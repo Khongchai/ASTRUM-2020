@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+
+    <style media="screen">
+
+      body
+      {
+        overflow-x: hidden;
+        width: 100%;
+        height: 2500px;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+      }
+    #planetsContainer
+    {
+      left: -30px;
+      text-align: center;
+      min-width: 1500px;
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      top: -30px;
+      z-index: 9;
+    }
+    #allplanets:hover
+    {
+      cursor: e-resize;
+    }
+    .topim:hover
+    {
+      cursor:pointer;
+    }
+
+    
+    .transitionbody
+    {
+      overflow-x: hidden;
+      position: absolute;
+      width: 100%;
+      top: 250px;
+    }
+    @media only screen and (max-width: 823px)
+    {
+      .disappearOnSmall
+      {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 780px)
+    {
+      .menuDisappear
+      {
+        display: none;
+      }
+    }
+    .planetsinfo
+    {
+      width: 100%;
+      position: relative;
+      height: 1550px;
+      background-color: black;
+      display: inline-block;
+      margin: 0 auto;
+      top: 180px;
+    }
+
+    #soundcheck
+    {
+      width: 5%;
+      margin: 0 auto;
+
+    }
+
+    .planetdesctext
+    {
+      font-weight: lighter;
+      transition: opacity .4s;
+      letter-spacing: 2.5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #F7F9E0;
+
+    }
+
+    #allplanets
+    {
+      height: 500px;
+    }
+
+    .planetsubdesctext
+    {
+      cursor: context-menu;
+      font-weight: lighter;
+      letter-spacing: 2.5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #F7F9E0;
+      font-style: italic;
+
+    }
+
+    .transitionbody
+    {
+      text-align: left;
+    }
+
+    .subtexthide
+    {
+      display: none;
+    }
+
+
+
+    </style>
+
+  </head>
+  <body >
+    <h1 class="titlepagename">
+      <div id="titlepagetext">
+        ASTRUM
+      </div>
+    </h1>
+    <br>
+    <div style="display: inline-block">
+      <p id="subtitle" >Where music meets science</p>
+    </div>
+
+    <table id="topnavtab"  class="menuDisappear">
+      <tr>
+        <th class="tableheader"><a href="index.html">Main</a></th>
+        <th class="tableheader"><a href="contact.html">Contact</a></th>
+      </tr>
+    </table>
+    <img id="logo" src="pictures/astrum logo.png" height="100" width="100">
+    <div class="transitionbody" style="height: 100%">
+      <h1 style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0">ABOUT PLANETS</h1>
+      <h5 class="disappearOnSmall"style="width: 30%; font-style: italic; letter-spacing: 3px; float: left; position: absolute; color: #F7F9E0; margin-left: 30px; font-family: segoe ui; font-weight: lighter; top: 30px;">
+        Stories by: Lourna Mydes Quinto
+        <br>
+        
+      </h5>
+      <h6 class="disappearOnSmall" style="font-style: italic; letter-spacing: 1px; float: left; color: #F7F9E0; margin-left: 30px; font-family: segoe ui; font-weight: lighter; position: absolute; top: 0px; width: 30%;">If planet textures fail to render, click on HD button at the bottom right corner.</h6>
+
+        <h6 id="soundcheck"style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0; position: relative; top: -20px; z-index: 10; cursor: pointer" onclick="setsound()">SOUND ON</h6>
+
+      <div id="planetsContainer">
+        <div id="allplanets">
+          <div class="topim" id="mercuryimage" onclick="displaysonClick('mercuryframe')" >
+            <a href="#"><img src="pictures/Mercury.png" style="height: 120px; width: 120px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="venusimage" onclick="displaysonClick('venusframe')">
+            <a href="#"><img src="pictures/venus.png" style="height: 120px; width: 120px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="earthimage" onclick="displaysonClick('earthframe')">
+            <a href="#"><img src="pictures/earth.png" style="height: 120px; width: 120px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="marsimage" onclick="displaysonClick('marsframe')">
+            <a href="#"><img src="pictures/mars.png" style="height: 120px; width: 120px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="jupiterimage" onclick="displaysonClick('jupiterframe')">
+            <a href="#"><img src="pictures/Jupiter.png" style="height: 120px; width: 120px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="saturnimage" style="clip-path: inset(65px 0px 65px 0px)" onclick="displaysonClick('saturnframe')">
+            <a href="#"><img src="pictures/Saturn.png" style="height: 220px; width: 220px; object-fit:contain"></a>
+          </div>
+  
+          <div class="topim" id="uranusimage" style="clip-path: inset(27px 50px 27px 50px)" onclick="displaysonClick('uranusframe')">
+            <a href="#"><img src="pictures/Uranus.png" style="height: 220px; width: 220px; object-fit:contain;" ></a>
+          </div>
+  
+          <div class="topim" id="neptuneimage" onclick="displaysonClick('neptuneframe')" >
+            <a href="#"><img src="pictures/Neptune.png" style="height: 120px; width: 120px; object-fit:contain;"></a>
+          </div>
+        </div>
+        
+      </div>
+        
+      </div>
+
+      <div class="planetsinfo">
+
+        <div id="mercuryframe" class="planetsframe" style="display: none; transition: display .4s" data-src="">
+          <iframe id="iframemercury" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
+          <div id="mercuryinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+
+            </p>
+          </div>
+        </div>
+        
+        <!------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div id="venusframe" class="planetsframe" style="display: none; transition: display .4s" data-src="">
+          <iframe id="iframevenus" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
+          <div id="venusinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+
+            </p>
+          </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div id="earthframe" class="planetsframe" style="display: none; transition: display .4s" data-src="sounds/Earth V1.mp3">
+          <iframe id="iframeEarth" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
+          <div id="earthinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+              <span  style="cursor: help" onmouseover="displaysonOver('earth-info-main')" onmouseout="displaysonOut('earth-info-main')"><strong>Earth</strong></span>: There is a saying shared across the universe.
+
+              Planet 3627-7 is a special world. It is a liquid world that fills up <span style="cursor: help" onmouseover="displaysonOver('earth-info-water')" onmouseout="displaysonOut('earth-info-water')"><strong>three fourths</strong></span> of its mass with water, yet sustains billions of species of creatures. Its 
+              <span style="cursor: help" onmouseover="displaysonOver('earth-info-residents')" onmouseout="displaysonOut('earth-info-residents')"><strong>residents</strong></span> 
+              live on the <span style="cursor: help" onmouseover="displaysonOver('earth-info-tall')" onmouseout="displaysonOut('earth-info-tall')"><strong>tallest</strong></span> peaks of the coldest mountains, 
+              to the <span style="cursor: help" onmouseover="displaysonOver('earth-info-hot')" onmouseout="displaysonOut('earth-info-hot')"><strong>hottest</strong></span> plains of its barren deserts, 
+              and into the <span><strong style="cursor: help" onmouseover="displaysonOver('earth-info-deep')" onmouseout="displaysonOut('earth-info-deep')">depths</strong></span> of its oceans. 
+              It is a world filled with an array of color unlike any other planet in its solar system. 
+              The <span style="cursor: help" onmouseover="displaysonOver('earth-info-magneticfield')" onmouseout="displaysonOut('earth-info-magneticfield')"><strong>firmament</strong></span> protects it from the radiation of the sun. 
+              Frozen water falls from the sky like fine white dust for a quarter of a cycle. 
+              It is filled with these things called trees that release <span style="cursor: help" onmouseover="displaysonOver('earth-info-atmosphere')" onmouseout="displaysonOut('earth-info-atmosphere')"><strong>gases</strong></span> that sustains life in its atmosphere, and that it is a world filled with creatures as 
+              tall as the trees and as small as the pebbles on the ground. 
+              <br>
+              <br>
+              It is said that the world’s rulers, creatures called humans, are the oddest of all. 
+              They live with plants and beasts that can kill them, but they have dominion above them all. 
+              They breathe in gases that burn them slowly in the inside at the rate of about 80 cycles around the sun. 
+              They have created settlements where temperatures dip to as low as -90 degrees and as high as 50 degrees and still reproduce. 
+              They capture the wind in the sails of their contraptions and journey across the waters. 
+              They then take the wind as their own and fly above the sky, defying their planet’s own gravity. 
+              The sun’s solar winds hit its atmosphere but instead of fearing it, they stare in awe at the lights they have named 
+              <span style="cursor: help" onmouseover="displaysonOver('earth-info-aurora')" onmouseout="displaysonOut('earth-info-aurora')"><strong>Aurora Borealis.</strong></span> 
+              As daylight in the night, these northern lights weaved amongst the silver clouds in a hypnotic dance, distorting in an array of 
+              green and purple with tongues of reds and oranges flickering in between. 
+              <br>
+              <br>
+              But they were not satisfied with the sky. These humans decided to venture out of their world and into the outer space, 
+              touching upon their moon and sending their metal creature <span style="cursor: help" onmouseover="displaysonOver('earth-info-depthofuniverse')" onmouseout="displaysonOut('earth-info-depthofuniverse')"><strong>into the depths of the universe</strong></span>, seeking others 
+              like them – hoping to find a connection – hopelessly lost. But the universe kept silent.
+              <br>
+              <br>
+              But the universe speaks of them. They speak of the terrible and marvelous things of the complex planet. The planet these humans call Earth.
+                
+            </p>
+
+          </div>
+          <div div id="earthAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="planetsubdesctext subtexthide" id="earth-info-main">
+              Earth, our home. Our only home. Our entire history is written on the surface of this miniscule blue globe. She has been taking care of us for millions
+              of years. Writing a music for something that encapsulates so many thing people can relate too is possibly one of the most challenging aspect of this 
+              project. The way I approached this is to capture the essence of sounds we are familiar with through use of synthesizers and acoustic sounds sampling.
+              For example, the sound of white noise could represent a number of things, waterfall, wind, the rustling of leaves, ocean waves, etc. Of course, pure white noise
+              would not sound so good without proper manipulation, so, that will be part of the process as well. 
+              <br>
+              <br>
+              
+              The use of synthesizers in this piece is to bring the sense of being similar, yet not entirely so; an aural uncanny valley. Had I used
+              an entirely acoustic sounds, the elements of this piece would sound too familiar, people would recognize immediately where to place the 
+              sounds in their perceived reality. What I intend for this piece is to bring the listener out of their reality and to look at Earth the same
+              way we look at other planets; the marvel she holds and her fragility. The writer of the story for Earth has perfectly captures the essence of 
+              my intention in her beautifully written work on the left. 
+            
+              <span style="width: 100%; display: inline-block; vertical-align: middle; text-align: center;"> 
+                <img src="pictures/TheBlueMarble.jpg" style="width: 300px"> 
+              </span>
+             
+            </p>
+
+            <p class ="planetsubdesctext subtexthide" id="earth-info-water">
+              72 percent of earth volume is covered in liquid water, only 3% of that is drinkable water, the rest is salty ocean water, and only 30% of the drinkable water is not licked in ice caps.
+              <br>
+              <br>
+	            During the formation of the solar system, we can see from the composition of the inner planets that water and other gaseous elements could not have possibly formed within this region, as it was far too hot
+              for liquid water to form. The accepted theory now is that water was delivered to Earth from icy planetesimals from the farther region of the protoplanetary disk.
+              <span><img src="pictures/protoplanetary disk.jpg" style="width: 100%; margin-top: 10px;"></span>
+            </p>
+
+            <p class = "planetdesctext subtexthide" id="earth-info-residents">
+
+              "Life finds a way", the famous quote from Jurassic Park cannot be more true. 
+              Wherever we look, if we look hard enough, we find life. Our current technology has allowed us to explore frontiers we didn't think possible, 
+              and oftentimes, we found ourselves staring in wonder as our own discoveries disprove our theories and hypotheses.
+
+            </p>
+
+            <p class = "planetdesctext subtexthide" id = "earth-info-tall">
+              The Mount Everest is not only famous for its height, but also for its' deadly cold and low-level of oxygen. 
+              In the face of all the adversities, we find that it still hosts an amazing animal diversity, such as the snow leopard, 
+              Himalayan black bear, Himalayan Tahr, or even the tiniest of all, the small Himalayan jumping spider         
+              <img src="pictures/Himalayan Mountains.jpg" style="width: 100%; margin-top: 10px">
+            </p>
+
+            <p class = "planetdesctext subtexthide" id = "earth-info-hot">
+
+              Amidst the heat of Earth's hottest plains, we have creatures such as the Fennec fox, Bactrian camels, the famous thorny devil lizards, etc. 
+              Despite the extreme conditions of the environments, from the face-melting heat to the water scarcity, 
+              each animal has found its own way of adapting to the harsh and unforgiving environment that is the desert.
+              <img src="pictures/Desert.jpg" style="width: 100%; margin-top: 10px">
+
+            </p>
+
+            <p class = "planetdesctext subtexthide" id = "earth-info-deep">
+
+              Life exists even in the depth of the sea. It is said that the deep sea contains more creatures than all of the land-dwelling ones combined. 
+              In the depth of the ocean, with so little to no sunlight, creatures have to adopt new ways of finding food and fend for themselves. 
+              As a result, we ended up with myriads of creatures whose appearances are beyond our imagination. 
+              <img src="pictures/Deep sea creature.webp" style="width: 100%; float: right; clip-path: inset(0px 10px 0px 0px); position: relative; left: 10px; margin-top: 10px; margin-bottom: 10px">
+              For each layer of depth, we find newer and stranger animals down to the deepest part of our ocean, the Mariana Trench. 
+              There, where the pressure is over a fifteen-thousand psi (over a thousand elephants), we have in 2017, 
+              discovered a species of snailfish called the Ethereal Snailfish (found in the depth of 8,076 m) lurking in the depth where 
+              we thought the pressure was too extreme for life.
+
+            </p>
+
+            <p class = "planetdesctext subtexthide" id ="earth-info-magneticfield">
+
+              Scientists believe that the outer layer of our planet's molten core is responsible for our magnetic field, as the molten material
+              possess electric charges and magnetic fields are created from the motion of moving electric charges. 
+              <span><img src="pictures/Earth magnetic field.jpg" style="width: 300px; float: right"></span>
+              <br>
+              Solar winds fly straight to Earth from the sun at the speed of roughly 400 km/s. Our planet's magnetic field deflects off the particles from the sun, with few collects
+              at the north and south poles, where the impact and dissipation of their energy against our atmosphere create the heavenly phenomenon known as "Aurora Borealis".
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <span><img src="pictures/jupiter Aurora.jpg" style="float: right; width: 300px"></span>
+              <br>
+              <br>
+              <br>
+              Earth is, however, not the only planet where such event occurs regularly in the solar system, all the other gas giants have it too, and their fields are even stronger than ours.
+              
+
+            </p>
+
+            <p class="planetdesctext subtexthide" id="earth-info-atmosphere">
+              <img src="pictures/Protoplanetary disk 2.jpg" style="width: 300px; float: right; margin-left: 10px;">
+              During the protoplanetary disk stage, the four rocky inner planets, Mercury, Venus, Earth and Mars, each acquired their own atmosphere by pulling in gas from the 
+              disk when they grew large enough to resist the gas drag posed by the surrounding gas. To retain the gathered gas, each planet must be sufficiently large, such that
+              the escape velocity is greater than the speed of the gas's atom. 
+              <br>
+              <br>
+              Earth's atmosphere came from absorbing those gases during the early stage and the ones spewing out of volcanoes. Early Earth's atmosphere was similar to Venus, 
+              as both planets formed in a relatively close proximity of each other. The breatheable air that we have today is thanks to the early life forms on earth that brought in 
+              the photosynthetic system.
+              <br>
+              <br>
+            </p>
+
+            <p class="planetdesctext subtexthide" id="earth-info-aurora">
+              <video width="100%"  autoplay loop>
+                <source src="videos/Aurora_Australis.ogv" type="application/ogg">
+                  Sorry, your browser does not support the video format.
+              </video>
+              <br>
+              The ionization of atoms in the atmosphere after the collision between photons from the sun and our atmosphere's constituents causes the the light show of varying color
+              and complexity.
+            </p>
+
+            <p class="planetdesctext subtexthide" id="earth-info-depthofuniverse">
+              <img src="pictures/Voyager 1.jpg" style="width: 100%; float: right">
+              Launched in 1977, Voyager 1 currently holds the place for the farthest human-made object from Earth. Travelling at the speed of 17km/s the spacecraft would take about 300 more years to
+              reach the edge of our solar system: Oort cloud and will be in 1.7 light years of its destination in the constellation Ophiucus, the star AC+79 3888, in the year 40,272 AD.
+              <br>
+              <br>
+              Pioneer 10 and 11 spacecrafts both had small metal plates loaded onto them that carried the information of their place of origin. For Voyager 1, 
+              however, the data was a tad more ambitious. The message is carried by a gold-plated cooper disk phonograph record. It contains  music from various periods
+              , sounds from many cultures, and images showing the diversity of life on Earth.
+            </p>
+
+            
+
+            
+         
+          </div>
+
+
+          
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div  id="marsframe" class="planetsframe" style="display: none; transition: display .4s" data-src="sounds/Mars.mp3">
+          <iframe id="iframeMars" src="" frameborder="0" style="width: 100%; height: 900px"></iframe>
+
+          <div id="marsinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+              <span style="cursor: help" onmouseover="displaysonOver('mars-info-main')" onmouseout="displaysonOut('mars-info-main')"><strong>Mars</strong>: </span>
+
+           The year is now 34 AE (After Earth). Humanity has lost its planet and has been travelling through space in search of a new <span onmouseover="displaysonOver('mars-info-lost')" onmouseout="displaysonOut('mars-info-lost')" style="cursor: help;"><strong>home</strong></span>. The AD millennia ended with entire civilizations crumbling into dust and its population <span onmouseover="displaysonOver('mars-info-annihilated')" onmouseout="displaysonOut('mars-info-annihilated')" style="cursor: help;"><strong>annihilated</strong></span> to a mere quarter of 7 billion. Once a planet brimming with life, it is now a skeleton of its former glory.
+            
+          Three large aircrafts approach upon the <span style="cursor: help" onmouseover="displaysonOver('mars-info-red')" onmouseout="displaysonOut('mars-info-red')"><strong>red</strong></span> planet of Mars – once a twinkling red dot <span span onmouseover="displaysonOver('mars-info-nightsky')" onmouseout="displaysonOut('mars-info-nightsky')" style="cursor: help"><strong>in the night sky </strong></span>is now a looming orb of a second home that is as unwelcoming as its <span onmouseover="displaysonOver('mars-info-barren')" onmouseout="displaysonOut('mars-info-barren')" style="cursor: help;"><strong>barren landscape.</strong></span> 
+          <br>
+          <br>
+          Touching upon the desert sand, heartbeats are loud against the whispers of the <span style="cursor: help" onmouseover="displaysonOver('mars-info-storm')" onmouseout="displaysonOut('mars-info-storm')"><strong>storm.</strong></span> 
+          They shiver at the sight of a cold, dead vast expanse of rocks on the dusty surface. Their steps are <span style="cursor: help" onmouseover="displaysonOver('mars-info-gravity')" onmouseout="displaysonOut('mars-info-gravity')" ><strong>light</strong></span> and they float through the air just by a brush of a footstep. As one, they venture into uncharted territory, blinded by the winds of the storm and the dust that dances across their vision.
+          
+          People huddle together for comfort as they walk towards a peak that touches the scarlet skies of its toxic atmosphere. It is <span style="cursor: help" onmouseover="displaysonOver('mars-info-mountain')" onmouseout="displaysonOut('mars-info-mountain')"><strong>Olympus Mons</strong></span> and it rises as a beacon of shelter. There is a settlement by their predecessors and they must arrive before the setting of the sun. As they reach the foot of the mountain, they see the shadows of the very <span><strong style="cursor: help" onmouseover="displaysonOver('mars-info-rovers')" onmouseout="displaysonOut('mars-info-rovers')">first explorers</strong></span> from Earth standing side by side, their solar panels glinting in the light, and there humanity is reminded of one's own inquisitive nature.
+          
+          Opportunity and Curiosity.
+            </p>
+
+          </div>
+
+          <div id="marsAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="planetsubdesctext subtexthide"id="mars-info-lost">
+              The space race to send people to Mars has never been more fierce, with  <span ><img src="pictures/ColonyOnMarsIII.jpg"style="width: 130px; float: right; margin: 10px; "></span>private companies such as Blue Origin,
+              SpaceX, Boeing, etc. working closely with government space agencies around the world to plan out our species' next biggest step.
+              <br>
+              <br>
+              In our effort to establish the second human colony on Mars, not only do we have to solve engineering problems, but argricultural, geological, medical, psychological, and many more
+              aspects as well. To build a self-sustainable colony on Mars, we have to ensure that it is able to cater for itself (it would take
+              too long for Earth's resource to reach Mars) when it comes to resource, be it for humans or machines. <span><img src="pictures/MarsColony.jpg"style="width: 160px; float: left; margin: 10px; "></span>Therefore, in the not-so-far-away future,
+               not only will we need engineers and scientists on Mars, but teachers, gardeners, musicians, artists, construction workers, doctors; people from all
+               facets of life will have to work hand-in-hand to fulfill the goal of humankind becoming the true space-faring species.
+              <br>
+              <br>
+              It is also exciting to see what Earth could benefit from such technological advancements; how we can apply those tech to help us improve
+              the quality of our first home.
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-main">
+              For Mars, I intended for the soundscape to exude somewhat of an eerie, and bleak atmosphere. The accompanying story depicts a scene where
+              humans slowly evacuate from the dying planet Earth. As they approach the looming red planet, several thoughts pop up in their heads, from
+              the scarcity of resource to the vast and empty inhabitable landscape on which to become their new home, most likely until their last breath.
+              
+              <br>
+              <br>
+              The musical elements are a constant heartbeats, a human element, against the background of uncertain Mars elements, ranging from
+              the scratchy dust-wind, to the haunting cry of the far-away storm hovering in the lower atmosphere. It is a sonic juxtaposition of human against 
+              nature on this dead planet.
+              <br>
+              <img src="pictures/MarsMountSharp.jpg" style="width: 100%; float: right; margin-top: 10px">
+
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-annihilated"> 
+              <img src="pictures/GlobalWarmingGraph II.png" style="width: 300px; float: right; margin-left: 10px;">
+              From massive wildfire disasters to the melting of the polar ice caps, the evidence for climate change has never been more apparent,
+               yet there are still some people that refuse to accept human's influence over the sudden rise of global temperature. 
+               <br>
+               <br>
+              If we let this type of ignorance run free, eventually, habitable moons and Mars won't be there to be our second home but rather, the 
+              on home we will have left. 
+
+              <br>
+               <br>
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-nightsky">
+              In the night sky, Mars is the third brightest planet behind Jupiter and Venus. It appears as a orange-red-hued bright dot in the night sky close to Saturn, Jupiter and the star Antares. With a good enough home telescope, we can 
+              see very fine details on Mars, even its ice caps. <img src="pictures/Mars in the night sky.jpg" style="width: 300px; float: right">
+              <br>
+              <br>
+
+              Observed my many civilizations throughout the history, Babylonians, Chinese, Egyptians, Italians, Greek etc., with first telescopic observation by Galileo Galilei. Humans' interest in this planet has always been nothing but strong, and even
+              more so when we have deduced from the centuries of information that Mars could potentially have harbored life in the past, and how similar it used to be to our own planet. 
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-red">
+              The reddish hue on Mars is a result of rusty dust suspended in the atmosphere; however, a closer inspection of the planet would reveal that the surface is more orange-red rather than the strong reddish hue depicted in many
+              oversaturated photos on the internet.
+              <img src="pictures/MarsSurface.jpg" style="width: 300px; float: right; margin-left: 10px;">
+              <br>
+              <br>
+              The rust in the atmosphere comes from the oxidized iron on the surface. The iron oxide, which is the same compound that gives blood its red color, when 
+              interract with oxygen, appears red as it absorbs blue and green spectrum of light.
+              We don't know, however, whether the rust on Mars occured due to rainstorms in the past, when Mars was still a young and rather wet planet, 
+              or is it a gradual process of the rocks interraction to the Martian atmosphere over billions of years.
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-barren">
+              One of the most concerning aspect of living on Mars lies in its nothingness. On Earth, most of our agricultural activities are done outdoors; grow crops, livestock, etc. But on Mars, its surface is a true rocky desert of nothingness, we will have to engineer our ways through the myriads of problems facing a true self-sustained colony; namely, how can we make sure that the colony will have a constant supply of Energy, how do we keep the few first generations of people sane, how do we grow food, how do we get water, etc. 
+              <br>
+              <br>
+              Without air and most likely, a limited supply of oxygen at first, taking a walk outside would be out of the question. The temperature outside is a freezing minus 60 degrees with only 0.1% oxygen in the atmosphere. Mars dust is also recognized to be harmful to our respiratory systems. The biggest challenge of Mars therefore lies not only in how to get there but how to “stay” there.
+              <img src="pictures/MarsPanorama.jpg" style="width: 100%; margin-top: 20px">
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-storm"> 
+              We have learnt about Mars’ storm the hard way when the probe Mariner arrived at Mars in 1971 expecting to see new fine details of this planet’s surface. What we got instead was a storm that covers virtually the entire planet that lasted for a month. 
+              <img src="pictures/MarsStorm.jpg" alt="" style="margin: 15px; width: 300px; float: right">
+              <br>
+              <br>
+              The dust storm on Mars contain dust particles that are much finer than on Earth. 
+              All equipment must be specially engineered to be functional for a sustained period in such condition, such as NASA’s rovers. 
+              Mars has a relatively thin atmosphere of 1% of Earth’s atmosphere, so storms of Mars would be comparable to a light breeze on Earth. 
+              However, Mars is still a very “dusty” place, and this could pose several problems in the long run such as blocking the sunlight from the solar panels, 
+              thus decreasing the power output significantly.
+            </p>
+ 
+            <p class="planetsubdesctext subtexthide" id="mars-info-gravity">
+              The gravity on Mars is about 3.711 meters per second squared, in other words, an object falling at Mars would see an increase in its speed by 3.711 m/s every second. 
+              In comparison, Earth is about 9.807 m/s^2. A person weighs 100kg on Earth would only weigh around 38kg on Mars. 
+              Though we might not be able to jump as high as portrayed in the film John Carter, a realistic height of 2.64 jump still sounds rather fun. 
+              <br>
+              <br>
+              <img src="pictures/JohnCarter.jpg" alt="" style="float: left; width: 300px">
+              With gravity even fewer than half of Earth’s, astronauts on Mars would have to work hard to prevent muscle atrophy. 
+              Though it will definitely not be as bad as their spaceflight to the planet will have been, 
+              living in such condition for a long period of time could bring about several medical conditions.    
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-mountain">
+              <img src="pictures/Olympus Mons.png" style="width: 100%; margin-bottom: 20px" >
+              Olympus Mons is the tallest mountain found anywhere in the solar system, towering over even our Mount Everest and Mauna Kea. 
+              Its diameter is around the size of an entire country: 624 km, and a height of 24 km. 
+              In comparison, the cruising altitude of a commercial airplane is around 7 km. 
+              <br>
+              <img src="pictures/Olympus Mons II.jpg" style="width: 250px; margin-top: 20px">
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="mars-info-rovers">
+              Though not the first rovers to have landed on the surface of Mars, 
+              Curiosity and Opportunity were the true first explorers by merits. 
+              Surface photos and details collected by these two were priceless. 
+              Opportunity, after having travelled over 40 kilometers, had unfortunately failed, 
+              and stopped responding during a heavy dust storm in 2018 and has taken a last parting panorama shot below, 
+              with Curiosity still functioning and going strong in 2020.
+              <br>
+              <img src="pictures/OpportunityPartingShot.jpg" alt="" style="width: 100%; margin-top: 10px">
+            </p >      
+          </div>
+        </div>
+
+      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div id="jupiterframe" class="planetsframe" style="display: none; transition: display .4s" data-src="">
+          <iframe id="iframejupiter" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
+          <div id="jupiterinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+
+            </p>
+          </div>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div id="saturnframe" class="planetsframe" style="display: none; transition: display .4s" data-src="">
+          <iframe id="iframesaturn" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
+          <div id="saturninfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+
+            </p>
+          </div>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div  id="uranusframe" class="planetsframe" style="display: none; transition: display .4s" data-src="">
+          <iframe id="iframeuranus" src="" frameborder="0" style="width: 100%; height: 900px"></iframe>
+          <div id="uranusinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+              <span  style="cursor: help" onmouseover="displaysonOver('uranus-info-main')" onmouseout="displaysonOut('uranus-info-main')"><strong>Neptune</strong></span>: 
+
+              foo main foo
+                
+            </p>
+
+          </div>
+          <div div id="uranusadditionalinfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="planetsubdesctext subtexthide" id="uranus-info-main">
+              
+              foo additional info foo
+             
+            </p>
+         
+          </div>     
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div  id="neptuneframe" class="planetsframe" style="display: none; transition: display .4s" data-src="sounds/Neptune V3.mp3">
+          <iframe id="iframeNeptune" src="" frameborder="0" style="width: 100%; height: 900px"></iframe>
+          <div id="neptuneinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
+            <p class="planetdesctext">
+              <span  style="cursor: help" onmouseover="displaysonOver('neptune-info-main')" onmouseout="displaysonOut('neptune-info-main')"><strong>Neptune</strong></span>: 
+
+              foo main foo
+                
+            </p>
+
+          </div>
+          <div div id="neptuneadditionalinfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="planetsubdesctext subtexthide" id="neptune-info-main">
+              
+              foo additional info foo
+             
+            </p>
+         
+          </div>     
+        </div>
+      </div>
+
+      <script>
+        var audio; 
+        var check = true; 
+        var theThingbeingDisplayed = null;
+
+        
+
+        //without this fucntion camera will save the changes; 
+        //if user looks for other planets, the camera won't focus at the same place
+        function openiFrame (reference)
+        {
+          if (reference === "mercuryframe")
+          {
+            document.querySelector("#iframemercury").src = "https://eyes.nasa.gov/apps/orrery/#/mercury?&close=true";
+          }
+          if (reference === "venusframe")
+          {
+            document.querySelector("#iframevenus").src = "https://eyes.nasa.gov/apps/orrery/#/venus?&close=true";
+          }
+          if (reference === "earthframe")
+          {
+            document.querySelector("#iframeEarth").src = "https://eyes.nasa.gov/apps/orrery/#/earth?&close=true";
+          }
+          if (reference === "marsframe")
+          {
+            document.querySelector("#iframeMars").src = "https://eyes.nasa.gov/apps/orrery/#/mars?&close=true";
+          }
+          if (reference === "jupiterframe")
+          {
+            document.querySelector("#iframejupiter").src = "https://eyes.nasa.gov/apps/orrery/#/jupiter?&close=true";
+          }
+          if (reference === "saturnframe")
+          {
+            document.querySelector("#iframesaturn").src = "https://eyes.nasa.gov/apps/orrery/#/saturn?&close=true";
+          }
+          if (reference === "uranusframe")
+          {
+            document.querySelector("#iframeuranus").src = "https://eyes.nasa.gov/apps/orrery/#/uranus?&close=true";
+          }
+          if (reference === "neptuneframe")
+          {
+            document.querySelector("#iframeNeptune").src = "https://eyes.nasa.gov/apps/orrery/#/neptune?&close=true";
+          }
+          
+        }
+
+        function setsound()
+        {
+          if (check)
+          {
+            if (audio != null)
+            {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+            check = false;
+            document.querySelector("#soundcheck").innerHTML = "SOUND OFF";
+            
+          }
+          else
+          {
+            check = true;
+            document.querySelector("#soundcheck").innerHTML = "SOUND ON";
+
+            //if something displayed and user click on SOUND "OFF"
+            if (theThingbeingDisplayed != null)
+            {
+              audio.play();
+            }
+          }
+        }
+
+        function displaysonClick(id)
+        {
+          openiFrame(id);
+
+          //if user click on another planet without closing current
+          if (theThingbeingDisplayed != null)
+          {
+            if (id != theThingbeingDisplayed)
+            {
+              if (audio != null)
+              {
+                audio.pause();
+                audio.currentTime = 0;
+              }
+              var displayedthing = document.getElementById(theThingbeingDisplayed);
+              displayedthing.style.display = "none";
+            }
+          }
+        
+
+          var toBeDisplayed = document.getElementById(id);
+          toBeDisplayed.src = toBeDisplayed.dataset.src;
+          if (toBeDisplayed.style.display === "none")
+          {
+            
+            audio = new Audio(toBeDisplayed.src);
+            audio.volume = 0.6;
+            if (check)
+            {
+              audio.play();
+            }
+            theThingbeingDisplayed = id;
+            toBeDisplayed.style.display = "block";
+          }
+          else
+          {
+            //check if to pause or to play a new audio sound with
+            //if src of both files are equal; comes from the same destination: pause, else start the new sound
+            if (audio != null)
+            {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+            toBeDisplayed.style.display = "none";
+            theThingbeingDisplayed = null;
+            
+          }
+
+        }
+
+        function displaysonOver(id)
+        {
+          var toBeDisplayed = document.getElementById(id);
+          toBeDisplayed.style.display = "block"; 
+          toBeDisplayed.className += " fadeinAnim";
+          toBeDisplayed.style.opacity = 1;
+          
+        }
+
+        function displaysonOut(id)
+        {
+          var toBeDisplayed = document.getElementById(id);
+          toBeDisplayed.style.opacity = 0;
+          toBeDisplayed.style.display = "none";
+          toBeDisplayed.className = "planetsubdesctext subtexthide";
+               
+        }
+
+        
+        
+
+        
+
+      </script>
+      <script src="slide.js"></script>    
+    </div>
+
+
+  </body>
+</html>
