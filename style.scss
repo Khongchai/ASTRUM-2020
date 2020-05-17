@@ -20,6 +20,40 @@ $creamcolor: #F7F9E0;
   z-index: 50;
 }
 
+
+@media only screen and (max-width: 1245px)
+  {
+    .firstpagecover
+    {
+      display: block !important;
+      clip-path: inset(0px 0px 0px 0px) !important;
+      opacity: 0.5 ; 
+      transform: none !important;
+      animation: none !important;
+      margin: 0 auto !important;
+      
+    }
+
+    #albumcover
+    {
+      width: 100% !important;
+      background: url(pictures/albumcoverBlurred.png);
+    }
+
+    #concertcover
+    {
+      width: 100% !important;
+      background: url(pictures/astrumlogoBlurred.png);
+    }
+
+    #violinProfcover
+    {
+      width: 100% !important;
+      background: url(pictures/clazz3Blurred.png);
+    }
+
+  }
+
 %descriptions
 {
   position:relative;
@@ -38,6 +72,7 @@ $creamcolor: #F7F9E0;
   clip-path: inset(0px 0px 0px 0px);
 
 }
+
 
 .topbarcover
 {
@@ -396,7 +431,7 @@ a
   opacity: 0.5;
   width: 150px;
   top: -60px;
-  left: 45%;
+  left: 40%;
   margin: 10px;
   transition: opacity .4s, height .4s, width .4s, left .4s, top .4s;
   position: relative;
