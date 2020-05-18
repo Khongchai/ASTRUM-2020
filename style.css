@@ -73,12 +73,15 @@ a {
 }
 
 #firstsettext {
-  text-align: center;
   vertical-align: top;
   color: #F7F9E0;
   letter-spacing: 2px;
+  width: 100%;
 }
 #firstsettext p {
+  margin: 0 auto;
+  display: inline-block;
+  width: 60%;
   letter-spacing: 3px;
   font-weight: lighter;
 }

@@ -103,6 +103,15 @@
 
     }
 
+    .instructionText
+    {
+      font-weight: lighter;
+      letter-spacing: 2.5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #F7F9E0;
+      font-size: 20px;
+    }
+
     .transitionbody
     {
       text-align: left;
@@ -137,7 +146,7 @@
     </table>
     <img id="logo" src="pictures/astrum logo.png" height="100" width="100">
     <div class="transitionbody" style="height: 100%">
-      <h1 style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0">ABOUT PLANETS</h1>
+      <h1 style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0">FIXED MEDIA</h1>
       <h5 class="disappearOnSmall"style="width: 30%; font-style: italic; letter-spacing: 3px; float: left; position: absolute; color: #F7F9E0; margin-left: 30px; font-family: segoe ui; font-weight: lighter; top: 30px;">
         Stories by: Lourna Mydes Quinto
         <br>
@@ -251,6 +260,7 @@
 
           </div>
           <div div id="earthAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="instructionText">Hover your mouse over / tap on bold texts on the left to show additional info.</p>
             <p class="planetsubdesctext subtexthide" id="earth-info-main">
               Earth, our home. Our only home. Our entire history is written on the surface of this miniscule blue globe. She has been taking care of us for millions
               of years. Writing a music for something that encapsulates so many thing people can relate too is possibly one of the most challenging aspect of this 
@@ -374,11 +384,7 @@
               however, the data was a tad more ambitious. The message is carried by a gold-plated cooper disk phonograph record. It contains  music from various periods
               , sounds from many cultures, and images showing the diversity of life on Earth.
             </p>
-
-            
-
-            
-         
+       
           </div>
 
 
@@ -409,6 +415,7 @@
           </div>
 
           <div id="marsAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
+            <p class="instructionText">Hover your mouse over / tap onbold texts on the left to show additional info.</p>
             <p class="planetsubdesctext subtexthide"id="mars-info-lost">
               The space race to send people to Mars has never been more fierce, with  <span ><img src="pictures/ColonyOnMarsIII.jpg"style="width: 130px; float: right; margin: 10px; "></span>private companies such as Blue Origin,
               SpaceX, Boeing, etc. working closely with government space agencies around the world to plan out our species' next biggest step.
@@ -605,6 +612,8 @@
         var audio; 
         var check = true; 
         var theThingbeingDisplayed = null;
+        var instructionText = document.getElementsByClassName("instructionText");
+        var instructionTextLength = instructionText.length;
 
         
 
@@ -729,6 +738,13 @@
           toBeDisplayed.style.display = "block"; 
           toBeDisplayed.className += " fadeinAnim";
           toBeDisplayed.style.opacity = 1;
+
+          //for instruction text
+          for (var i = 0; i < instructionTextLength; i++)
+          {
+            instructionText[i].style.display = "none";
+          }
+          
           
         }
 
@@ -738,6 +754,12 @@
           toBeDisplayed.style.opacity = 0;
           toBeDisplayed.style.display = "none";
           toBeDisplayed.className = "planetsubdesctext subtexthide";
+
+          //for instruction text
+          for (var i = 0; i < instructionTextLength; i++)
+          {
+            instructionText[i].style.display = "block";
+          }
                
         }
 
