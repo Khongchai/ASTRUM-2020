@@ -23,10 +23,10 @@
       if (e.type === "touchstart") 
       {
         initialX = e.touches[0].clientX - xOffset;
-        initialY = e.touches[0].clientY - yOffset;
+       // initialY = e.touches[0].clientY - yOffset;
       } else {
         initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
+       // initialY = e.clientY - yOffset;
       }
 
       if (e.target === dragItem) {
@@ -36,7 +36,7 @@
 
     function dragEnd(e) {
       initialX = currentX;
-      initialY = currentY;
+      //initialY = currentY;
 
       active = false;
     }
@@ -46,16 +46,17 @@
       
         e.preventDefault();
       
-        if (e.type === "touchmove") {
+        if (e.type === "touchmove") 
+        {
           currentX = e.touches[0].clientX - initialX;
-          currentY = e.touches[0].clientY - initialY;
+         // currentY = e.touches[0].clientY - initialY;
         } else {
           currentX = e.clientX - initialX;
-          currentY = e.clientY - initialY;
+          //currentY = e.clientY - initialY;
         }
 
         xOffset = currentX;
-        yOffset = currentY;
+        //yOffset = currentY;
 
         setTranslate(currentX, 0, dragItem); //to make move only horizontally, put a constant in Y value
       }
