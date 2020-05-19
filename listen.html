@@ -593,12 +593,12 @@
               <span  style="cursor: help" onmouseover="displaysonOver('neptune-info-main')" onmouseout="displaysonOut('neptune-info-main')"><strong>Neptune</strong></span>: 
               <br>
               <br>
-              A vivid azure<br>
-              with a great dark spot<br>
-              spinning in lonesome wonder<br>
+              A vivid <span style="cursor: help" onmouseover="displaysonOver('neptune-info-azure')" onmouseout="displaysonOut('neptune-info-azure')"><strong>azure</strong><br></span>
+              with a great <span style="cursor: help" onmouseover="displaysonOver('neptune-info-darkspot')" onmouseout="displaysonOut('neptune-info-darkspot')"><strong>dark spot</strong></span><br>
+              spinning in <span style="cursor: help" onmouseover="displaysonOver('neptune-info-lonesome')" onmouseout="displaysonOut('neptune-info-lonesome')"><strong></strong>lonesome wonder</span><br>
               <br>
               
-              She storms and rages<br>
+              She <span style="cursor: help" onmouseover="displaysonOver('neptune-info-storms')" onmouseout="displaysonOut('neptune-info-storms')"><strong>storms</strong></span> and rages<br>
               with a name oft’ fought<br>
               hidden away from plain sight<br>
               <br>
@@ -626,8 +626,40 @@
           <div div id="neptuneadditionalinfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
             <p class="planetsubdesctext subtexthide" id="neptune-info-main">
               
-              foo additional info foo
-             
+              Neptune, one of the most alluring planets of all. We have only ever visited the planet up close once, when Voyager 2 was 
+              making a flyby of the gaseous planets in the 70s and 80s. Being the farthest planet away from the sun, at the time of writing,
+              we have very little information about the planet. But what we do know, is that it is very stormy, it's got the fastest windspeed
+              in the solar system, of 2,200 km/h. It also has a cloud top with no solid surface, similar to the other 3 gaseous planets. We have
+              also learnt a lot about the planet's composition from Earth, too. However, much remains a mystery. My composition is a tribute to
+              her mystifying pulchritude. 
+              <br>
+              <br>
+              <img src="pictures/Neptune rings.jpg" alt="" style="width: 300px; float: right; margin-left: 10px; margin-bottom: 10px">
+              Due to the multitude of unsolved mysteries surrounding this planet, composing a piece for her was a unique challenge; how do I go about
+               musically describing the planet with such <b>little</b> information? Looking at the available information we can deduce that 1, it is a windy planet,
+              so a windy sound might be suitable; 2, it is very hard to spot, even harder than the faintest star in the sky (it was even discovered
+              not through telescopic observations, but mathematical caculations), so using musical materials that are short, transient in nature, with, sprasely, 
+              something that is long but not too present so as to not pull away from the mysterious sprinkles of sound those short sounds create. Combining these 
+              with sprinkles of my musical interpretation and we have the piece you are listening to(hopefully) right now.
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="neptune-info-azure">
+              The blue hue of the planet can be contributed to the methane in its' atmosphere reflecting away blue wavelength. In comparison Uranus, the coloration is different thanks to the 
+              greater volume of ices on Neptune's surface.
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="neptune-info-darkspot">
+              <img src="pictures/NeptuneDarkSpot.jpg" style="height: 300px; float: left; margin-right: 10px; margin-bottom: 10px">
+              Similar to the one on Jupiter's Great Red Spot, this Great Dark Spot on Neptune is roughly the same size as Earth, with initial dimensions of 13,000 x 6,600 km. White traces
+              around the storm are crystals of frozen methane in the tropopose layer, as opposed to crystal ice in Earth's clouds. 
+              <br>
+              <br>
+              The spot was thought to have disappeared or have been covered up in 1994, when the Hubble Space Telescope photographed Neptune. In 2016, however, another similar spot 
+              has appeared in the northern hemisphere and remained visible for several years. Currently, the observations of the planet and it is difficult at this time to get 
+              more information through telescopic observations alone.
+              <br>
+              <br>
+              <img src="pictures/NeptuneDarkSpot2.jpg" style="width: 400px; float: left; margin-right: 10px; margin-bottom: 10px">
             </p>
          
           </div>     
@@ -640,6 +672,25 @@
         var theThingbeingDisplayed = null;
         var instructionText = document.getElementsByClassName("instructionText");
         var instructionTextLength = instructionText.length;
+
+        
+        document.addEventListener("DOMContentLoaded", () => 
+        {
+          //if does not exist or equals true
+          
+          if ((localStorage.getItem("checkValLocal") === "true"))
+          {
+            check = false;
+            setsound(check);
+          }
+          else
+          {
+            check = true;
+            setsound(check);
+          }     
+        })
+        
+        
 
         
 
@@ -686,6 +737,7 @@
         {
           if (check)
           {
+            
             if (audio != null)
             {
               audio.pause();
@@ -693,6 +745,7 @@
             }
             check = false;
             document.querySelector("#soundcheck").innerHTML = "SOUND OFF";
+            localStorage.setItem("checkValLocal", check);
             
           }
           else
@@ -705,6 +758,7 @@
             {
               audio.play();
             }
+            localStorage.setItem("checkValLocal", check);
           }
         }
 
