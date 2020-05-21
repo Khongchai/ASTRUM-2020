@@ -135,6 +135,10 @@ p {
   .menuDisappear {
     opacity: 0;
   }
+
+  .tableheader {
+    display: none;
+  }
 }
 #mercuryimage {
   animation: float 2s ease-in-out infinite;
