@@ -533,10 +533,12 @@ p {
   z-index: 11;
 }
 
-#title {
+.title {
+  letter-spacing: 3px;
   font-family: segoe ui;
-  font-weight: lighter;
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
+  text-align: left;
   position: relative;
   top: -50px;
   color: #F7F9E0;
