@@ -2,18 +2,49 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
-    <style media="screen">
+    <style media="screen"> 
 
-
-      
+    @media only screen and (max-width: 1245px)
+    {
+      #indexsubbody
+      {
+        top: -124px;
+      }
+    }
+    @media only screen and (max-width: 1020px)
+    {
+      #indexsubbody
+      {
+        top: -62px !important;
+      }
+    }
 
     </style>
 
   </head>
   <body class="indexbody" style="z-index: 10;">
+
+<!--hamburgerbar----------------------------------------------------------------------------------->
+<div id="hamburger">
+  <label for="" id="hamburgerActivate">&#9776;</label>
+
+  <div id="sidebarMobile">
+      <div id="menuMobileList" >
+          <br>
+          <a href="about.html">ABOUT</a>
+          <br>
+          <a href="biography.html">BIO</a>
+          <br>
+          <a href="credits.html">CREDITS</a>
+      </div>
+  </div>
+</div>
+<!--hamburgerbar----------------------------------------------------------------------------------->
+
+
 
     <h1 class="titlepagename">
       <div id="titlepagetext">
@@ -29,16 +60,19 @@
     <table id="topnavtab" class="menuDisappear">
       <tr>
         <th class="tableheader"><a href="about.html">About</a></th>
-        <th class="tableheader"><a href="credits.html">Credits</a></th>
         <th class="tableheader"><a href="biography.html">Biography</a></th>
+        <th class="tableheader"><a href="credits.html">Credits</a></th>
       </tr>
     </table>
-    <img id="logo" src="pictures/astrum logo.png" height="100" width="100">
+    <img id="logo" src="pictures/astrum logo.png" style="height: 100px; width: 100px">
 
-    <div class="transitionbody">
+    
+
+    <div id="indexsubbody"class="transitionbody" style="position: relative;">
       <div id="links">
         <div id="divformove">
 
+          
 <!--
         <a id="invisiblebox2" href="biography.html"></a>
         <p id="violinProfcoverdescription"><i>....WINGS TO THE MIND....</i></p>
@@ -82,6 +116,10 @@
       </div>
 
     </div>
+
+    <script src="hamburgerbarscript.js">
+
+    </script>
 
 
   </body>
