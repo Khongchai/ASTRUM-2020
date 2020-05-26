@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 
@@ -16,11 +16,15 @@
         text-align: left;
         color: #F7F9E0;
       }
+      #spaceshuttle
+      {
+        top: 0px !important;
+      }
       #longpardiv
       {
         position: relative;
         top: -50px;
-        width: 800px;
+        width: 63%;
         height: auto;
         margin: 0 auto;
       }
@@ -43,11 +47,30 @@
        
       }
 
-      
-
     </style>
   </head>
   <body class="aboutaudiobody">
+
+  <!--hamburgerbar----------------------------------------------------------------------------------->
+  <div id="hamburger">
+    <label for="" id="hamburgerActivate">&#9776;</label>
+
+    <div id="sidebarMobile">
+        <div id="menuMobileList" >
+            <br>
+            <a href="index.html">MAIN</a>
+            <br>
+            <a href="biography.html">BIO</a>
+            <br>
+            <a href="credits.html">CREDITS</a>
+        </div>
+    </div>
+  </div>
+  <!--hamburgerbar----------------------------------------------------------------------------------->
+
+
+
+
     <h1 class="titlepagename">
       <div id="titlepagetext">
         <a href="index.html">ASTRUM</a>
@@ -66,7 +89,7 @@
       </tr>
     </table>
     <a href="index.html"><img id="logo" src="pictures/astrum logo.png" style="height: 100px; width: 100px"></a>
-    <div class="transitionbody">
+    <div class="transitionbody" id="aboutaudioTransitionBody">
 
       <div id="facebookpic" style="width: 300px; height: 300px; margin: 0 auto; position: relative; top: -50px">
         <img src="pictures/facebookpic.jpeg"  style="max-height: 100%; max-width: 100%">
@@ -137,6 +160,10 @@
 
 
     </div>
+
+    <script src="hamburgerbarscript.js">
+
+    </script>
 
 
   </body>

@@ -69,6 +69,10 @@
       margin: 0 auto;
       top: 180px;
     }
+    #sidebarMobile
+    {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
 
     #soundcheck
     {
@@ -128,6 +132,25 @@
 
   </head>
   <body >
+  <!--hamburgerbar----------------------------------------------------------------------------------->
+  <div id="hamburger">
+    <label for="" id="hamburgerActivate">&#9776;</label>
+
+    <div id="sidebarMobile">
+        <div id="menuMobileList" >
+            <br>
+            <a href="index.html">MAIN</a>
+            <br>
+            <a href="biography.html">BIO</a>
+            <br>
+            <a href="credits.html">CREDITS</a>
+        </div>
+    </div>
+  </div>
+  <!--hamburgerbar----------------------------------------------------------------------------------->
+
+
+
     <h1 class="titlepagename">
       <div id="titlepagetext">
         <a href="index.html">ASTRUM</a>
@@ -723,9 +746,8 @@
         
         document.addEventListener("DOMContentLoaded", () => 
         {
-          //if does not exist or equals true
-          
-          if ((localStorage.getItem("checkValLocal") === "true"))
+          //if does not exist or equals true  
+          if ((localStorage.getItem("checkValLocal") === "true") || !localStorage.getItem("checkValLocal"))
           {
             check = false;
             setsound(check);
@@ -888,7 +910,8 @@
         }
 
       </script>
-      <script src="slide.js"></script>    
+      <script src="slide.js"></script>  
+      <script src="hamburgerbarscript.js"></script>  
     </div>
 
 

@@ -113,15 +113,13 @@ $creamcolor: #F7F9E0;
   color: $creamcolor;
   letter-spacing: 2px;
   width: 100%;
-  
-
 
   p
   {
     margin: 0 auto;
     display: inline-block;
     
-    width: 60%;
+    width: 100%;
     letter-spacing: 3px;
     font-weight: lighter;
   }
@@ -135,6 +133,11 @@ p{
 a
 {
   @extend %removeHyperformat;
+}
+
+.forewardlastpar
+{
+  font-size: 15px;
 }
 
 .titlepagename
@@ -191,9 +194,27 @@ a
   }
 }
 
+#TheViolinistTitle
+{
+  position: relative;
+}
 
 @media only screen and (max-width: 1020px)
 {
+  .planetsinfo
+  {
+    position: relative;
+    top: 240px !important;
+  }
+  #aboutaudioTransitionBody
+  {
+    position: relative;
+    top: 66px;
+  }
+  #longpardiv
+  {
+    width: 85% !important;
+  }
   .menuDisappear
   {
     opacity: 0;
@@ -221,6 +242,11 @@ a
   {
     display: none;
   }
+  #biographyTransitionBody
+  {
+    position: relative;
+    top: 58px;
+  }
 
 
 }
@@ -241,7 +267,7 @@ a
     bottom: 0;
     right: 0;
     text-align: center;
-    z-index: 1;
+    z-index: 20;
     
 }
 #menuMobileList a
@@ -271,7 +297,7 @@ a
     top: 72px;
     color: grey;
     font-size: 40px;
-    z-index: 2;
+    z-index: 21;
     cursor: pointer;
 }
 
@@ -514,8 +540,7 @@ a
   height: 150px;
   opacity: 0.5;
   width: 150px;
-  top: -60px;
-  left: 40%;
+  top: 51px;
   margin: 10px;
   transition: opacity .4s, height .4s, width .4s, left .4s, top .4s;
   position: relative;
@@ -527,10 +552,10 @@ a
 
   &:hover
   {
-    top: -70px;
+    //top: -70px;
     height: 230px;
     width: 300px;
-    left: 40%;
+
     opacity: 1;
   }
 
@@ -569,7 +594,7 @@ a
 
 #topnavtab
 {
-  margin-right: 100px;
+  margin-right: 50px;
   margin-left: auto;
   position:relative;
   top: -130px;

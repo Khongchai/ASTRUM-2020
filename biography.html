@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 
-    <style media="screen">
+    <style media="screen" >
 
       p
       {
@@ -17,11 +17,13 @@
 
       .transitionbody
       {
-        height: 2000px;
+        height: 2400px;
 
       }
       .blackbar
       {
+        overflow-y: hidden;
+        overflow-x: hidden;
         position: relative;
         width:100%;
         height: 800px;
@@ -33,10 +35,10 @@
       .slideshowcontainer
       {
         margin: auto;
-        margin-top: 70px;
+        margin-top: 40px;
         margin-bottom: 70px;
-        width: 700px;
-        height: 600px;
+        width: 60%;
+
 
         position: relative;
       }
@@ -131,6 +133,23 @@
   </head>
   <body class="indexbody" style="position: relative">
 
+<!--hamburgerbar----------------------------------------------------------------------------------->
+<div id="hamburger">
+  <label for="" id="hamburgerActivate">&#9776;</label>
+
+  <div id="sidebarMobile">
+      <div id="menuMobileList" >
+          <br>
+          <a href="index.html">MAIN</a>
+          <br>
+          <a href="about.html">ABOUT</a>
+          <br>
+          <a href="credits.html">CREDITS</a>
+      </div>
+  </div>
+</div>
+<!--hamburgerbar----------------------------------------------------------------------------------->
+
     <!--this h1 is wrongly formatted, but too lazy to change-->
     <h1 class="titlepagename">
       <div id="titlepagediv">
@@ -154,20 +173,22 @@
     </table>
     <a href="index.html"><img id="logo" src="pictures/astrum logo.png" height="100" width="100" style="z-index: 9"></a>
 
-    <div  class="blockparallax"style="position: absolute; width: 100%; background-color: #826046; height: 320px; top: 200px; z-index: 8;">
-    </div>
 
-    <div class="transitionbody" >
-      <div  id="violinclipart"style="width: 100px; height: 100px; margin: 0 auto; z-index: 9">
-        <img src="pictures/violin.png" style="width: 100%; height: 100%">
+
+    <div class="transitionbody" id="biographyTransitionBody">
+
+      <div id="TheViolinistTitle" >
+        <div  id="violinclipart"style="width: 100px; height: 100px; margin: 0 auto; z-index: 9">
+          <img src="pictures/violin.png" style="width: 100%; height: 100%">
+        </div>
+        <h1 id="mainTitle" style="z-index:9; top: -50px">THE VIOLINIST</h1>
       </div>
-
-      <h1 id="mainTitle" style="z-index:9; top: -50px">THE VIOLINIST</h1>
+      
 
 
       <div class="blackbar">
-        <section class="movediv" data-rate="0.3" style="display: grid; top: 150px; position: relative">
-          <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: segoe ui; letter-spacing: 3px; width: 73%; margin: 0 auto; top: 30px; height: 100%; position: relative; text-align: justify; text-justify: inter-character">
+        <section class="movediv" data-rate="0.3" style="display: block; top: 150px; position: relative">
+          <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: segoe ui; letter-spacing: 3px; width: 82%; margin: 0 auto; top: 30px; height: 100%; position: relative; text-align: justify; text-justify: inter-character">
             Playing the violin since the age of 3, I have always been embalmed in music, and not a day had gone by where I thoughts have not in the slightest strayed into the realm of music. After joining the College of Music, Mahidol University in early 2012, my musical vocabulary has since then, been expanding to cover a wide variety of genres.
 
              As a player, I have performed regularly as both a violinist and violist in orchestras, chamber groups, and Jazz combos. In 2019 alone, I have performed in Bach in Bali Festival, Bali; 150 yeares Thai-Austrian Relationship concert, Vienna, Austria; Thai-Hungarian Relationship Concert, Hungary; Clazz International Music Festival, Arcidosso, Italy. My styles include Classical, Jazz, Celtic, Folk and more.
@@ -217,26 +238,24 @@
         </section>
       </div>
 
-      <div id="composertitleContainer" style="width: 100%; background: #826046; height: 320px; position: relative">
+      <div id="composertitleContainer" style="width: 100%; background: #826046; height: 320px; position: relative; top: 15px">
         <div  id="violinclipart"style="width: 200px; height: 100px; z-index: 9; position: relative; top: 60px; margin: 0 auto">
           <img src="pictures/FLStudiologo.png" style="width: 200px; height: 100%;">
         </div>
         <h1 id="mainTitle" style="z-index:9;  top: 60px">THE COMPOSER</h1>
       </div>
 
-        <div  class="blockparallax"style="position: absolute; width: 100%; background-color: #826046; height: 350px; top: 1300px; z-index: 8; ">
-        </div>
 
       <div class="blackbar">
-        <section data-rate="0.55" style="display: grid; top: 150px; position: relative">
-          <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: segoe ui; letter-spacing: 3px; width: 73%; margin: 0 auto; height: 100%; position: relative; text-justify: inter-character; text-align: justify">
+        <section data-rate="0.25" style="display: grid; top: 448px; position: relative" class="movediv">
+          <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: segoe ui; letter-spacing: 3px; width: 82%; margin: 0 auto; height: 100%; position: relative; text-justify: inter-character; text-align: justify">
         Other than being a regular player, I am also an arranger and composer. My interest spans over various genres of music: classical, jazz, traditional, electronic, film music, etc. In 2013, a year after I was admitted to the College of Music Mahidol University as a violin major, I began music composition lessons with Dr. James Ogburn, with whom I studied for a year and a half. Afterwards, my interest in performance and composition persisted and I am currently pursuing a bachelor's degree at Princess Galyani Vadhana Institute of Music. Sought after as a composer and arranger, I have collaborated throughout my many years of composing and arranging with artists from the USA, Russia, Israel, Thailand, and Germany. My latest album “Brunette” can be found on most major online stores, such as iTunes, Spotify, Google Music, and Deezer.
           </p>
 
         </section>
       </div>
 
-      <div id="spaceshuttle"  style="text-align: center ; top: 0px ">
+      <div id="spaceshuttle"  style="text-align: center;">
         <span id="spaceshuttlespan">
           <a href="aboutaudio.html">
           <img src="pictures/spaceshuttle.png" style="height: 100%; width: 100%; object-fit:contain">
@@ -320,6 +339,10 @@
 
 
 
+
+    </script>
+
+    <script src="hamburgerbarscript.js">
 
     </script>
 

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 
@@ -24,8 +24,27 @@
       top: -21px;
     }
 
+    
   </style>
   <body id="aboutbody">
+
+    <!--hamburgerbar----------------------------------------------------------------------------------->
+<div id="hamburger">
+  <label for="" id="hamburgerActivate">&#9776;</label>
+
+  <div id="sidebarMobile">
+      <div id="menuMobileList" >
+          <br>
+          <a href="index.html">MAIN</a>
+          <br>
+          <a href="biography.html">BIO</a>
+          <br>
+          <a href="credits.html">CREDITS</a>
+      </div>
+  </div>
+</div>
+<!--hamburgerbar----------------------------------------------------------------------------------->
+
 
 
     <h1 class="titlepagename">
@@ -51,20 +70,20 @@
     <div id="firstsettext" class="explaination" >
       <div style="width: 80%; margin: 0 auto; line-height: 1.4">
         <h1>FOREWORD</h1>
-        <p style="text-align: left">
+        <p class="forewardlastpar">
           Throughout the history of mankind, (insert more text from paper)
         </p>
 
         <br>
         <br>
-        <p id="forewordLastPar"style="margin: 30px; font-size: 16px">
+        <p class="forewardlastpar">
           This project can be seen as a story-telling project that leverages available tools in the 21st century to supplement the narrative. And by doing
         so, I hope to show that science and art are both ways which humans use to understand their relationship with the world.
 
         </p >
 
         <h1 >OUTCOME</h1><br>
-        <p style="margin: 30px; font-size: 16px">In the end, this project will have three final results: a 5.1 system installation, an app which people can download and experience binaurally
+        <p class="forewardlastpar">In the end, this project will have three final results: a 5.1 system installation, an app which people can download and experience binaurally
          and a fixed media; a set of 10-minute long atmospheric, spatial audio sound; a more organized and planned version of the previous two.
 
       </p>
@@ -97,6 +116,8 @@
     </div>
 
   </div>
+
+  <script src="hamburgerbarscript.js"></script>
 
 
 
