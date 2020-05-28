@@ -167,22 +167,82 @@ body
   overflow-x: hidden;
 }
 
-
-#globe
+#planetsCursorContainer
 {
-  z-index: 100;
-  border-radius: 50%;
   position: fixed;
+  //width: 300px;
+  //height: 300px;
   pointer-events: none;
-  top: 50%;
-  left: 50%;
+  z-index: 100;
+  //background: red;
+}
+#turnOffAnim
+{
+  position: absolute;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+
+#mercuryCursor
+{
+  background: url("pictures/HongPlanets/mercury.png") no-repeat center;
+  background-size: 10px, 10px;
+}
+#venusCursor
+{
+  background: url("pictures/HongPlanets/venus.png") no-repeat center;
+  background-size: 10px, 10px;
+}
+#earthCursor
+{
   background: url("pictures/HongPlanets/earth.png") no-repeat center;
-  background-size: 45px, 45px;
+  background-size: 12px, 12px;
+}
+#marsCursor
+{
+  background: url("pictures/HongPlanets/mars.png") no-repeat center;
+  background-size: 12px, 12px;
+}
+#jupiterCursor
+{
+  background: url("pictures/HongPlanets/Jupiter.png") no-repeat center;
+  background-size: 20px, 20px;
+}
+
+
+#saturnCursor
+{
+  background: url("pictures/HongPlanets/saturn.png") no-repeat center;
+  background-size: 15px, 15px;
+}
+
+#uranusCursor
+{
+  background: url("pictures/HongPlanets/uranus.png") no-repeat center;
+  background-size: 25px, 25px;
+}
+#neptuneCursor
+{
+  background: url("pictures/HongPlanets/neptune.png") no-repeat center;
+  background-size: 14px, 14px;
+}
+
+.planetsCursor
+{
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+
 }
 
 .pulseanim
 {
-    animation: pulsating 1.9s infinite;
+  opacity: 1;
+  width: 1em;
+  height: 1em;
+    //animation: pulsating 1.9s infinite;
 }
 
 @keyframes pulsating
@@ -257,6 +317,10 @@ body
 
 @media only screen and (max-width: 1020px)
 {
+  #planetsCursorContainer
+  {
+    display: none;
+  }
   .planetsinfo
   {
     position: relative;
