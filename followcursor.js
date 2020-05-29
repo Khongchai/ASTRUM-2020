@@ -1,4 +1,4 @@
-var system = document.querySelector("#planetsCursorContainer");
+var system = document.querySelectorAll(".planetsCursorContainer");
 var planets = document.querySelectorAll(".planetsCursor");
 var onOffButton = document.querySelector("#turnOffAnim");
 
@@ -40,9 +40,14 @@ for (var i = 0; i < planets.length; i++)
 
 
 var curmouse = {x: 0, y: 0};
-var lastmouse  = {x: 0, y: 0};
-var difference = {x: 0, y: 0}
 
+var lastmouse = new Array(3);
+var difference = new Array(3);
+for (var i = 0; i < planets.length; i++)
+{
+    lastmouse[i]  = {x: 0, y: 0};
+    difference[i] = {x: 0, y: 0};
+}
 
 
 
@@ -58,18 +63,24 @@ document.addEventListener("DOMContentLoaded", () =>
 
     
     var animStat = localStorage.getItem("AnimStat");
+
     if (animStat === "off")
     {
         onOffButton.innerHTML = "ANIMATION: OFF";
-        $("#planetsCursorContainer").hide();
+        for (planet of system)
+        {
+            $(planet).hide();
+        }
+        
     }
     else if (!animStat || animStat ==="on")
     {
         onOffButton.innerHTML = "ANIMATION: ON";
-        $("#planetsCursorContainer").show();
+        for (planet of system)
+        {
+            $(planet).show();
+        }
     }
-    
-
     if (prevX != 0 && prevY != 0)
     {
         
@@ -77,24 +88,39 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             $(planet).addClass("pulseanim");   
         }
-        $(system).css({left: prevX, top: prevY});
+        for (planet of system)
+        {
+            $(planet).css({left: prevX, top: prevY});
+        }
+        
     }
 
     onOffButton.onclick = () => 
     {
+
         if (onOffButton.innerHTML === "ANIMATION: ON")
         {
             onOffButton.innerHTML = "ANIMATION: OFF";
             localStorage.setItem("AnimStat", "off");
-            $("#planetsCursorContainer").hide();
+            
+            for (planet of system)
+            {
+                $(planet).hide();
+            }
         }
         else
         {
             onOffButton.innerHTML = "ANIMATION: ON";
             localStorage.setItem("AnimStat", "on");
-            $("#planetsCursorContainer").show();;
+
+            for (planet of system)
+            {
+                $(planet).show();
+            }
 
         }
+
+       
     
     }
     
@@ -112,8 +138,12 @@ $(document).mousemove(function(e)
             $(planet).addClass("pulseanim");   
         }
 
-        lastmouse.x = e.clientX;
-        lastmouse.y = e.clientY;
+        for (obj of lastmouse)
+        {
+            obj.x = e.clientX;
+            obj.y = e.clientY;
+        }
+        
     }
 
     curmouse.x = e.clientX;
@@ -126,25 +156,30 @@ function mousetrack()
 {
     requestAnimationFrame(mousetrack);
 
+    var speedDif = 0.070;
 
     //drag effect
     //mousetrack 1
-    difference.x = (curmouse.x - lastmouse.x) * 0.050;
-    difference.y = (curmouse.y - lastmouse.y) * 0.050;
-
-    lastmouse.x += difference.x;
-    lastmouse.y += difference.y;
-
-
-    //mouse track
-    if(lastmouse.x != 0 && lastmouse.y != 0)
+    for (var i = 0; i < planets.length; i++)
     {
-        $(system).css({left: lastmouse.x, top:lastmouse.y});
-        localStorage.setItem("mouseX", lastmouse.x);
-        localStorage.setItem("mouseY", lastmouse.y);
-    }  
-}
+        difference[i].x = (curmouse.x - lastmouse[i].x) * speedDif;
+        difference[i].y = (curmouse.y - lastmouse[i].y) * speedDif;
+        lastmouse[i].x += difference[i].x;
+        lastmouse[i].y += difference[i].y;
+        console.log(difference[i].x);
+        speedDif -= 0.020;
 
+        //mouse track -- if mouse has been moved; location no longer equals to 0; starting point
+        if(lastmouse[i].x != 0 && lastmouse[i].y != 0)
+        {
+            $(system[i]).css({left: lastmouse[i].x, top:lastmouse[i].y});
+            localStorage.setItem("mouseX", curmouse.x);
+            localStorage.setItem("mouseY", curmouse.y);
+        }  
+    }
+
+    
+}
 
 
 function initOrbit()
