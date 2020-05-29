@@ -7,25 +7,25 @@ var onOffButton = document.querySelector("#turnOffAnim");
 var planetObj = [
     {
         //1 
-        "velocity": 0.04,
+        "velocity": 0.06,
         "x": -5,
-        "y": 28,
+        "y": 38,
         "radians": 0,
         "size": 1.1
         
     },
     {
         //2 
-        "velocity": 0.03,
+        "velocity": 0.05,
         "x": -3,
-        "y": 10,
+        "y": 24,
         "radians": 0,
         "size": 1.55
     },
     {   //3
-        "velocity": 0.02,
+        "velocity": 0.04,
         "x": -1,
-        "y": -10,
+        "y": 15,
         "radians": 0,
         "size": 1.7
         
@@ -156,7 +156,7 @@ function mousetrack()
 {
     requestAnimationFrame(mousetrack);
 
-    var speedDif = 0.070;
+    var speedDif = 0.09;
 
     //drag effect
     //mousetrack 1
@@ -167,7 +167,7 @@ function mousetrack()
         lastmouse[i].x += difference[i].x;
         lastmouse[i].y += difference[i].y;
         console.log(difference[i].x);
-        speedDif -= 0.020;
+        speedDif -= 0.024;
 
         //mouse track -- if mouse has been moved; location no longer equals to 0; starting point
         if(lastmouse[i].x != 0 && lastmouse[i].y != 0)

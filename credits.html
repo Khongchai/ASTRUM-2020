@@ -7,6 +7,20 @@
     <title>ASTRUM</title>
     <style media="screen"> 
 
+
+    .fullName
+    {
+      margin: 0 auto;
+    }
+    p
+    {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 3px;
+      font-weight: lighter;
+      color:#F7F9E0;
+      font-size: 16px;
+      position: relative;
+    }
     footer
     {
         width: 100%;
@@ -44,11 +58,11 @@
     .prof
     {
         height: 100%;
-        background-color: red;
-        display: inline-flex;
+        display: inline-block;
         width: 300px;
-        margin: 30px;
+        margin-right: 50px;
         position: relative;
+        margin-top: 30px;
     }
     @media only screen and (max-width: 1020px)
     {
@@ -56,6 +70,25 @@
       {
         top: 63px !important;
       }
+    }
+    .circForPeople
+    {
+      position: relative;
+      margin: 0 auto;
+      display: block;
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      background-color: black;
+    }
+    .textContainer
+    {
+      display: block;
+      position: absolute;
+      text-align: center;
+      margin-top: 20px;
+      width: 100%;
+
     }
 
 
@@ -103,7 +136,6 @@
       <p id="subtitle" >Where music meets science <br><span id="turnOffAnim">ANIMATION: ON</span></p>
     </div>
 
-
     <table id="topnavtab" class="menuDisappear">
       <tr>
         <th class="tableheader"><a href="index.html">Main</a></th>
@@ -118,10 +150,60 @@
     <div id="indexsubbody"class="transitionbody" style="position: relative;">
           
         <div id="mainSection">
-            <div class="prof"id="Khong">1</div>
-            <div class="prof" id="JD">2</div>
-            <div class="prof"id="Lourna">3</div>
-            <div class="prof"id="Hong">4</div>
+            <div class="prof"id="Khong">
+              <div class="circForPeople">
+
+              </div>
+
+              <div class="textContainer">
+                <p class="fullName">
+                  Khongchai Greesuradej
+                </p>
+              </div>     
+            </div>
+
+            <div class="prof"id="JD">
+              <div class="circForPeople">
+
+              </div>
+
+              <div class="textContainer">
+                <p class="fullName">
+                  Jean-David Caillouët
+                </p>
+              </div>     
+            </div>
+
+
+            <div class="prof"id="Lourna">
+              <div class="circForPeople">
+
+              </div>
+
+              <div class="textContainer">
+                <p class="fullName">
+                  Lourna Myrdes Quinto
+                </p>
+              </div>     
+            </div>
+
+
+
+            <div class="prof"id="Hong">
+              <div class="circForPeople">
+
+              </div>
+
+              <div class="textContainer">
+                <p class="fullName">
+                  Chanita Pholudom
+                </p>
+              </div>     
+            </div>
+
+
+
+
         </div>
 
         <footer>
