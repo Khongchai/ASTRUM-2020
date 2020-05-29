@@ -6,64 +6,31 @@ var onOffButton = document.querySelector("#turnOffAnim");
 //planet object
 var planetObj = [
     {
-        //1 - Mercury
-        "velocity": 0.15,
+        //1 
+        "velocity": 0.04,
         "x": -5,
         "y": 28,
         "radians": 0,
-        "size": 3
+        "size": 1.1
         
     },
     {
-        //2 - Venus
-        "velocity": 0.11,
-        "x": -5,
-        "y": 20,
-        "radians": 0,
-        "size": 3
-    },
-    {   //3 - Earth
-        "velocity": 0.07,
-        "x": -10,
+        //2 
+        "velocity": 0.03,
+        "x": -3,
         "y": 10,
         "radians": 0,
-        "size": 3
+        "size": 1.55
     },
-    {   //4 - Mars
-        "velocity": 0.05,
-        "x": 0,
-        "y": 0,
+    {   //3
+        "velocity": 0.02,
+        "x": -1,
+        "y": -10,
         "radians": 0,
-        "size": 3
-    },
-    {   //5 - Jupiter
-        "velocity": 0.04,
-        "x": 0,
-        "y": -20,
-        "radians": 0,
-        "size": 4
-    },
-    {   //6 - Saturn
-        "velocity": 0.03,
-        "x": 0,
-        "y": -50,
-        "radians": 0,
-        "size": 4
-    },
-    {   //7 - Uranus
-        "velocity": 0.025,
-        "x": 0,
-        "y": -86,
-        "radians": 0,
-        "size": 4
-    },
-    {   //8 - Neptune
-        "velocity": 0.015,
-        "x": 0,
-        "y": -180,
-        "radians": 0,
-        "size": 4
+        "size": 1.7
+        
     }
+
 ];
 for (var i = 0; i < planets.length; i++)
 {
@@ -161,7 +128,7 @@ function mousetrack()
 
 
     //drag effect
-    //after everything is finished implement different drag speed or different planets too
+    //mousetrack 1
     difference.x = (curmouse.x - lastmouse.x) * 0.050;
     difference.y = (curmouse.y - lastmouse.y) * 0.050;
 
