@@ -48,21 +48,24 @@
     body
     {
         overflow-y: scroll;
-        height: 1000px !important;
+        height: 100vh !important;
     }
     .transitionbody
     {
         bottom: 100px;
-        height: 900px;
+
     }
     .prof
     {
-        height: 100%;
+
+        height: 370px;
+        text-align: center;
         display: inline-block;
-        width: 300px;
+        width: 320px;
         margin-right: 50px;
         position: relative;
         margin-top: 30px;
+        perspective: 1000px;
     }
     @media only screen and (max-width: 1020px)
     {
@@ -71,16 +74,22 @@
         top: 63px !important;
       }
     }
-    .circForPeople
+    .circMainClass
     {
-      position: relative;
-      margin: 0 auto;
-      display: block;
+      position: absolute;
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
-      background-color: black;
+      height: 300px;
+      width: 300px;
+      overflow: hidden;
+      left: 3%;
     }
+    .photos
+    {
+      width: 100%;
+      position: relative;
+      
+    }
+
     .textContainer
     {
       display: block;
@@ -88,7 +97,45 @@
       text-align: center;
       margin-top: 20px;
       width: 100%;
+    }
+    .forFlip
+    {
+      margin-left: 12px;
+      position: relative;
+      height: 300px;
+      transition: transform .9s, opacity .1s;
+      transform-style: preserve-3d;
+    }
 
+    #Khong:hover #flipKhong
+    {
+      transform: rotateY(180deg);
+      
+    }
+    #Lourna:hover #flipLourna
+    {
+      transform: rotateY(180deg);
+
+    }
+    #Hong:hover #flipHong
+    {
+      transform: rotateY(180deg);
+
+    }
+    #JD:hover #flipJD
+    {
+      transform: rotateY(180deg);
+    }
+    .circForDescBack
+    {
+      transform: rotateY(180deg);
+      opacity: 0;
+      background-color: #F7F9E0;
+      
+    }
+    .roleText
+    {
+      color: #826046;
     }
 
 
@@ -150,11 +197,29 @@
     <div id="indexsubbody"class="transitionbody" style="position: relative;">
           
         <div id="mainSection">
+
             <div class="prof"id="Khong">
-              <div class="circForPeople">
-
+              <div class="forFlip" id="flipKhong">
+                <div class="circMainClass circForPeople" >
+                  <img class="photos" src="pictures/peoplePhotos/Khong.jpg" >
+                </div>
+                <div class="circMainClass circForDescBack" id="khongBack">
+                  <p class="roleText">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    Performer
+                    <br>
+                    <br>
+                    Composer
+                    <br>
+                    <br>
+                    Developer
+                  </p>
+                </div>
               </div>
-
               <div class="textContainer">
                 <p class="fullName">
                   Khongchai Greesuradej
@@ -162,45 +227,92 @@
               </div>     
             </div>
 
+            <!------------------------------------------------------------------------------------------------>
             <div class="prof"id="JD">
-              <div class="circForPeople">
+              <div class="forFlip" id="flipJD">
+                <div class="circMainClass circForPeople" >
+                  <img class="photos" src="pictures/peoplePhotos/JD.jpg" style="width: 200%">
+                </div>
+                <div class="circMainClass circForDescBack" id="jdBack">
+                  <p class="roleText">
+                    <br>
+                    <br>
+                    <br>
+                    <br>   
+                    <br>   
+                    Instructor
+                    <br>
+                    <br>
+                    Advisor
+                    <br>
+                    <br>
+                    <br>
+                  </p>
 
+                </div>
               </div>
-
               <div class="textContainer">
                 <p class="fullName">
                   Jean-David Caillouët
                 </p>
               </div>     
             </div>
-
+            <!------------------------------------------------------------------------------------------------>
 
             <div class="prof"id="Lourna">
-              <div class="circForPeople">
+              <div class="forFlip" id="flipLourna">
+                <div class="circMainClass circForPeople" >
+                  <img class="photos" src="pictures/peoplePhotos/Lourna.jpg" style="position: relative; top: -125px">
+                </div>
+                <div class="circMainClass circForDescBack" id="lournaBack">
+                  <p class="roleText" style="font-size: 18px;">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Story Writer
+                    <br>
+                    <br>
+                    <br>
+                  </p>
 
+                </div>
               </div>
-
               <div class="textContainer">
                 <p class="fullName">
                   Lourna Myrdes Quinto
                 </p>
               </div>     
             </div>
-
-
+            <!------------------------------------------------------------------------------------------------>
 
             <div class="prof"id="Hong">
-              <div class="circForPeople">
+              <div class="forFlip" id="flipHong">
+                <div class="circMainClass circForPeople" >
+                  <img class="photos" src="pictures/peoplePhotos/Hong.jpg" >
+                </div>
+                <div class="circMainClass circForDescBack" id="hongBack">
+                  <p class="roleText" style="font-size: 18px;">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Art Assets Designer
+                    <br>
+                    <br>
+                    <br>
+                  </p>
 
+                </div>
               </div>
-
               <div class="textContainer">
                 <p class="fullName">
                   Chanita Pholudom
                 </p>
               </div>     
             </div>
-
 
 
 
@@ -219,4 +331,17 @@
 
     
   </body>
+  <script type="text/javascript">
+    $("#Khong").mouseover(() => {setTimeout(() => {$("#khongBack").css({opacity: 1});}, 200)})
+    $("#Khong").mouseleave(() => {setTimeout(() => {$("#khongBack").css({opacity: 0});}, 360)})
+
+    $("#JD").mouseover(() => {setTimeout(() => {$("#jdBack").css({opacity: 1});}, 200)})
+    $("#JD").mouseleave(() => {setTimeout(() => {$("#jdBack").css({opacity: 0});}, 360)})
+
+    $("#Lourna").mouseover(() => {setTimeout(() => {$("#lournaBack").css({opacity: 1});}, 200)})
+    $("#Lourna").mouseleave(() => {setTimeout(() => {$("#lournaBack").css({opacity: 0});}, 360)})
+
+    $("#Hong").mouseover(() => {setTimeout(() => {$("#hongBack").css({opacity: 1});}, 200)})
+    $("#Hong").mouseleave(() => {setTimeout(() => {$("#hongBack").css({opacity: 0});}, 360)})
+  </script>
 </html>

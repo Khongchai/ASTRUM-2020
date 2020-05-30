@@ -37,10 +37,24 @@
         margin: auto;
         margin-top: 40px;
         margin-bottom: 70px;
-        width: 60%;
-
-
+        width: 45%;
         position: relative;
+      }
+      @media only screen and (max-width: 1020px)
+      {
+        .slideshowcontainer
+        {
+          width: 60%;
+        }
+      }
+
+      /*for screens wider than 1080p*/
+      @media only screen and (min-width: 1081px)
+      {   
+        .slideshowcontainer
+        {
+          width: 800px;
+        }
       }
 
       .img
@@ -208,34 +222,35 @@
              As a player, I have performed regularly as both a violinist and violist in orchestras, chamber groups, and Jazz combos. In 2019 alone, I have performed in Bach in Bali Festival, Bali; 150 yeares Thai-Austrian Relationship concert, Vienna, Austria; Thai-Hungarian Relationship Concert, Hungary; Clazz International Music Festival, Arcidosso, Italy. My styles include Classical, Jazz, Celtic, Folk and more.
           </p>
 
-          <div class="slideshowcontainer" style="z-index: 8">
+          <div style="width: 100%; position: relative">
+            <div class="slideshowcontainer" style="z-index: 8">
 
-            <div class="mySlides fade">
-              <img src="pictures/violinpic.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="pictures/clazz2.webp" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="pictures/clazz3.webp" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="pictures/bachinbali1.webp" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="pictures/viola.webp" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="pictures/gypsyjazz.webp" style="width:100%">
-            </div>
-
-            <div>
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <div class="mySlides fade">
+                <img src="pictures/violinpic.jpg" style="width:100%">
+              </div>
+  
+              <div class="mySlides fade">
+                <img src="pictures/clazz2.webp" style="width:100%">
+              </div>
+  
+              <div class="mySlides fade">
+                <img src="pictures/clazz3.webp" style="width:100%">
+              </div>
+  
+              <div class="mySlides fade">
+                <img src="pictures/bachinbali1.webp" style="width:100%">
+              </div>
+  
+              <div class="mySlides fade">
+                <img src="pictures/viola.webp" style="width:100%">
+              </div>
+  
+              <div class="mySlides fade">
+                <img src="pictures/gypsyjazz.webp" style="width:100%">
+              </div>
+  
+              <div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
@@ -247,6 +262,11 @@
               <span class="dot" onclick="currentSlide(5)"></span>
               <span class="dot" onclick="currentSlide(6)"></span>
             </div>
+
+          </div>
+          
+              
+            
           </div>
 
         </section>

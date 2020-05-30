@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 $(document).mousemove(function(e)
 {
+    //for restoring value on load
     if (!curmouse.x && !curmouse.y)
     {
         for (planet of planets)
