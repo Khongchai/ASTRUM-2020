@@ -119,7 +119,7 @@ body {
 .planetsCursorContainer {
   position: fixed;
   pointer-events: none;
-  z-index: 100;
+  z-index: 600;
 }
 
 #turnOffAnim {
@@ -604,6 +604,7 @@ body {
 }
 
 .firstpagecover {
+  position: relative;
   display: inline-block;
 }
 

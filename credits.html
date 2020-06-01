@@ -21,17 +21,8 @@
       font-size: 16px;
       position: relative;
     }
-    footer
-    {
-        width: 100%;
-        background-color: #F7F9E0;
-        position: fixed;
-        bottom: 0;
-        opacity: 0.75;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: lighter;
-        letter-spacing: 3px;
-    }
+
+
 
     #mainSection
     {
@@ -57,14 +48,12 @@
     }
     .prof
     {
-
         height: 370px;
         text-align: center;
         display: inline-block;
         width: 320px;
-        margin-right: 50px;
         position: relative;
-        margin-top: 30px;
+        margin: 40px;
         perspective: 1000px;
     }
     @media only screen and (max-width: 1020px)
@@ -73,15 +62,31 @@
       {
         top: 63px !important;
       }
+      #footerDiv p
+      {
+
+        font-size: 16px !important;
+        margin-left: 50px;
+      }
+      #specialThanks
+      {
+        font-size: 20px !important;
+
+      }
+      #footerDiv
+      {
+        text-align: left;
+      }
     }
     .circMainClass
     {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       position: absolute;
       border-radius: 50%;
       height: 300px;
       width: 300px;
       overflow: hidden;
-      left: 3%;
+
     }
     .photos
     {
@@ -106,6 +111,17 @@
       transition: transform .9s, opacity .1s;
       transform-style: preserve-3d;
     }
+    #footerDiv
+    {
+      margin-bottom: 60px;
+      position: relative;
+      margin-top: 60px;
+      font-style: italic;
+    }
+    #footerDiv p
+    {
+      font-size: 16px;
+    }
 
     #Khong:hover #flipKhong
     {
@@ -129,7 +145,6 @@
     .circForDescBack
     {
       transform: rotateY(180deg);
-      opacity: 0;
       background-color: #F7F9E0;
       
     }
@@ -318,9 +333,13 @@
 
         </div>
 
-        <footer>
-            <p>Special thanks to: </p>
-        </footer>
+        <div id="footerDiv">
+            <p><span id="specialThanks" style="font-size: 25px; font-weight: bold">Special thanks to:</span> <br><br>
+            Mom and dad<br><br>
+            My girlfriend Iris<br><br>
+            My friend Alek
+          </p>
+        </div>
 
     </div>
     
@@ -332,6 +351,7 @@
     
   </body>
   <script type="text/javascript">
+  /*
     $("#Khong").mouseover(() => {setTimeout(() => {$("#khongBack").css({opacity: 1});}, 200)})
     $("#Khong").mouseleave(() => {setTimeout(() => {$("#khongBack").css({opacity: 0});}, 360)})
 
@@ -343,5 +363,6 @@
 
     $("#Hong").mouseover(() => {setTimeout(() => {$("#hongBack").css({opacity: 1});}, 200)})
     $("#Hong").mouseleave(() => {setTimeout(() => {$("#hongBack").css({opacity: 0});}, 360)})
+    */
   </script>
 </html>

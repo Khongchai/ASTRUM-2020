@@ -24,6 +24,7 @@ $creamcolor: #F7F9E0;
 
 @media only screen and (max-width: 1245px)
   {
+
     .firstpagecover
     {
       display: block !important;
@@ -52,6 +53,7 @@ $creamcolor: #F7F9E0;
       width: 100% !important;
       background: url(pictures/clazz3Blurred.png);
     }
+
 
   }
 
@@ -173,7 +175,7 @@ body
   //width: 300px;
   //height: 300px;
   pointer-events: none;
-  z-index: 100;
+  z-index: 600;
   //background: red;
 }
 #turnOffAnim
@@ -770,7 +772,9 @@ body
 
 .firstpagecover
 {
+  position: relative;
   display: inline-block;
+
 }
 
 .indexbody{
