@@ -302,7 +302,7 @@ body {
   bottom: 0;
   right: 0;
   text-align: center;
-  z-index: 20;
+  z-index: 601;
 }
 
 #menuMobileList a {
@@ -329,7 +329,7 @@ body {
   top: 72px;
   color: grey;
   font-size: 40px;
-  z-index: 21;
+  z-index: 602;
   cursor: pointer;
 }
 
