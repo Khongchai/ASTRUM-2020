@@ -41,8 +41,8 @@ for (var i = 0; i < planets.length; i++)
 
 var curmouse = {x: 0, y: 0};
 
-var lastmouse = new Array(3);
-var difference = new Array(3);
+var lastmouse = new Array(planets.length);
+var difference = new Array(planets.length);
 for (var i = 0; i < planets.length; i++)
 {
     lastmouse[i]  = {x: 0, y: 0};

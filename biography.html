@@ -40,11 +40,15 @@
         width: 45%;
         position: relative;
       }
-      @media only screen and (max-width: 1020px)
+      @media only screen and (max-width: 850px)
       {
         .slideshowcontainer
         {
           width: 60%;
+        }
+        #secondblackbar
+        {
+          height: 1000px;
         }
       }
 
@@ -54,6 +58,14 @@
         .slideshowcontainer
         {
           width: 800px;
+        }
+      }
+      @media only screen and (max-width: 400px)
+      {
+        #albumPortal
+        {
+          width: 300px !important;
+          height: 300px !important;
         }
       }
 
@@ -142,6 +154,64 @@
         position: relative;
         color:#F7F9E0;
       }
+      .youtubePortal
+      {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 50px;
+        text-align: center;
+        perspective: 1000px;
+
+        /*
+        background-color: red;
+        opacity: 0.5;
+        */
+      }
+
+      #albumPortal
+      {
+        background-image: url(pictures/albumcover.jpg);
+        width: 400px;
+        height: 400px;
+        background-size: auto 100%;
+        display: inline-block;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateY(-40deg);   
+        transition: transform .5s;   
+      }
+      #albumPortal::after
+      {
+        background-size: cover;
+        content: "";
+        background-position: bottom;
+        background-image: inherit;
+        width: inherit;
+        display: block;
+        height: 50%;
+        position: absolute;
+        bottom: -51%;
+        transform: scaleY(-1);
+        opacity: 0.7;
+      }
+      #albumPortal::before
+      {
+        content: "";
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6),black);
+        width: inherit;
+        display: block;
+        height: 52%;
+        position: absolute;
+        bottom: -52%;
+        z-index: 1;
+      }
+      #albumPortal:hover
+      {
+        transform: rotateY(0deg);
+      }
+      
+
     </style>
 
   </head>
@@ -280,22 +350,31 @@
       </div>
 
 
-      <div class="blackbar">
+      <div class="blackbar" id="secondblackbar">
         <section data-rate="0.25" style="display: grid; top: 448px; position: relative" class="movediv">
           <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: segoe ui; letter-spacing: 3px; width: 82%; margin: 0 auto; height: 100%; position: relative; text-justify: inter-character; text-align: justify">
-        Other than being a regular player, I am also an arranger and composer. My interest spans over various genres of music: classical, jazz, traditional, electronic, film music, etc. In 2013, a year after I was admitted to the College of Music Mahidol University as a violin major, I began music composition lessons with Dr. James Ogburn, with whom I studied for a year and a half. Afterwards, my interest in performance and composition persisted and I am currently pursuing a bachelor's degree at Princess Galyani Vadhana Institute of Music. Sought after as a composer and arranger, I have collaborated throughout my many years of composing and arranging with artists from the USA, Russia, Israel, Thailand, and Germany. My latest album “Brunette” can be found on most major online stores, such as iTunes, Spotify, Google Music, and Deezer.
+        Other than being a regular player, I am also an arranger and composer. My interest spans over various genres of music: classical, 
+        jazz, traditional, electronic, film music, etc. In 2013, a year after I was admitted to the College of Music Mahidol University as a violin major, 
+        I began music composition lessons with Dr. James Ogburn, with whom I studied for a year and a half. Afterwards, my interest in performance and composition 
+        persisted and I am currently pursuing a bachelor's degree at Princess Galyani Vadhana Institute of Music. Sought after as a composer and arranger, 
+        I have collaborated throughout my many years of composing and arranging with artists from the USA, Russia, Israel, Thailand, and Germany. 
+        My latest album “Brunette” can be found on most major online stores, such as iTunes, Spotify, Google Music, and Deezer. Most of my newly finished
+        compositions are uploaded to my <a style="color: #F7F9E0; text-decoration: underline;"href="https://www.youtube.com/user/Alphaplz" target="_blank">YouTube</a> channel right after completion.
           </p>
 
+          <div class="youtubePortal">
+
+            <a href="https://open.spotify.com/artist/25znyDCY8EmPkMAT5g4oPw" target="_blank">
+              <div id="albumPortal">
+  
+              </div>
+            </a>
+          </div>
         </section>
+
+        
       </div>
 
-      <div id="spaceshuttle"  style="text-align: center;">
-        <span id="spaceshuttlespan">
-          <a href="aboutaudio.html">
-          <img src="pictures/spaceshuttle.png" style="height: 100%; width: 100%; object-fit:contain">
-          </a>
-        </span>
-      </div>
 
     </div>
 
@@ -370,6 +449,7 @@
         //concatenate class name, resulting in being a member of 2 classes
         dots[slideIndex-1].className += " active";
       }
+
 
 
 

@@ -14,7 +14,11 @@ a {
   z-index: 50;
 }
 
-@media only screen and (max-width: 1245px) {
+@media only screen and (max-width: 850px) {
+  .ASTRUMprojectText {
+    display: none;
+  }
+
   .firstpagecover {
     display: block !important;
     clip-path: inset(0px 0px 0px 0px) !important;
@@ -238,7 +242,7 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 850px) {
   .planetsCursorContainer {
     opacity: 0;
   }
@@ -677,7 +681,7 @@ body {
 }
 
 #violinProfcover {
-  clip-path: inset(0px 30px 10px 200px);
+  clip-path: inset(0px 110px 0px 110px);
   box-shadow: 10px 10px 5px grey;
   height: 400px;
   opacity: 0.3;
