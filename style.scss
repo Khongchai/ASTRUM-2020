@@ -20,11 +20,65 @@ $creamcolor: #F7F9E0;
   z-index: 50;
 }
 
+#planetDecorI
+{
+  width: 300px;
+  height: 300px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/saturn.png);
+  position: absolute;
+  opacity: 0.2;
+  top: 400px;
+}
+#planetDecorII
+{
+  width: 500px;
+  height: 500px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/uranus.png);
+  position: absolute;
+  opacity: 0.2;
+  left: 1000px;
+  top: 700px;
+  z-index: 3;
+}
+#planetDecorIII
+{
+  width: 100px;
+  height: 100px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/neptune.png);
+  position: absolute;
+  opacity: 0.15;
+  left: 1000px;
+  top: 200px;
+  z-index: 2;
+}
+#planetDecorIV
+{
+  width: 50px;
+  height: 50px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/2.png);
+  position: absolute;
+  opacity: 0.15;
+  left: 400px;
+  top: 100px;
+  z-index: 2;
+}
+.planetsDecorContainer
+{
+  position: fixed;
+}
+
 
 
 @media only screen and (max-width: 850px)
   {
-
+    #divformove
+    {
+      top: 0 !important;
+    }
     .ASTRUMprojectText
     {
       display: none;
@@ -737,6 +791,7 @@ body
   margin-bottom: 10;
   margin-top: 0;
   padding: 0;
+  z-index: 5
 
 }
 
@@ -772,6 +827,7 @@ body
 
 #divformove
 {
+  top: -50px;
   text-align: center;
 }
 
