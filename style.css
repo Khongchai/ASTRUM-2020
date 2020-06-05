@@ -14,6 +14,10 @@ a {
   z-index: 50;
 }
 
+.planetDecors {
+  position: relative;
+}
+
 #planetDecorI {
   width: 300px;
   height: 300px;
@@ -29,21 +33,20 @@ a {
   height: 500px;
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/uranus.png);
-  position: absolute;
   opacity: 0.2;
-  left: 1000px;
+  float: right;
   top: 700px;
   z-index: 3;
 }
 
 #planetDecorIII {
+  float: right;
   width: 100px;
   height: 100px;
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/neptune.png);
-  position: absolute;
   opacity: 0.15;
-  left: 1000px;
+  left: -500px;
   top: 200px;
   z-index: 2;
 }
@@ -53,7 +56,6 @@ a {
   height: 50px;
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/2.png);
-  position: absolute;
   opacity: 0.15;
   left: 400px;
   top: 100px;
@@ -61,10 +63,16 @@ a {
 }
 
 .planetsDecorContainer {
+  width: 100%;
   position: fixed;
 }
 
 @media only screen and (max-width: 850px) {
+  #pathText {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
   #divformove {
     top: 0 !important;
   }
@@ -107,6 +115,14 @@ a {
   position: absolute;
   height: 30px;
   top: auto;
+}
+
+#pathsContainer {
+  position: relative;
+  margin-top: 70px;
+  width: 80%;
+  margin: 0 auto;
+  height: 370px;
 }
 
 #albumcoverdescriptiondiv {
@@ -429,7 +445,6 @@ body {
 
 #planetlink1 {
   text-align: center;
-  display: inline-block;
   height: 150px;
   opacity: 0.5;
   width: 130px;
@@ -442,8 +457,8 @@ body {
   transition: opacity 0.4s;
 }
 #planetlink1:hover {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   opacity: 1;
 }
 #planetlink1:hover > #planet1span {
@@ -451,7 +466,6 @@ body {
 }
 
 #planetlink2 {
-  display: inline-block;
   height: 150px;
   opacity: 0.5;
   width: 150px;
@@ -464,8 +478,8 @@ body {
   transition: opacity 0.4s;
 }
 #planetlink2:hover {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   opacity: 1;
 }
 #planetlink2:hover > #planet2span {
@@ -514,11 +528,14 @@ body {
   text-align: center;
 }
 
+.planetLinks {
+  display: block;
+}
+
 .imagelinks {
   width: 100%;
   text-align: center;
   position: relative;
-  top: -50px;
 }
 
 #Venus {
@@ -659,7 +676,6 @@ body {
 }
 
 #divformove {
-  top: -50px;
   text-align: center;
 }
 
@@ -703,6 +719,7 @@ body {
   background-color: #826046;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-bottom: 50px;
 }
 
 #concertcover {

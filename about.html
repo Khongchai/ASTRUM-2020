@@ -59,25 +59,25 @@
 
 
   <div class="planetsDecorContainer" data-rate="0.5">
-    <div id="planetDecorI" >
+    <div id="planetDecorI" class="planetDecors">
 
     </div>
   </div>
 
   <div class="planetsDecorContainer" data-rate="0.7">
-    <div id="planetDecorII" >
+    <div id="planetDecorII" class="planetDecors">
 
     </div>
   </div>
 
   <div class="planetsDecorContainer" data-rate="0.35">
-    <div id="planetDecorIII" >
+    <div id="planetDecorIII" class="planetDecors">
 
     </div>
   </div>
 
   <div class="planetsDecorContainer" data-rate="0.25">
-    <div id="planetDecorIV" >
+    <div id="planetDecorIV" class="planetDecors">
 
     </div>
   </div>
@@ -166,20 +166,41 @@
     <br>
 
     </div>
-    <div class="imagelinks">
-      <div id="planetlink1" class="">
-            <span id="planet1span">
-              <a href="aboutaudio.html">
-              <img src="pictures/planet4.png" style="height: 100%; width: 100%; object-fit:contain">
-            </span>
-      </div>
 
-      <div id="planetlink2" class="">
+    <div id="pathsContainer">
+      <div style="width: 50%; position: absolute; top: 50%; transform: translateY(-100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 3px; color: #F7F9E0;">
+        <h2 id="pathText"style="position: relative; float: right; margin-right: 20px"> 
+        Choose your path: 
+      </h2>
+      </div>
+      
+      <div id="linksContainer" style="position: absolute; left: 50%; width: 50%; height: 100%;">
+        <div id="firstPathContainer" style="position: relative; display: block; height: 50%;" >
+          <div class="imagelinks">
+            <div id="planetlink1" class="planetLinks"onmouseover="changeText('Explore surround audio with an interactive android application')" onmouseout="changeText('Choose your path:')">
+                  <span id="planet1span">
+                    <a href="aboutaudio.html">
+                    <img src="pictures/planet4.png" style="height: 100%; width: 100%; object-fit:contain">
+                  </span>
+            </div>
+          </div>
+        <div>
+  
+        </div id=secondPathContainer>
+          <div id="planetlink2" class="planetLinks" onmouseover="changeText('Journey through the solar system on your web browser')" onmouseout="changeText('Choose your path:')">
             <span id="planet2span">
               <a href="listen.html">
               <img src="pictures/planet5.png" style="height: 100%; width: 100%; object-fit:contain">
             </span>
+          </div>
+        </div>
+
       </div>
+      
+
+   
+
 
 
 
@@ -191,6 +212,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="followcursor.js"></script>
   <script src="scrollForPlanets.js"></script>
+  <script>
+
+    function changeText(newText)
+    {
+      $("#pathText").html(newText);
+    }
+  </script>
 
 
   </body>
