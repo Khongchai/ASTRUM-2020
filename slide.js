@@ -29,7 +29,11 @@
        // initialY = e.clientY - yOffset;
       }
 
-      if (e.target === dragItem) {
+      //if element being dragged = element that calls event
+      //for future reference, this function might not be necessary, just set everything above to true
+      if (e.target === dragItem) 
+      {
+        console.log(e.target);
         active = true;
       }
     }
