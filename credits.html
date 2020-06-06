@@ -55,6 +55,7 @@
         position: relative;
         margin: 40px;
         perspective: 1000px;
+
     }
     @media only screen and (max-width: 850px)
     {
@@ -86,6 +87,8 @@
       height: 300px;
       width: 300px;
       overflow: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
 
     }
     .photos
@@ -109,6 +112,7 @@
       position: relative;
       height: 300px;
       transition: transform .9s, opacity .1s;
+      transform:rotateX(0deg);
       transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
     }
@@ -256,7 +260,7 @@
                 <div class="circMainClass circForPeople" >
                   <img class="photos" src="pictures/peoplePhotos/JD.jpg" style="width: 200%">
                 </div>
-                <div class="circMainClass circForDescBack" id="jdBack">
+                <div class="circMainClass circForDescBack" id="jdBack" >
                   <p class="roleText">
                     <br>
                     <br>

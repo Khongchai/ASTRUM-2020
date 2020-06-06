@@ -18,6 +18,13 @@ a {
   position: relative;
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/font_path/Segoe.eot");
+  src: url("/font_path/Segoe.eot?#iefix") format("embedded-opentype"), url("/font_path/Segoe.woff") format("woff"), url("/font_path/Segoe.ttf") format("truetype"), url("/font_path/Segoe.svg#Segoe") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 #planetDecorI {
   width: 300px;
   height: 300px;
@@ -130,7 +137,7 @@ a {
   text-align: center;
   color: white;
   letter-spacing: 3px;
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: lighter;
   font-size: 0px;
   opacity: 1;
@@ -167,10 +174,11 @@ p {
 .aboutParagraphs {
   text-align: left;
   font-size: 16px;
+  line-height: 28px;
 }
 
 .titlepagename {
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #F7F9E0;
   opacity: 0.75;
   height: 200px;
@@ -261,6 +269,29 @@ body {
 }
 
 @keyframes pulsating {
+  0% {
+    opacity: 0.7;
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  50% {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 0.7;
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+}
+@-webkit-keyframes pulsating {
   0% {
     opacity: 0.7;
     width: 1.3em;
@@ -628,7 +659,7 @@ body {
 #subtitle {
   margin: 0;
   padding: 0;
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: lighter;
   letter-spacing: 3px;
   position: relative;
@@ -644,7 +675,7 @@ body {
   top: -130px;
   border-right: 3px;
   font-weight: lighter;
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 10;
   margin-top: 0;
   padding: 0;
@@ -736,7 +767,7 @@ body {
 }
 
 #violinProfcoverdescription {
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   left: 41%;
   position: absolute;
@@ -777,7 +808,29 @@ body {
     transform: translatey(0px);
   }
 }
+@-webkit-keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 @keyframes floatwithXwiggle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes floatwithXwiggle {
   0% {
     transform: translate(0px, 0px);
   }
@@ -790,7 +843,7 @@ body {
 }
 #concertcoverdescription2 {
   font-weight: lighter;
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #F7F9E0;
   position: absolute;
   font-size: 20px;
@@ -804,7 +857,7 @@ body {
 
 .title {
   letter-spacing: 3px;
-  font-family: segoe ui;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: left;
   font-weight: bold;
   text-align: left;
@@ -829,7 +882,27 @@ body {
     transform: rotateX(0deg);
   }
 }
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
 @keyframes transitionOut {
+  from {
+    opacity: 1;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes transitionOut {
   from {
     opacity: 1;
     transform: rotateX(-10deg);
