@@ -3,6 +3,24 @@ a {
   color: #826046;
 }
 
+@font-face {
+  font-family: "WeblySleek";
+  src: url(fonts/weblysleekuil.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "WeblySleekItalic";
+  src: url(fonts/weblysleekuili.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "WeblySleekBold";
+  src: url(fonts/weblysleekuisb.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
 #albumcover {
   clip-path: inset(0px 200px 10px 30px);
   box-shadow: 10px 10px 5px grey;
@@ -31,6 +49,7 @@ a {
 #planetDecorII {
   width: 500px;
   height: 500px;
+  right: -100px;
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/uranus.png);
   opacity: 0.2;
@@ -134,7 +153,7 @@ a {
   text-align: center;
   color: white;
   letter-spacing: 3px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   font-weight: lighter;
   font-size: 0px;
   opacity: 1;
@@ -175,7 +194,7 @@ p {
 }
 
 .titlepagename {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   background-color: #F7F9E0;
   opacity: 0.75;
   height: 200px;
@@ -202,10 +221,23 @@ body {
 }
 
 #turnOffAnim {
+  font-family: WeblySleekItalic;
   position: absolute;
   font-weight: bold;
-  font-style: italic;
   cursor: pointer;
+  margin-top: 5px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: white;
 }
 
 #mercuryCursor {
@@ -413,7 +445,7 @@ body {
   margin-top: 100px;
   font-size: 16px;
   letter-spacing: 3px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   color: #f7f9e0;
   text-decoration: none;
   margin: 30px;
@@ -519,7 +551,7 @@ body {
   transition: opacity 0.4s;
   opacity: 0;
   letter-spacing: 2.5px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   color: #F7F9E0;
 }
 
@@ -656,7 +688,7 @@ body {
 #subtitle {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   font-weight: lighter;
   letter-spacing: 3px;
   position: relative;
@@ -672,7 +704,7 @@ body {
   top: -130px;
   border-right: 3px;
   font-weight: lighter;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   margin-bottom: 10;
   margin-top: 0;
   padding: 0;
@@ -764,7 +796,7 @@ body {
 }
 
 #violinProfcoverdescription {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   font-size: 20px;
   left: 41%;
   position: absolute;
@@ -840,7 +872,7 @@ body {
 }
 #concertcoverdescription2 {
   font-weight: lighter;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleek;
   color: #F7F9E0;
   position: absolute;
   font-size: 20px;
@@ -854,7 +886,7 @@ body {
 
 .title {
   letter-spacing: 3px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: WeblySleekBold;
   text-align: left;
   font-weight: bold;
   text-align: left;

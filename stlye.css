@@ -14,7 +14,65 @@ a {
   z-index: 50;
 }
 
-@media only screen and (max-width: 1245px) {
+#planetDecorI {
+  width: 300px;
+  height: 300px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/saturn.png);
+  position: absolute;
+  opacity: 0.2;
+  top: 400px;
+}
+
+#planetDecorII {
+  width: 500px;
+  height: 500px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/uranus.png);
+  position: absolute;
+  opacity: 0.2;
+  left: 1000px;
+  top: 700px;
+  z-index: 3;
+}
+
+#planetDecorIII {
+  width: 100px;
+  height: 100px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/neptune.png);
+  position: absolute;
+  opacity: 0.15;
+  left: 1000px;
+  top: 200px;
+  z-index: 2;
+}
+
+#planetDecorIV {
+  width: 50px;
+  height: 50px;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/2.png);
+  position: absolute;
+  opacity: 0.15;
+  left: 400px;
+  top: 100px;
+  z-index: 2;
+}
+
+.planetsDecorContainer {
+  position: fixed;
+}
+
+@media only screen and (max-width: 850px) {
+  #divformove {
+    top: 0 !important;
+  }
+
+  .ASTRUMprojectText {
+    display: none;
+  }
+
   .firstpagecover {
     display: block !important;
     clip-path: inset(0px 0px 0px 0px) !important;
@@ -119,7 +177,7 @@ body {
 .planetsCursorContainer {
   position: fixed;
   pointer-events: none;
-  z-index: 100;
+  z-index: 600;
 }
 
 #turnOffAnim {
@@ -130,8 +188,8 @@ body {
 }
 
 #mercuryCursor {
-  background: url("pictures/HongPlanets/mercury.png") no-repeat center;
-  background-size: 10px, 10px;
+  background: url("pictures/HongPlanets/2.png") no-repeat center;
+  background-size: 17px, 17px;
 }
 
 /*
@@ -142,12 +200,12 @@ body {
 }
 */
 #earthCursor {
-  background: url("pictures/HongPlanets/earth.png") no-repeat center;
+  background: url("pictures/HongPlanets/1.png") no-repeat center;
   background-size: 12px, 12px;
 }
 
 #marsCursor {
-  background: url("pictures/HongPlanets/mars.png") no-repeat center;
+  background: url("pictures/HongPlanets/3.png") no-repeat center;
   background-size: 12px, 12px;
 }
 
@@ -238,9 +296,9 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 850px) {
   .planetsCursorContainer {
-    display: none;
+    opacity: 0;
   }
 
   .planetsinfo {
@@ -302,7 +360,7 @@ body {
   bottom: 0;
   right: 0;
   text-align: center;
-  z-index: 20;
+  z-index: 601;
 }
 
 #menuMobileList a {
@@ -329,7 +387,7 @@ body {
   top: 72px;
   color: grey;
   font-size: 40px;
-  z-index: 21;
+  z-index: 602;
   cursor: pointer;
 }
 
@@ -573,6 +631,7 @@ body {
   margin-bottom: 10;
   margin-top: 0;
   padding: 0;
+  z-index: 5;
 }
 
 #titlepagediv {
@@ -600,10 +659,12 @@ body {
 }
 
 #divformove {
+  top: 0 !important;
   text-align: center;
 }
 
 .firstpagecover {
+  position: relative;
   display: inline-block;
 }
 
@@ -676,7 +737,7 @@ body {
 }
 
 #violinProfcover {
-  clip-path: inset(0px 30px 10px 200px);
+  clip-path: inset(0px 110px 0px 110px);
   box-shadow: 10px 10px 5px grey;
   height: 400px;
   opacity: 0.3;

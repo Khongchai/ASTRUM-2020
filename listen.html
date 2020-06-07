@@ -35,11 +35,9 @@
     {
       cursor:pointer;
     }
-
-    
     .transitionbody
     {
-      overflow-x: hidden;
+      overflow-x: visible;
       position: absolute;
       width: 100%;
       top: 250px;
@@ -76,9 +74,11 @@
 
     #soundcheck
     {
-      width: 5%;
-      margin: 0 auto;
-
+      font-family: WeblySleekItalic;
+      position: absolute;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
     }
 
     .planetdesctext
@@ -86,7 +86,7 @@
       font-weight: lighter;
       transition: opacity .4s;
       letter-spacing: 2.5px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: WeblySleek;
       color: #F7F9E0;
 
     }
@@ -101,9 +101,8 @@
       cursor: context-menu;
       font-weight: lighter;
       letter-spacing: 2.5px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: WeblySleekItalic;
       color: #F7F9E0;
-      font-style: italic;
 
     }
 
@@ -111,7 +110,7 @@
     {
       font-weight: lighter;
       letter-spacing: 2.5px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: WeblySleekItalic;
       color: #F7F9E0;
       font-size: 20px;
     }
@@ -129,6 +128,21 @@
     .overrideTopColor
     {
       color: #F7F9E0 !important;
+    }
+    #topTextContainer
+    {
+      letter-spacing: 3px; 
+      text-align: center; 
+      top: -20px;
+      font-family: WeblySleek; 
+      color: #F7F9E0; 
+      pointer-events: none;
+      position: relative;
+      z-index: 100;
+    }
+    #topTextContainer
+    {
+      margin: 10px;
     }
 
     </style>
@@ -175,7 +189,14 @@
     </h1>
     <br>
     <div style="display: inline-block">
-      <p id="subtitle" class="overrideTopColor">Where music meets science <br><span id="turnOffAnim">ANIMATION: ON</span></p>
+      <p id="subtitle" class="overrideTopColor">Where music meets science <br>
+        <span id="turnOffAnim">ANIMATION: ON</span>
+        <br>
+        <span id="soundcheck" onclick="setsound()">SOUND: ON</span>  
+      </p>
+   
+        
+      
     </div>
 
     <table id="topnavtab"  class="menuDisappear">
@@ -190,9 +211,13 @@
 
 
     <div class="transitionbody" style="height: 100%">
-      <h1 style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0">EXPLORE</h1>
+      <div id="topTextContainer">
+        <h1 style="margin-bottom: 0">EXPLORE</h1>
+        <h5 style="margin: 10px; font-family: WeblySleekItalic">An interactive exploration of our solar system</h5>
+      </div>
+      
 
-        <h6 id="soundcheck"style="letter-spacing: 3px; text-align: center; font-family: segoe ui; font-weight: lighter; color: #F7F9E0; position: relative; top: -20px; z-index: 10; cursor: pointer; width: fit-content" onclick="setsound()">SOUND ON</h6>
+      
 
       <div id="planetsContainer">
         <div id="allplanets">
@@ -824,14 +849,14 @@
               audio.currentTime = 0;
             }
             check = false;
-            document.querySelector("#soundcheck").innerHTML = "SOUND OFF";
+            document.querySelector("#soundcheck").innerHTML = "SOUND: OFF";
             localStorage.setItem("checkValLocal", check);
             
           }
           else
           {
             check = true;
-            document.querySelector("#soundcheck").innerHTML = "SOUND ON";
+            document.querySelector("#soundcheck").innerHTML = "SOUND: ON";
 
             //if something displayed and user click on SOUND "OFF"
             if (theThingbeingDisplayed != null)
