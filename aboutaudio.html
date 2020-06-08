@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="starsEffects.css">
     <title>ASTRUM</title>
 
     <style media="screen">
@@ -46,6 +47,10 @@
         line-height: 1.6;
        
       }
+      .planetsDecorContainer
+      {
+        top: 0;
+      }
 
     </style>
   </head>
@@ -62,6 +67,13 @@
   <div id ="marsCursor" class="planetsCursor"></div>
 </div>
 <!--Cursor---------------------------------------------------------------------------------------->
+
+<div class="planetsDecorContainer" data-rate="0.3" style="width: 100%;">
+  <div id="planetDecorV" class="planetDecors">
+
+  </div>
+</div>
+
 
   <!--hamburgerbar----------------------------------------------------------------------------------->
   <div id="hamburger">
@@ -103,6 +115,9 @@
     </table>
     <a href="index.html"><img id="logo" src="pictures/astrum logo.png" style="height: 100px; width: 100px"></a>
     <div class="transitionbody" id="aboutaudioTransitionBody">
+
+      <div class="stars starsContainer" data-rate="0.02" style="transform-style: preserve-3d"></div>
+      <div class="twinkling"></div>
 
       <div id="facebookpic" style="width: 300px; height: 300px; margin: 0 auto; position: relative; top: -50px">
         <img src="pictures/facebookpic.jpeg"  style="max-height: 100%; max-width: 100%">
@@ -179,6 +194,7 @@
     <script src="hamburgerbarscript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="followcursor.js"></script>
+      <script src="scrollForPlanets.js"></script>
 
 
   </body>

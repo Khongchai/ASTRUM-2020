@@ -1,0 +1,58 @@
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+:root
+{
+  --main-speed: 400s;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+
+.stars, .twinkling{
+position: fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+height:110%;
+display:block;
+pointer-events: none;
+}
+
+.stars {
+background: transparent url(pictures/stars.png) repeat top center;
+z-index:-2;
+}
+
+.twinkling
+{
+  opacity: 0.7;
+background: transparent url(pictures/twinklingTexture.png) repeat top center;
+z-index:-1;
+
+-moz-animation:move-twink-back var(--main-speed) linear infinite;
+-ms-animation:move-twink-back var(--main-speed) linear infinite;
+-o-animation:move-twink-back var(--main-speed) linear infinite;
+-webkit-animation:move-twink-back var(--main-speed) linear infinite;
+animation:move-twink-back var(--main-speed) linear infinite;
+}
+
