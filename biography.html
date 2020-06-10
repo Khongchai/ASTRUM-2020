@@ -35,40 +35,12 @@
       .slideshowcontainer
       {
         margin: auto;
-        margin-top: 40px;
+        margin-top: 70px;
         margin-bottom: 70px;
-        width: 45%;
+        width: calc(200px + 45%);
         position: relative;
+        max-width: 1000px;
       }
-      @media only screen and (max-width: 850px)
-      {
-        .slideshowcontainer
-        {
-          width: 60%;
-        }
-        #secondblackbar
-        {
-          height: 1000px;
-        }
-      }
-
-      /*for screens wider than 1080p*/
-      @media only screen and (min-width: 1081px)
-      {   
-        .slideshowcontainer
-        {
-          width: 800px;
-        }
-      }
-      @media only screen and (max-width: 400px)
-      {
-        #albumPortal
-        {
-          width: 300px !important;
-          height: 300px !important;
-        }
-      }
-
       .img
       {
         vertical-align: middle;
@@ -118,7 +90,6 @@
         display: inline-block;
         transition: background-color 0.6s ease;
       }
-
       .active, .dot:hover
       {
         background-color: #717171;
@@ -284,7 +255,7 @@
       
 
 
-      <div class="blackbar">
+      <div class="blackbar" id="firstBlackbar">
         <section class="movediv" data-rate="0.3" style="display: block; top: 150px; position: relative">
           <p class ="parallax"  style="color: #F7F9E0;font-weight: lighter; font-family: WeblySleek; letter-spacing: 3px; width: 82%; margin: 0 auto; top: 30px; height: 100%; position: relative; text-align: justify; text-justify: inter-character">
             Playing the violin since the age of 3, I have always been embalmed in music, and not a day had gone by where I thoughts have not in the slightest strayed into the realm of music. After joining the College of Music, Mahidol University in early 2012, my musical vocabulary has since then, been expanding to cover a wide variety of genres.
@@ -324,14 +295,6 @@
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
-            <div style="text-align: center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-              <span class="dot" onclick="currentSlide(4)"></span>
-              <span class="dot" onclick="currentSlide(5)"></span>
-              <span class="dot" onclick="currentSlide(6)"></span>
-            </div>
 
           </div>
           
@@ -418,8 +381,6 @@
 
         //get a list of elements
         var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        dotsFORDEBUG = document.getElementsByClassName("dot");
 
         //prevents slide from going out of bounds
         if (n < 1)
@@ -437,17 +398,9 @@
           slides[i].style.display = "none";
         }
 
-        for (i = 0; i < dots.length; i++)
-        {
-          //turn off all dots
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-
         //set display to block; visible
         slides[slideIndex-1].style.display = "block";
 
-        //concatenate class name, resulting in being a member of 2 classes
-        dots[slideIndex-1].className += " active";
       }
 
 

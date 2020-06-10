@@ -82,14 +82,14 @@ a {
 }
 
 #planetDecorV {
-  width: 2100px;
-  height: 2100px;
+  width: 800px;
+  height: 800px;
   background-size: auto 100%;
-  background-image: url(pictures/HongPlanets/3.png);
+  background-image: url(pictures/HongPlanets/JupiterLarge.png);
   opacity: 0.2;
-  top: 20rem;
+  top: 55rem;
   margin: 0;
-  left: calc(-1200px + 10%);
+  left: calc(-500px + 10%);
   z-index: 2;
   bottom: 0;
   float: left;
@@ -101,7 +101,28 @@ a {
   position: fixed;
 }
 
+#firstBlackbar {
+  height: 900px;
+}
+
 @media only screen and (max-width: 850px) {
+  .slideshowcontainer {
+    width: 100% !important;
+  }
+
+  #secondblackbar {
+    height: 1300px !important;
+  }
+
+  .youtubePortal {
+    perspective: 0px !important;
+  }
+
+  #albumPortal {
+    width: 100% !important;
+    transform: rotateY(0deg) !important;
+  }
+
   #planetDecorII {
     top: 1390px;
   }
