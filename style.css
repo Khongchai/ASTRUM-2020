@@ -105,7 +105,16 @@ a {
   height: 900px;
 }
 
+@media only screen and (max-width: 400px) {
+  #albumPortal {
+    width: 100% !important;
+  }
+}
 @media only screen and (max-width: 850px) {
+  #albumPortal {
+    transform: rotateY(0deg) !important;
+  }
+
   .slideshowcontainer {
     width: 100% !important;
   }
@@ -116,11 +125,6 @@ a {
 
   .youtubePortal {
     perspective: 0px !important;
-  }
-
-  #albumPortal {
-    width: 100% !important;
-    transform: rotateY(0deg) !important;
   }
 
   #planetDecorII {
