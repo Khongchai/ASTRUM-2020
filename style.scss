@@ -134,7 +134,11 @@ $creamcolor: #F7F9E0;
 
 @media only screen and (max-width: 850px)
   {
-      #albumPortal
+    #dragBox
+    {
+      display: none;
+    }
+    #albumPortal
     {
       transform: rotateY(0deg) !important;
     }

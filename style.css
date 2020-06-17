@@ -111,6 +111,10 @@ a {
   }
 }
 @media only screen and (max-width: 850px) {
+  #dragBox {
+    display: none;
+  }
+
   #albumPortal {
     transform: rotateY(0deg) !important;
   }
