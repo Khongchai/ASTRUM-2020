@@ -80,10 +80,8 @@
           
           if (audio != null)
           {
-            audio.pause();
-            audio.currentTime = 0;
-            $(dragBox).addClass("dragBoxOut");
-            $(dragBox).removeClass("dragBoxIn");
+            DragBoxFadeOut();
+            
             durText.innerHTML = "0:00";
             curText.innerHTML = "0:00";
           }
@@ -100,9 +98,9 @@
           //if something displayed and user click on SOUND "OFF"
           if (theThingbeingDisplayed != null)
           {
-            audio.play();
-            $(dragBox).addClass("dragBoxIn");
-            $(dragBox).removeClass("dragBoxOut");
+            
+            DragBoxFadeIn();
+
             audio.addEventListener("loadedmetadata", textChange());
           
           }
@@ -120,12 +118,8 @@
           if (id != theThingbeingDisplayed)
           {
             if (audio != null)
-            {
-              audio.pause();
-              audio.currentTime = 0;
-              $(dragBox).addClass("dragBoxOut");
-              $(dragBox).removeClass("dragBoxIn");
-              
+            {              
+              DragBoxFadeOut();
             }
             var displayedthing = document.getElementById(theThingbeingDisplayed);
             displayedthing.style.display = "none";
@@ -141,10 +135,9 @@
           audio = new Audio(toBeDisplayed.src);
           audio.volume = 0.6;
           if (check)
-          {
-            audio.play();
-            $(dragBox).addClass("dragBoxIn");
-            $(dragBox).removeClass("dragBoxOut");
+          {           
+            DragBoxFadeIn();
+
             audio.addEventListener("loadedmetadata", textChange);
             dragBox.style.cursor = "grab";
 
@@ -158,10 +151,7 @@
           //if src of both files are equal; comes from the same destination: pause, else start the new sound
           if (audio != null)
           {
-            audio.pause();
-            $(dragBox).addClass("dragBoxOut");
-            $(dragBox).removeClass("dragBoxIn");
-            audio.currentTime = 0;
+            DragBoxFadeOut();
           }
           toBeDisplayed.style.display = "none";
           theThingbeingDisplayed = null;
@@ -237,9 +227,10 @@
 
               audio.pause();
 
-              //add
               dragBox.addEventListener("touchmove", incrementTime);
               dragBox.addEventListener("mousemove", incrementTime);
+
+
           }    
       }
       function resumeTime()
@@ -269,6 +260,8 @@
 
       function incrementTime(e)
       {
+        if (e.type === "mousemove")
+        {
           currentPos = e.clientX;
           //function for detecting mouse stop then assign new value to defPos using current clientX
           clearTimeout(timer);
@@ -282,7 +275,27 @@
           else 
           { 
               shiftAudio(6.5);
-          }           
+          }   
+        }
+        else
+        {
+          currentPos = e.touches[0].clientX;
+          //function for detecting mouse stop then assign new value to defPos using current clientX
+          clearTimeout(timer);
+          timer = setTimeout(relogDefaultPosition,66);
+
+          
+          if (defPos < e.touches[0].clientX) 
+          { 
+              shiftAudio(-6.5);
+          }
+          else 
+          { 
+              shiftAudio(6.5);
+          } 
+
+        }
+                  
 
       }
 
@@ -308,4 +321,19 @@
                     curText.innerHTML = durText.innerHTML;
                 }
             });
+      }
+
+      function DragBoxFadeIn()
+      {
+        audio.play();
+        dragBox.classList.remove("dragBoxOut");
+        dragBox.classList.add("dragBoxIn");
+      }
+
+      function DragBoxFadeOut()
+      {
+        audio.pause();
+        audio.currentTime = 0;
+        dragBox.classList.remove("dragBoxIn");
+        dragBox.classList.add("dragBoxOut");
       }
