@@ -100,7 +100,6 @@
           {
             
             DragBoxFadeIn();
-
             audio.addEventListener("loadedmetadata", textChange());
           
           }
@@ -138,7 +137,7 @@
           {           
             DragBoxFadeIn();
 
-            audio.addEventListener("loadedmetadata", textChange);
+            audio.addEventListener("loadedmetadata", textChange());
             dragBox.style.cursor = "grab";
 
           }
@@ -159,13 +158,21 @@
         }
 
       }
-
+      var displayedBox;
       function displaysonOver(id)
       {
-        var toBeDisplayed = document.getElementById(id);
-        toBeDisplayed.style.display = "block"; 
-        toBeDisplayed.className += " fadeinAnim";
-        toBeDisplayed.style.opacity = 1;
+        if (displayedBox != null)
+        {
+          displayedBox.style.opacity = 0;
+          displayedBox.style.display = "none";
+          displayedBox.className = "planetsubdesctext subtexthide";
+        }
+        
+        
+        displayedBox = document.getElementById(id);
+        displayedBox.style.display = "block"; 
+        displayedBox.className += " fadeinAnim";
+        displayedBox.style.opacity = 1;
 
         //for instruction text
         for (var i = 0; i < instructionTextLength; i++)
@@ -178,6 +185,7 @@
 
       function displaysonOut(id)
       {
+        /*
         var toBeDisplayed = document.getElementById(id);
         toBeDisplayed.style.opacity = 0;
         toBeDisplayed.style.display = "none";
@@ -188,6 +196,7 @@
         {
           instructionText[i].style.display = "block";
         }
+        */
              
       }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -285,7 +294,7 @@
           timer = setTimeout(relogDefaultPosition,66);
 
           
-          if (defPos < e.touches[0].clientX) 
+          if (defPos < e.touches[0].client) 
           { 
               shiftAudio(-6.5);
           }
@@ -312,14 +321,16 @@
 
       function textChange()
       {
-            durText.innerHTML = timetoText(audio.duration);
-            audio.addEventListener("timeupdate", () => {
-                curText.innerHTML = timetoText(audio.currentTime);
-                if (curText.innerHTML === durText.innerHTML) 
-                {
-                    //prevents current duration from exceeding duration
-                    curText.innerHTML = durText.innerHTML;
-                }
+            
+            audio.addEventListener("timeupdate", () => 
+            {
+              durText.innerHTML = timetoText(audio.duration);
+              curText.innerHTML = timetoText(audio.currentTime);
+              if (curText.innerHTML === durText.innerHTML) 
+              {
+                  //prevents current duration from exceeding duration
+                  curText.innerHTML = durText.innerHTML;
+              }
             });
       }
 
