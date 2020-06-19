@@ -228,18 +228,31 @@
       {
           if (audio != null)
           {
-              //makes dragBox full so user can drag everywhere
-              dragBox.style.cursor = "ew-resize"
+              if (e.type === "mousedown")
+              {
+                //makes dragBox full so user can drag everywhere
+                dragBox.style.cursor = "ew-resize"
 
 
-              defPos = e.clientX;
+                defPos = e.clientX;
 
-              audio.pause();
+                audio.pause();
 
-              dragBox.addEventListener("touchmove", incrementTime);
-              dragBox.addEventListener("mousemove", incrementTime);
+                dragBox.addEventListener("mousemove", incrementTime);
+              }
+              else 
+              {
+                //makes dragBox full so user can drag everywhere
+                dragBox.style.cursor = "ew-resize"
 
 
+                defPos = e.touches[0].clientX;
+
+                audio.pause();
+
+                dragBox.addEventListener("touchmove", incrementTime);
+              }
+              
           }    
       }
       function resumeTime()
@@ -288,18 +301,21 @@
         }
         else
         {
+          
           currentPos = e.touches[0].clientX;
           //function for detecting mouse stop then assign new value to defPos using current clientX
           clearTimeout(timer);
           timer = setTimeout(relogDefaultPosition,66);
 
           
-          if (defPos < e.touches[0].client) 
+          if (defPos < e.touches[0].clientX) 
           { 
+            console.log("right");
               shiftAudio(-6.5);
           }
           else 
           { 
+            console.log("left");
               shiftAudio(6.5);
           } 
 
