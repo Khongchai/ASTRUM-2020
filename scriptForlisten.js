@@ -98,7 +98,7 @@
           //if something displayed and user click on SOUND "OFF"
           if (theThingbeingDisplayed != null)
           {
-            
+              
             DragBoxFadeIn();
             audio.addEventListener("loadedmetadata", textChange());
           
@@ -205,13 +205,14 @@
 
       function timetoText(dur) 
       {
-          var min = Math.floor(dur / 60);
-          var sec = Math.floor(dur % 60);
-          if (sec < 10)
-          {
-              sec = "0" + sec;
-          }
-          return min + ":" + sec;
+
+        var min = Math.floor(dur / 60);
+        var sec = Math.floor(dur % 60);
+        if (sec < 10)
+        {
+            sec = "0" + sec;
+        }
+        return min + ":" + sec;    
       }
 
 
@@ -336,18 +337,43 @@
       }
 
       function textChange()
-      {
-            
-            audio.addEventListener("timeupdate", () => 
+      {        
+        audio.addEventListener("timeupdate", () => 
+        {
+          if (isNaN(audio.duration))
+          {
+            durText.innerHTML = "";
+            curText.innerHTML = "Audio is loading; please wait";
+
+            //turn off slash and arrows
+            document.getElementById("slash").style.opacity = 0;
+            for (obj of arrows)
             {
-              durText.innerHTML = timetoText(audio.duration);
-              curText.innerHTML = timetoText(audio.currentTime);
-              if (curText.innerHTML === durText.innerHTML) 
+              obj.style.opacity = 0;
+            }
+          }
+          else
+          {
+            //check so only do once
+            if (durText.innerHTML === "")
+            {
+              document.getElementById("slash").style.opacity = 1;
+              for (obj of arrows)
               {
-                  //prevents current duration from exceeding duration
-                  curText.innerHTML = durText.innerHTML;
+                obj.style.opacity = 1;
               }
-            });
+            }
+
+            durText.innerHTML = timetoText(audio.duration);
+            curText.innerHTML = timetoText(audio.currentTime);
+            if (curText.innerHTML === durText.innerHTML) 
+            {
+                //prevents current duration from exceeding duration
+                curText.innerHTML = durText.innerHTML;
+            }
+          }
+          
+        });
       }
 
       function DragBoxFadeIn()

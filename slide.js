@@ -33,7 +33,6 @@
       //for future reference, this function might not be necessary, just set everything above to true
       if (e.target === dragItem) 
       {
-        console.log(e.target);
         active = true;
       }
     }
