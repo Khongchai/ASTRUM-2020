@@ -378,15 +378,23 @@
 
       function DragBoxFadeIn()
       {
-        audio.play();
-        dragBox.classList.remove("dragBoxOut");
-        dragBox.classList.add("dragBoxIn");
+        if (audio != null)
+        {
+          audio.play();
+          dragBox.classList.remove("dragBoxOut");
+          dragBox.classList.add("dragBoxIn");
+        }
+        
       }
 
       function DragBoxFadeOut()
       {
-        audio.pause();
-        audio.currentTime = 0;
-        dragBox.classList.remove("dragBoxIn");
-        dragBox.classList.add("dragBoxOut");
+        if (audio != null)
+        {
+          audio.pause();
+          audio.currentTime = 0;
+          dragBox.classList.remove("dragBoxIn");
+          dragBox.classList.add("dragBoxOut");
+        }
+        
       }
