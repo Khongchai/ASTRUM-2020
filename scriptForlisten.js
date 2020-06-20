@@ -161,14 +161,38 @@
       var displayedBox;
       function displaysonOver(id)
       {
-        if (displayedBox != null)
+        //replace with new description
+        if (displayedBox != null || displayedBox === document.getElementById(id))
         {
           displayedBox.style.opacity = 0;
           displayedBox.style.display = "none";
           displayedBox.className = "planetsubdesctext subtexthide";
+
+          if (displayedBox === document.getElementById(id))
+          {
+            //only check first one
+            if (instructionText[0].style.display === "block")
+            {
+              displayDescription(id);
+            }
+            else
+            {
+              for (var i = 0; i < instructionTextLength; i++)
+              {
+                instructionText[i].style.display = "block";
+              }
+            }  
+          }
         }
-        
-        
+
+        if (displayedBox != document.getElementById(id))
+        {
+          displayDescription(id);
+        }    
+      }
+
+      function displayDescription(id)
+      {
         displayedBox = document.getElementById(id);
         displayedBox.style.display = "block"; 
         displayedBox.className += " fadeinAnim";
@@ -178,26 +202,7 @@
         for (var i = 0; i < instructionTextLength; i++)
         {
           instructionText[i].style.display = "none";
-        }
-        
-        
-      }
-
-      function displaysonOut(id)
-      {
-        /*
-        var toBeDisplayed = document.getElementById(id);
-        toBeDisplayed.style.opacity = 0;
-        toBeDisplayed.style.display = "none";
-        toBeDisplayed.className = "planetsubdesctext subtexthide";
-
-        //for instruction text
-        for (var i = 0; i < instructionTextLength; i++)
-        {
-          instructionText[i].style.display = "block";
-        }
-        */
-             
+        } 
       }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -219,7 +224,6 @@
       dragBox.addEventListener("touchstart", pauseTime);
       dragBox.addEventListener("touchend", resumeTime);
       
-
       dragBox.addEventListener("mousedown", pauseTime);
       dragBox.addEventListener("mouseup", resumeTime);
       dragBox.addEventListener("mouseleave", resumeTime);
