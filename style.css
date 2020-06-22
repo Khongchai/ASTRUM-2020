@@ -870,6 +870,31 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
+.toolTipHover {
+  font-size: 16px;
+}
+
+.toolTipHover + .toolTipInfo {
+  opacity: 0;
+  transition: opacity 0.5s;
+  bottom: 5px;
+  width: 400px;
+  right: 5px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: burlywood;
+  padding: 5px 0;
+  /*for positioning*/
+  position: fixed;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.toolTipHover:hover + .toolTipInfo {
+  opacity: 1;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
