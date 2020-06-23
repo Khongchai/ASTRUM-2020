@@ -875,6 +875,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .toolTipHover + .toolTipInfo {
+  position: fixed;
   opacity: 0;
   transition: opacity 0.5s;
   bottom: 5px;
@@ -886,7 +887,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #826046;
   padding: 5px 0;
   /*for positioning*/
-  position: fixed;
   z-index: 1;
   pointer-events: none;
 }
