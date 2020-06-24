@@ -7,12 +7,14 @@
 
       var durText = document.getElementById("duration");
       var curText = document.getElementById("currentTime");
-      var arrows = document.getElementsByClassName("arrowIndicator");
+
 
       var defPos = 0;
       var currentPos = 0;
       var timeShift = 0;
       var timer;
+
+
       
 
       var dragBox = document.getElementById("dragBox");
@@ -105,6 +107,8 @@
           }
           localStorage.setItem("checkValLocal", check);
         }
+
+        
       }
 
       function displaysonClick(id)
@@ -208,7 +212,7 @@
 
 
 
-      function timetoText(dur) 
+      function timetoText(dur, position) 
       {
 
         var min = Math.floor(dur / 60);
@@ -217,7 +221,15 @@
         {
             sec = "0" + sec;
         }
-        return min + ":" + sec;    
+        if (position == "front")
+        {
+          return "← " + min + ":" + sec  + " /";   
+        }
+        else
+        {
+          return min + ":" + sec + " →";   
+        }
+         
       }
 
 
@@ -350,26 +362,32 @@
             curText.innerHTML = "Audio is loading; please wait";
 
             //turn off slash and arrows
+            /*
             document.getElementById("slash").style.opacity = 0;
             for (obj of arrows)
             {
               obj.style.opacity = 0;
             }
+            */
           }
           else
           {
             //check so only do once
+            /*
             if (durText.innerHTML === "")
             {
+              /
               document.getElementById("slash").style.opacity = 1;
               for (obj of arrows)
               {
                 obj.style.opacity = 1;
               }
+              
             }
+            */
 
-            durText.innerHTML = timetoText(audio.duration);
-            curText.innerHTML = timetoText(audio.currentTime);
+            durText.innerHTML = timetoText(audio.duration, "back");
+            curText.innerHTML = timetoText(audio.currentTime, "front");
             if (curText.innerHTML === durText.innerHTML) 
             {
                 //prevents current duration from exceeding duration
