@@ -148,10 +148,12 @@
     }
     strong
     {
+      
       letter-spacing: 4px;
       font-family: Garamond;
       font-size: larger;
       font-style: italic;
+      cursor: help;
     }
     .quoteContainer
     {
@@ -208,9 +210,14 @@
     }
     .storyText
     {
-      font-family: Garamond;
-      letter-spacing: 3px;
-      font-size: 19px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      letter-spacing: 2.5px;
+      font-size: 18.5px;
+    }
+    .storyIndent
+    {
+      text-indent: 2em;
+      display: inline-block;
     }
 
     </style>
@@ -333,10 +340,10 @@
           <iframe id="iframemercury" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="mercuryinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span style="cursor: help" onmousedown="displaysonOver('mercury-info-main')" ><strong>Mercury</strong></span>:
-              I’m <span style="cursor: help" onmousedown="displaysonOver('mercury-info-tiny')" ><strong>tiny.</strong></span> 
+              <span   onmousedown="displaysonOver('mercury-info-main')" ><strong>Mercury</strong></span>:
+              I’m <span   onmousedown="displaysonOver('mercury-info-tiny')" ><strong>tiny.</strong></span> 
               But I’m not the tiniest. Pluto is the tiniest amongst us Milky Way siblings. 
-              But I heard Pluto was <span style="cursor: help" onmousedown="displaysonOver('mercury-info-kickedout')" ><strong>kicked out</strong></span> 
+              But I heard Pluto was <span   onmousedown="displaysonOver('mercury-info-kickedout')" ><strong>kicked out</strong></span> 
               of the family because he was too small and too far away. 
               Well, I think Pluto is <i>ohana</i> and <i>ohana</i> means family and family mean no one gets
                left behind or forgotten. But Planet 3627-7 inhabitants say otherwise. 
@@ -344,31 +351,40 @@
               <br>
               <br>
               I’m hot. But I’m not the hottest. 
-              My next door <span style="cursor: help" onmousedown="displaysonOver('mercury-info-neighbors')"><strong>neighbors</strong></span> are hotter than me.  
+              My next door <span   onmousedown="displaysonOver('mercury-info-neighbors')"><strong>neighbors</strong></span> are hotter than me.  
               Venus, my sister, likes to keep the heat to herself. 
               Sun, my roommate, is literally a star. Sun and I usually go for walks in circles, 
-              although I mostly do the walking and spinning while Sun just <span style="cursor: help" onmousedown="displaysonOver('mercury-info-stays')" ><strong>stays on her seat</strong></span>. 
+              although I mostly do the walking and spinning while Sun just <span   onmousedown="displaysonOver('mercury-info-stays')" ><strong>stays on her seat</strong></span>. 
               Everyone else walks at a slower pace, but I guess it’s because they’re not as close to Sun as I am. 
               Well, our friendship is kind of inclusive, so only a select few are within our orbit.
               <br>
               <br>
               Why is it that my other brothers and sisters get to have visitors that come through the door while only 
-              I have <span style="cursor: help" onmousedown="displaysonOver('mercury-info-visitors')" ><strong>visitors</strong></span> that stay at a distance and just take pictures? 
+              I have <span   onmousedown="displaysonOver('mercury-info-visitors')" ><strong>visitors</strong></span> that stay at a distance and just take pictures? 
               I thought MESSENGER would at least stay for tea, but he only took a few photos and then died on my doorstep, 
               leaving a 16 meter crack on my pretty surface. The audacity!
               <br><br>
               And sun, my roommate! Goodness, sometimes when she's mad, 
-              she throws a tantrum and hits me with her waves <strong style="cursor: help" onmousedown="displaysonOver('mercury-info-solarwinds')">solar winds</strong>, 
+              she throws a tantrum and hits me with her waves <strong   onmousedown="displaysonOver('mercury-info-solarwinds')">solar winds</strong>, 
               stripping away my atmosphere and stealing my breath away.
               <br>
               <br>
-              Sometimes I cry about my appearance. I’m gray and wrinkly and <span style="cursor: help" onmousedown="displaysonOver('mercury-info-dead')" ><strong>dead</strong></span>. 
+              Sometimes I cry about my appearance. I’m gray and wrinkly and <span   onmousedown="displaysonOver('mercury-info-dead')" ><strong>dead</strong></span>. 
               There’s nothing interesting about me and I have no moons to speak of. 
               I might as well be a moon myself, as Planet 3627-7’s moon looks a lot like me.
                Venus says my wrinkles look like interweaving constellations. 
                I think she’s just trying to be nice, but it’s the thought that counts.
 
             </p>
+
+            <span class="quoteContainer">
+              Mercury is like a detective case. We have the body, we have some clues, but we really have to piece it together.
+            </span>
+            <br>
+            <span class="quoteSource">
+              Moogega Stricker - Secret History of Mercury
+            </span>
+
           </div>
           <div div id="mercuryAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
             <p class="instructionText">Click / tap on italic texts on the left to show additional info.</p>
@@ -554,11 +570,11 @@
           <iframe id="iframevenus" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="venusinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <strong>Venus</strong>:
-              Her reddish beauty is a deception, an alluring neighbor that can be seen in the night sky with the naked eye. 
-              One is reminded not to approach her as a single touch can burn. 
-              Her skin bleeds molten fire and she cries of acid that evaporates within seconds in her atmosphere. 
-              As Planet 3627-7 says good night, Venus rises and says good morning, her day passing in slow motion until she goes to sleep on the 243rd morning of Planet 3627-7.          
+              <strong onmousedown="displaysonOver('venus-info-main')">Venus</strong>:
+              Her <strong onmousedown="displaysonOver('venus-info-reddish')">reddish</strong> beauty is a deception, an alluring neighbor that can be <strong onmousedown="displaysonOver('venus-info-seen')">seen in the night sky</strong> with the naked eye. 
+              One is reminded not to approach her as a single touch can <strong onmousedown="displaysonOver('venus-info-burn')">burn</strong>. 
+              Her skin bleeds <strong onmousedown="displaysonOver('venus-info-fire')">molten fire</strong> and she cries of acid that evaporates within seconds in her atmosphere. 
+              As Planet 3627-7 says good night, Venus rises and says good morning, her day passing in slow motion until she goes to sleep on the <strong onmousedown="displaysonOver('venus-info-243')">243rd</strong> morning of Planet 3627-7.          
               <br>.
               <br>.
               <br>.
@@ -569,33 +585,43 @@
                 </span>
                 <br>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The words flash red on the screen, jumping around a few times and settling again. The multiple monitors' glitch as the system starts to fry. Alarms blaze scarlet in multiple pulses as the two astronauts bustle around, trying to fix the source of the damage.<br>
+                <span class="storyIndent">The words flash red on the screen, jumping around a few times and settling again. The multiple monitors' glitch as the system starts to fry. Alarms blaze scarlet in multiple pulses as the two astronauts bustle around, trying to fix the source of the damage.</span><br><br>
                 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Are you getting this?” Charles Smith says as he presses on a combination of codes, hoping something – anything will work. <br>
+                <span class=storyIndent>“Are you getting this?” Charles Smith says as he presses on a combination of codes, hoping something – anything will work. </span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“The right side engine isn’t working. Any second now, we’re gonna drop if we lose control.”<br>
+                <span class=storyIndent>“The right side engine isn’t working. Any second now, we’re gonna drop if we lose control.”</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“How about the steering system and power subsystem?” Werner Holt asks as he pulls out a toolbox from a cabinet. <br>
+                <span class=storyIndent>“How about the steering system and power subsystem?” Werner Holt asks as he pulls out a toolbox from a cabinet.</span> <br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Communications?”<br>
+                <span class=storyIndent>“Communications?”</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;Charles Smith presses his ear on the headset, but all he gets is white noise. <br>
+                <span class=storyIndent>Charles Smith presses his ear on the headset, but all he gets is white noise. </span><br>
                 
-                &nbsp;&nbsp;&nbsp;&nbsp;“I can’t reach them. The friction created by the atmosphere must’ve damaged the service module. Nothing is working.”<br>
+                <span class=storyIndent>“I can’t reach them. The <strong onmousedown="displaysonOver('venus-info-atmosphereheat')">heat from the atmosphere</strong> must’ve damaged the service module. Nothing is working.”</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Try to check on the propulsion system. If it’s working, we might be able to at least escape its gravity.” Werner Holt grits his teeth as he proceeds to pull out a panel from underneath the switchboard, revealing hundreds of wires. Crawling inside, he grips the penlight between his teeth as he begins to fiddle with the wires.<br>
+                <span class=storyIndent>“Try to check on the propulsion system. If it’s still working, we might be able to at least escape its gravity.”
+                </span><br><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Bad news. The left engine is damaged. It must’ve been from the meteorite that crashed into us a while ago. The right engine is overworked, we're losing our ticket out!” Charles Smith looks out the window and at the looming planet. Sweat trickles down his temple. The room feels hot. <br>
+                <span class=storyIndent>
+                  Werner Holt grits his teeth as he proceeds to pull out a panel from underneath the switchboard, revealing hundreds of wires. Crawling inside,
+                  he grips the penlight between his teeth as he begins to fiddle with the wires.
+                </span><br>
                 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Uhh, Werner? We’re starting to fall.”<br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;Incoherent words spill out from Werner Holt’s mouth, but Charles Smith got the gist that they weren’t such pleasant words.<br>
+                <span class=storyIndent>“Bad news. The left engine is damaged. It must’ve been from the meteorite that crashed into us a 
+                  while ago. The right engine is overworked, we're losing our ticket out!” Charles Smith looks out the window and at the looming planet.
+                   Sweat trickles down his temple. The room feels hot. </span><br>
+                
+                <span class=storyIndent>“Uhh, Werner? We’re starting to <strong>fall</strong>.”</span><br>
 
-                <i>Creak</i><br>
+                <span class=storyIndent>Incoherent words spill out from Werner Holt’s mouth, but Charles Smith got the gist that they weren’t such pleasant words.</span><br><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;A chunk of metal ripped out and falls into the atmosphere, only to burn into nothingness. Both of them froze.<br>
+                <span class=storyIndent><i>Creak!</i></span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“There goes our external tank.” Charles says quietly, a sense of dread washing over him. He rushes to the somewhat working monitors. “Atmospheric pressure and temperature are rising. Looks like the Orbiter Passive Control System was also damaged in the crash.”<br><br>
+                <span class=storyIndent>A chunk of metal ripped out and disappear into the thick, <strong onmousedown="displaysonOver('venus-info-sulfuric')">sulfuric</strong> atmosphere, Both of them froze.</span><br>
+
+                <span class=storyIndent>“There goes our external tank.” Charles says quietly, a sense of dread washing over him. He rushes to the somewhat working monitors. 
+                  “Atmospheric pressure and temperature are rising. Looks like the Orbiter Passive Control System was also damaged in the crash.”</span><br><br>
 
                 <span style="display: inline-block; text-align: center; width: 100%">
                   <span>Orbiter PVD System down</span>
@@ -617,32 +643,33 @@
                   <span>EMERGENCY PARACHUTE DEPLOYED</span>
                 </span><br><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;The spacecraft jolts as the parachute gains lift, only for the fabric to be torn from the craft by the brutal force of the winds. The spacecraft whirls around, metal glowing as it starts to fall into the toxic atmosphere.<br>
+                <span class=storyIndent>The spacecraft jolts as the parachute gains lift, only for the fabric to be torn from the craft by the brutal force of the winds and the scorching healt of the air. The spacecraft whirls around, metal glowing as it starts to fall into the toxic atmosphere.</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Werner! We’ve lost control!”<br>
+                <span class=storyIndent>“Werner! We’ve lost control!”</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Almost got it-”<br>
+                <span class=storyIndent>“Almost got it-”</span><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;“Werner!”<br><br>
+                <span class=storyIndent>“Werner!”</span><br><br>
 
                 <i>CRASH</i><br><br>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;A fiery cloud billows, blossoming like a flower of death. Within minutes, the fire had consumed the Venera 48 – spacecraft, titanium, humans, and all.
+                <span class=storyIndent>A fiery cloud billows, blossoming like a flower of death. Within minutes, the fire had consumed the <strong onmousedown="displaysonOver('venus-info-venera')">Venera 48</strong> – spacecraft, titanium, humans, and all.</span>
             </span>
               <br>.
               <br>.
               <br>.
               <br>.<br>
               Venus does not receive visitors from her next-door neighbors. 
-              She deems it is due to her unwelcoming doorstep; as the crafts Planet 3627-7 have sent seem to burn up after a short period of time. Pity.
+              She deems it is due to her unwelcoming doorstep; as the crafts Planet 3627-7 have sent seem to burn up after a <strong onmousedowws="displaysonOver('venus-info-nothingsurvives')">short period of time</strong>. Pity.
               
-              <br><br><br><br>
+              <br><br><br><br><br>
+
               <span class="quoteContainer">
-                “foo"
+                Hell, real hell.
               </span>
               <br>
               <span class="quoteSource">
-               foo
+               Mikhail Marov - A Traveler's Guide to the Planets
               </span>
 
             </p>
@@ -655,17 +682,17 @@
           <iframe id="iframeEarth" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="earthinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span  style="cursor: help" onmousedown="displaysonOver('earth-info-main')" ><strong>Earth</strong></span>: There is a saying shared across the universe.
+              <span    onmousedown="displaysonOver('earth-info-main')" ><strong>Earth</strong></span>: There is a saying shared across the universe.
 
-              Planet 3627-7 is a special world. It is a liquid world that fills up <span style="cursor: help" onmousedown="displaysonOver('earth-info-water')"><strong>three-fourths</strong></span> of its mass with water, yet sustains billions of species of creatures. Its 
-              <span style="cursor: help" onmousedown="displaysonOver('earth-info-residents')" ><strong>residents</strong></span> 
-              live on the <span style="cursor: help" onmousedown="displaysonOver('earth-info-tall')" ><strong>tallest</strong></span> peaks of the coldest mountains, 
-              to the <span style="cursor: help" onmousedown="displaysonOver('earth-info-hot')"><strong>hottest</strong></span> plains of its barren deserts, 
-              and into the <span><strong style="cursor: help" onmousedown="displaysonOver('earth-info-deep')" >depths</strong></span> of its oceans. 
+              Planet 3627-7 is a special world. It is a liquid world that fills up <span   onmousedown="displaysonOver('earth-info-water')"><strong>three-fourths</strong></span> of its mass with water, yet sustains billions of species of creatures. Its 
+              <span   onmousedown="displaysonOver('earth-info-residents')" ><strong>residents</strong></span> 
+              live on the <span   onmousedown="displaysonOver('earth-info-tall')" ><strong>tallest</strong></span> peaks of the coldest mountains, 
+              to the <span   onmousedown="displaysonOver('earth-info-hot')"><strong>hottest</strong></span> plains of its barren deserts, 
+              and into the <span><strong   onmousedown="displaysonOver('earth-info-deep')" >depths</strong></span> of its oceans. 
               It is a world filled with an array of color unlike any other planet in its solar system. 
-              The <span style="cursor: help" onmousedown="displaysonOver('earth-info-magneticfield')" ><strong>firmament</strong></span> protects it from the radiation of the sun. 
+              The <span   onmousedown="displaysonOver('earth-info-magneticfield')" ><strong>firmament</strong></span> protects it from the radiation of the sun. 
               Frozen water fall from the sky like fine white dust for a quarter of a cycle. 
-              It is filled with these things called trees that release <span style="cursor: help" onmousedown="displaysonOver('earth-info-atmosphere')" ><strong>gases</strong></span> that sustain life in its atmosphere, and that it is a world filled with creatures as 
+              It is filled with these things called trees that release <span   onmousedown="displaysonOver('earth-info-atmosphere')" ><strong>gases</strong></span> that sustain life in its atmosphere, and that it is a world filled with creatures as 
               tall as the trees and as small as the pebbles on the ground. 
               <br>
               <br>
@@ -676,13 +703,13 @@
               They capture the wind in the sails of their contraptions and journey across the waters. 
               They then take the wind as their own and fly above the sky, defying their planet’s own gravity. 
               The sun’s solar winds hit its atmosphere but instead of fearing it, they stare in awe at the lights they have named 
-              <span style="cursor: help" onmousedown="displaysonOver('earth-info-aurora')" ><strong>Aurora Borealis.</strong></span> 
+              <span   onmousedown="displaysonOver('earth-info-aurora')" ><strong>Aurora Borealis.</strong></span> 
               As daylight in the night, these northern lights weaved amongst the silver clouds in a hypnotic dance, distorting in an array of 
               green and purple with tongues of reds and oranges flickering in between. 
               <br>
               <br>
               But they were not satisfied with the sky. These humans decided to venture out of their world and into outer space, 
-              touching upon their moon and sending their metal creature <span style="cursor: help" onmousedown="displaysonOver('earth-info-depthofuniverse')" ><strong>into the depths of the universe</strong></span>, seeking others 
+              touching upon their moon and sending their metal creature <span   onmousedown="displaysonOver('earth-info-depthofuniverse')" ><strong>into the depths of the universe</strong></span>, seeking others 
               like them – hoping to find a connection – hopelessly lost. But the universe kept silent.
               <br>
               <br>
@@ -918,17 +945,17 @@
 
           <div id="marsinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span style="cursor: help" onmousedown="displaysonOver('mars-info-main')" ><strong>Mars</strong>: </span>
+              <span   onmousedown="displaysonOver('mars-info-main')" ><strong>Mars</strong>: </span>
 
            The year is now 34 AE (After Earth). Humanity has lost its planet and has been traveling through space in search of a new <span onmousedown="displaysonOver('mars-info-lost')" style="cursor: help;"><strong>home</strong></span>. The AD millennia ended with entire civilizations crumbling into dust and its population <span onmousedown="displaysonOver('mars-info-annihilated')" style="cursor: help;"><strong>annihilated</strong></span> to a mere quarter of 7 billion. Once a planet brimming with life, it is now a skeleton of its former glory.
             
-          Three large aircraft approach upon the <span style="cursor: help" onmousedown="displaysonOver('mars-info-red')"><strong>red</strong></span> planet of Mars – once a twinkling red dot <span span onmousedown="displaysonOver('mars-info-nightsky')" style="cursor: help"><strong>in the night sky </strong></span>is now a looming orb of a second home that is as unwelcoming as its <span onmousedown="displaysonOver('mars-info-barren')"  style="cursor: help;"><strong>barren landscape.</strong></span> 
+          Three large aircraft approach upon the <span   onmousedown="displaysonOver('mars-info-red')"><strong>red</strong></span> planet of Mars – once a twinkling red dot <span span onmousedown="displaysonOver('mars-info-nightsky')"  ><strong>in the night sky </strong></span>is now a looming orb of a second home that is as unwelcoming as its <span onmousedown="displaysonOver('mars-info-barren')"  style="cursor: help;"><strong>barren landscape.</strong></span> 
           <br>
           <br>
-          Touching upon the desert sand, heartbeats are loud against the whispers of the <span style="cursor: help" onmousedown="displaysonOver('mars-info-storm')" ><strong>storm.</strong></span> 
-          They shiver at the sight of a cold, dead vast expanse of rocks on the dusty surface. Their steps are <span style="cursor: help" onmousedown="displaysonOver('mars-info-gravity')" ><strong>light</strong></span> and they float through the air just by a brush of a footstep. As one, they venture into uncharted territory, blinded by the winds of the storm and the dust that dances across their vision.
+          Touching upon the desert sand, heartbeats are loud against the whispers of the <span   onmousedown="displaysonOver('mars-info-storm')" ><strong>storm.</strong></span> 
+          They shiver at the sight of a cold, dead vast expanse of rocks on the dusty surface. Their steps are <span   onmousedown="displaysonOver('mars-info-gravity')" ><strong>light</strong></span> and they float through the air just by a brush of a footstep. As one, they venture into uncharted territory, blinded by the winds of the storm and the dust that dances across their vision.
           
-          People huddle together for comfort as they walk towards a peak that touches the scarlet skies of its toxic atmosphere. It is <span style="cursor: help" onmousedown="displaysonOver('mars-info-mountain')" ><strong>Olympus Mons</strong></span> and it rises as a beacon of shelter. There is a settlement by their predecessors and they must arrive before the setting of the sun. As they reach the foot of the mountain, they see the shadows of the very <span><strong style="cursor: help" onmousedown="displaysonOver('mars-info-rovers')">first explorers</strong></span> from Earth standing side by side, their solar panels glinting in the light, and there, humanity is reminded of one's own inquisitive nature.
+          People huddle together for comfort as they walk towards a peak that touches the scarlet skies of its toxic atmosphere. It is <span   onmousedown="displaysonOver('mars-info-mountain')" ><strong>Olympus Mons</strong></span> and it rises as a beacon of shelter. There is a settlement by their predecessors and they must arrive before the setting of the sun. As they reach the foot of the mountain, they see the shadows of the very <span><strong   onmousedown="displaysonOver('mars-info-rovers')">first explorers</strong></span> from Earth standing side by side, their solar panels glinting in the light, and there, humanity is reminded of one's own inquisitive nature.
           
           Opportunity and Curiosity.
           <br>
@@ -1123,22 +1150,22 @@
           <iframe id="iframesaturn" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="saturninfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-main')">Saturn</strong>:
+              <strong   onmousedown="displaysonOver('saturn-info-main')">Saturn</strong>:
               Her name is Cassini-Huygens and she is a lone explorer on a journey to Saturn’s rings and moons. 
-              After 7 Earth years of travelling through space, she has finally reached the sixth planet and its family of <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-icymoons')">icy moons</strong>. 
-              The rings revolve around the world, as its moons around the planet with its <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-rivers')">methane rivers and methane seas</strong>. 
+              After 7 Earth years of travelling through space, she has finally reached the sixth planet and its family of <strong   onmousedown="displaysonOver('saturn-info-icymoons')">icy moons</strong>. 
+              The rings revolve around the world, as its moons around the planet with its <strong   onmousedown="displaysonOver('saturn-info-rivers')">methane rivers and methane seas</strong>. 
               <br>
               <br>
               She coasts about its moons – especially on Titan and Enceladus which shows the possibility of harboring life. 
-              Drawing nearer to Saturn, she takes pictures of the <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-spokes')">spokes</strong> in the rings – fine particles of dust interweaving with the floating rocks. 
-              Scanning the rings, she hears them sing. Their resonances bounce with the waves of the moons, creating a chilling melody in <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-resonance')">orbital resonance</strong>.
+              Drawing nearer to Saturn, she takes pictures of the <strong   onmousedown="displaysonOver('saturn-info-spokes')">spokes</strong> in the rings – fine particles of dust interweaving with the floating rocks. 
+              Scanning the rings, she hears them sing. Their resonances bounce with the waves of the moons, creating a chilling melody in <strong   onmousedown="displaysonOver('saturn-info-resonance')">orbital resonance</strong>.
               <br>
               <br>
-              Missing home, she turns around and takes a <strong style="cursor: help" onmousedown="displaysonOver('saturn-info-earthpicture')">picture</strong> of the Pale Blue Dot 1.451 million kilometers away. 
+              Missing home, she turns around and takes a <strong   onmousedown="displaysonOver('saturn-info-earthpicture')">picture</strong> of the Pale Blue Dot 1.451 million kilometers away. 
               She communicates with the humans, sending them her scans and updates on the planet’s storms on its opposite poles. 
               <br>
               <br>
-              <span style="display: inline-block; text-align: center; width: 100%"><strong style="cursor: help" onmousedown="displaysonOver('saturn-info-cassinifinal')">
+              <span style="display: inline-block; text-align: center; width: 100%"><strong   onmousedown="displaysonOver('saturn-info-cassinifinal')">
                 September 15, 2017
               </strong></span>
               <br>
@@ -1332,30 +1359,30 @@
           <iframe id="iframeuranus" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="uranusinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span  style="cursor: help" onmousedown="displaysonOver('uranus-info-main')"><strong>Uranus</strong></span>: 
-              Howling winds. The air is <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-thickair')">thicker</strong> than you can imagine. Everything is blue.
+              <span    onmousedown="displaysonOver('uranus-info-main')"><strong>Uranus</strong></span>: 
+              Howling winds. The air is <strong   onmousedown="displaysonOver('uranus-info-thickair')">thicker</strong> than you can imagine. Everything is blue.
               <i> spin. spin. spin.</i><br><br>
-              You're <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-tilted')">tilted</strong> on your side.
+              You're <strong   onmousedown="displaysonOver('uranus-info-tilted')">tilted</strong> on your side.
               There's nothing to see for miles.<br><br>
 
-              It's <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-cold')">cold</strong>.
+              It's <strong   onmousedown="displaysonOver('uranus-info-cold')">cold</strong>.
               The sun's warmth can't reach you.
               You don't know what warmth is.<br><br>
 
-              You are attended by <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-27')">27</strong> spirits of the air.
+              You are attended by <strong   onmousedown="displaysonOver('uranus-info-27')">27</strong> spirits of the air.
               Titania is your queen.<br><br>
 
-              A <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-voyager')">Voyager</strong> knocks on your door.
+              A <strong   onmousedown="displaysonOver('uranus-info-voyager')">Voyager</strong> knocks on your door.
               He enters not.
               You travel around.<br><br>
 
-              The day passes <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-shortly')">shortly</strong>.
+              The day passes <strong   onmousedown="displaysonOver('uranus-info-shortly')">shortly</strong>.
               You rise as they sleep.
               You slumber as they wake.
               The journey is long.<br><br>
 
               You return home.
-              It has been <strong style="cursor: help" onmousedown="displaysonOver('uranus-info-84')">84</strong> years.<br><br>
+              It has been <strong   onmousedown="displaysonOver('uranus-info-84')">84</strong> years.<br><br>
                 
             </p>
 
@@ -1519,17 +1546,17 @@
           <iframe id="iframeNeptune" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="neptuneinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span  style="cursor: help" onmousedown="displaysonOver('neptune-info-main')" ><strong>Neptune</strong></span>: 
+              <span    onmousedown="displaysonOver('neptune-info-main')" ><strong>Neptune</strong></span>: 
               <br>
               <br>
-              A vivid <span style="cursor: help" onmousedown="displaysonOver('neptune-info-azure')" ><strong>azure</strong><br></span>
-              with a great <span style="cursor: help" onmousedown="displaysonOver('neptune-info-darkspot')"><strong>dark spot</strong></span><br>
-              spinning in <span style="cursor: help" onmousedown="displaysonOver('neptune-info-lonesome')" ><strong>lonesome wonder</strong></span><br>
+              A vivid <span   onmousedown="displaysonOver('neptune-info-azure')" ><strong>azure</strong><br></span>
+              with a great <span   onmousedown="displaysonOver('neptune-info-darkspot')"><strong>dark spot</strong></span><br>
+              spinning in <span   onmousedown="displaysonOver('neptune-info-lonesome')" ><strong>lonesome wonder</strong></span><br>
               <br>
               
               She storms and rages<br>
-              with a name oft’ <span style="cursor: help" onmousedown="displaysonOver('neptune-info-fought')" ><strong>fought</strong></span><br>
-              <span style="cursor: help" onmousedown="displaysonOver('neptune-info-hidden')" ><strong>hidden</strong></span> away from plain sight<br>
+              with a name oft’ <span   onmousedown="displaysonOver('neptune-info-fought')" ><strong>fought</strong></span><br>
+              <span   onmousedown="displaysonOver('neptune-info-hidden')" ><strong>hidden</strong></span> away from plain sight<br>
               <br>
               
               Darkness is her companion<br>
@@ -1541,7 +1568,7 @@
               Furthest away from the sun,<br>
               She ages in a cycle of one<br>
               To Earth’s century and some<br>
-              We have only <span style="cursor: help" onmousedown="displaysonOver('neptune-info-seenonce')"><strong>seen her once</strong></span><br>
+              We have only <span   onmousedown="displaysonOver('neptune-info-seenonce')"><strong>seen her once</strong></span><br>
               <br>
               
               Through the eyes of the Voyager<br>
