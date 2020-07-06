@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pictures/astrum logo.png" type="image/png">
     <title>ASTRUM</title>
 
     <style media="screen">
@@ -114,7 +115,7 @@
       letter-spacing: 2.5px;
       font-family: WeblySleekItalic;
       color: #F7F9E0;
-      font-size: 20px;
+      font-size: 16px;
     }
 
     .transitionbody
@@ -148,7 +149,7 @@
     }
     strong
     {
-      
+      font-size: 25px !important;
       letter-spacing: 4px;
       font-family: Garamond;
       font-size: larger;
@@ -220,6 +221,16 @@
       text-indent: 2em;
       display: inline-block;
     }
+    .aboutMusic
+    {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-family: WeblySleek;
+    }
 
     </style>
 
@@ -236,6 +247,8 @@
             <a href="index.html">MAIN</a>
             <br>
             <a href="biography.html">BIO</a>
+            <br>
+            <a href="research.html">RESEARCH</a>
             <br>
             <a href="credits.html">CREDITS</a>
         </div>
@@ -279,6 +292,7 @@
       <tr>
         <th class="tableheader "><a class="overrideTopColor" href="index.html">Main</a></th>
         <th class="tableheader "><a class="overrideTopColor" href="biography.html">Biography</a></th>
+        <th class="tableheader"><a class="overrideTopColor" href="research.html">Research</a></th>
         <th class="tableheader "><a class="overrideTopColor" href="credits.html">Credits</a></th>
         
       </tr>
@@ -341,7 +355,7 @@
           <iframe id="iframemercury" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="mercuryinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              <span   onmousedown="displaysonOver('mercury-info-main')" ><strong>Mercury</strong></span>:
+              Mercury:
               I’m <span   onmousedown="displaysonOver('mercury-info-tiny')" ><strong>tiny.</strong></span> 
               But I’m not the tiniest. Pluto is the tiniest amongst us Milky Way siblings. 
               But I heard Pluto was <span   onmousedown="displaysonOver('mercury-info-kickedout')" ><strong>kicked out</strong></span> 
@@ -389,18 +403,7 @@
           </div>
           <div div id="mercuryAdditionalInfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
             <p class="instructionText">
-              
-              For Mercury, I have taken direct inspirations from scientific phenomena such as the solar wind, the stripping away of Mercury's almost non-existent atmosphere, the huge visible
-              and unfiltered mass of the sun. This interpretation is differs somewhat from other pieces. //TODO
-              
-              This composition reflects the strong solar radiation and the huge visible mass of the sun, through mediums such as constant low hum, a drone that is designed to not be aurally pleasing but to imitate the actual 
-              Solar waves; the size of Mercury in the presence of the sun is represented by several high pitched noises surrounded by sporadic electromagnetic interferences 
-              from the sun; and the stripping away of its atmosphere from a stream of the solar wind. 
-              <br><br>
-              Again, the music is not 100% accurate as it is nonetheless a piece of music, 
-              but I have attempted to be more accurate with each aural representation of these astronomical events.
-            </p>
-            <p class="planetsubdesctext subtexthide" id="mercury-info-main">
+
 
               Mercury is currently the smallest planet in the solar system.
               Its close proximity to the sun makes it more sensitive to any solar activity, so much so that we can study the effects of our aging sun through the planet. 
@@ -421,11 +424,20 @@
                   </span>
                 </span>
               </a>
-              
-              
-              
 
+              <span class="aboutMusic">THE MUSIC</span>
+
+              For Mercury, I have taken direct inspirations from scientific phenomena such as the solar wind, the stripping away of Mercury's almost non-existent atmosphere, the huge visible
+              and unfiltered mass of the sun. This interpretation differs somewhat from other pieces. 
+              
+              This composition reflects the strong solar radiation and the huge visible mass of the sun, through mediums such as constant low hum, a drone that is designed to not be aurally pleasing but to imitate the actual 
+              Solar waves; the size of Mercury in the presence of the sun is represented by several high pitched noises surrounded by sporadic electromagnetic interferences 
+              from the sun; and the stripping away of its atmosphere from a stream of the solar wind. 
+              <br><br>
+              Again, the music is not 100% accurate as it is nonetheless a piece of music, 
+              but I have attempted to be more accurate with each aural representation of these astronomical events.
             </p>
+
 
             <p class="planetsubdesctext subtexthide" id="mercury-info-tiny">
               <span>
@@ -1371,7 +1383,7 @@
           <iframe id="iframejupiter" src="" frameborder="0" style="width: 100%; height: 900px; position: relative; z-index: 15"></iframe>
           <div id="jupiterinfo" style="display: inline-block; position: relative; width: 46%; margin-left: 4%; text-justify: inter-character;text-align: justify;">
             <p class="planetdesctext">
-              Jupiter – Europa: <br>
+              <strong   onmousedown="displaysonOver('jupiter-info-main')">Jupiter - Europa</strong>:<br>
 
               <span class="storyText">
                 <span class="storyIndent">“Be careful out there.” Alice Reider said as she put the space helmet for him.</span><br>
@@ -1382,23 +1394,24 @@
                 <span class="storyIndent">“You better.” She patted his visor and gave his spacesuit a once over. “Looks like you’re ready to go.”</span><br>
 
                 <span class="storyIndent">The EVA (Extravehicular Activity) Team stood ready inside the mid-deck. 
-                  With close fit suits scientifically engineered to withstand extreme temperatures and ultraviolet rays, 
-                  along with oxygen tanks equipped with genetically modified plants that explosively photosynthesize under 
-                  light, giving an extended supply of oxygen – Juno 35 would be the first team to recon Europa in search of life.</span><br><br>
+                  With close fit suits scientifically engineered to withstand <strong onmousedown="displaysonOver('jupiter-info-extremetemp')">extreme temperatures</strong> and ultraviolet rays, 
+                  along with <strong onmousedown="displaysonOver('jupiter-info-oxygentanks')">oxygen tanks</strong> equipped with genetically modified plants that explosively photosynthesize under 
+                  light, giving an extended supply of oxygen – <strong onmousedown="displaysonOver('jupiter-info-juno')">Juno</strong> 35 would be the first team to recon Europa in search of life.</span><br><br>
 
                 <span style="display: inline-block; text-align: center; width: 100%">
                   <span>AIRLOCK OPENING</span>
                 </span><br><br>
                 
 
-                <span class="storyIndent">The hiss of the doors opened as the cabin depressurized, the PVD System doing its work. One by one, the EVAs climbed out of the spacewalk hatches and out in the freezing landscape of Europa. </span>
+                <span class="storyIndent">The hiss of the doors opened as the cabin depressurized. One by one, 
+                  the astronauts climbed out of the spacewalk hatches and out in the freezing landscape of Europa. </span>
 
                 <span class="storyIndent">“One step for man,” Houston stepped on its icy surface. “One leap for mankind.”</span><br>
 
-                <span class="storyIndent"> As quoted from <i>the</i> Neil Armstrong. </span><br>
+                <span class="storyIndent"> As <storng onmousedown="displaysonOver('jupiter-info-quoted')">quoted</storng> from <i>the</i> Neil Armstrong. </span><br>
                 
                 <span class="storyIndent">Cheers broke out in the crew compartment and the space station on Earth as 
-                  they celebrated the historic moment. Houston started walking out with the rest of the EVAs following him. 
+                  they celebrated the historic moment. Houston started walking out with the rest of the astronauts following him. 
                   The team fanned out, inspecting the surface of the moon and bagging samples to be taken back to the spacecraft for examination.</span><br>
 
                 <span class="storyIndent">Houston reported the data scanned by his helmet. “All is of a temperature of -170◦C. 
@@ -1408,13 +1421,14 @@
 
                 <span class="storyIndent">Until it wasn't.</span><br>
 
-                <span class="storyIndent">Houston looked up. "You guys feel that?"</span><br>
+                <span class="storyIndent">Houston looked up. "You guys <strong onmousedown="displaysonOver('jupiter-info-feel')">feel</strong> that?"</span><br>
 
                 <span class="storyIndent">Reider said in annoyance, “Houston, I swear if this is one of your jokes again-”</span><br>
 
                 <span class="storyIndent">“No, no. I’m serious. There was a vibration.”</span><br>
 
-                <span class="storyIndent">“Probably just the ice shifting from the underwater vents.” One of his team, Meri Lee, spoke up.</span><br>
+                <span class="storyIndent">“Probably just the ice shifting from the <strong onmousedown="displaysonOver('jupiter-info-underwatervents')">underwater vents</strong>.” 
+                  One of his team, Meri Lee, spoke up.</span><br>
 
                 <span class="storyIndent">“Could be aquatic sea life.” Vaniya Stokvesky quipped.</span><br>
 
@@ -1427,15 +1441,15 @@
                 <span class="storyIndent">They all went back to their posts, inspecting the cracked ice.
                   Reddish-brown spotted the surface. Houston crouched down and grabbed a handful, frowning. His screen displayed the elements of the ice and he didn’t like what it said.</span><br>
 
-                <span class="storyIndent"> “What’s wrong?” One of the EVAs, Carlos Rodney, asked.</span><br>
+                <span class="storyIndent"> “What’s wrong?” One of the astronauts, Carlos Rodney, asked.</span><br>
 
-                <span class="storyIndent">Houston said, “I was just thinking…they said this reddish-brown stuff is sea salt gunk. But I wonder if there’s a way I could smell this thing.”</span><br>
+                <span class="storyIndent">Houston said, “I was just thinking…they said this <strong onmousedown="('jupiter-info-redbrown')">reddish-brown</strong> stuff is sea salt gunk. But I wonder if there’s a way I could smell this thing.”</span><br>
 
                 <span class="storyIndent"> Rodney’s eyes widened. “You think it’s…blood?”</span><br>
 
                 <span class="storyIndent">“I don’t know.” He said as he bagged it. “I mean, one of the components of this moon includes iron-sulfur. But then again, I could be wrong.”</span><br>
 
-                <span class="storyIndent">As he crouched up, he surveyed the landscape. The surface was jagged, with outcrops and cliffs of ice.</span><br>
+                <span class="storyIndent">As he crouched up, he surveyed the landscape. The <strong onmousedown="displaysonOver('jupiter-info-surface')">surface</strong> was jagged, with outcrops and cliffs of ice.</span><br>
 
                 <span class="storyIndent"> “Where’s Clifford?”</span><br>
 
@@ -1489,7 +1503,7 @@
                 <span class="storyIndent"> “Vaniya!”</span><br>
 
                 <span class="storyIndent">Houston grabbed her arm as she scrambled to get out of the hole – only to 
-                  scream as the water and the ice turned red, warm blood steaming as it met the freezing ocean.
+                  scream as the water and the ice turned red, warm blood <strong onmousedown="('jupiter-info-steaming')">steaming</strong> as it met the freezing ocean.
                   He tried pulling her up, but his strength was lost as she slipped through his fingers.</span><br>
 
                 <span class="storyIndent">“Houston! Get back to the ship!”</span><br>
@@ -1513,11 +1527,11 @@
                       1 <br><br>
                     </span>
                   </span>
-              
-
+            
                 <span class="storyIndent">
                   The ice shifted. And just before the spacecraft could lift away, the largest hole opened up and swallowed up the manmade contraption. 
-                  The humans inside could only stare at the aquatic horror in front of them before the craft was crushed by the moon’s deepwater inhabitants.
+                  The humans inside could only stare at the aquatic horror in front of them before 
+                  the craft was crushed by the moon’s deepwater <strong onmousedown="displaysonOver('jupiter-info-inhabitnats')">inhabitants</strong>.
                   The engines billowed, only to be snuffed out by the intense coldness of the ocean.
                 </span> 
                 <br><br><br>
@@ -1526,15 +1540,95 @@
                   There was no escape. There was no refuge. At this rate, humans would be stuck on their own dying planet without the help of their planetary neighbors.
                 </span>
             </span>
-              
-
             </p>
 
           </div>
           <div div id="jupiteradditionalinfo" style="margin-right: 4%; position: relative; width: 43%; text-align: right; float: right">
             <p class="instructionText">
+              Rather than focusing on Jupiter, I personally prefer messing around, trying to create a story that 
+              revolves around its moon Europa. In our solar system, there are two moons that could potentially 
+              harbor life as we know it, Enceladus of Saturn, and Europa of Jupiter. I was quite confident that 
+              I wanted to pursue the alien-life form discovery route for one of them, but I was not sure which. 
+              Luckily, the journey of Cassini through the solar system has given me something to latch on as the main focus for Saturn's story, 
+              removing Enceladus from our option.
+              <br><br>
+              In my research, I have alluded briefly 
+              to the inaccuracies of the previous musical works of this genre, for example, 
+              Venus from Holst sounding calm// serene, and Mars sounding angry//thrilling. 
+              The music invoke the wrong mental image for each planet. Here, not going the route in keeping with 
+              most of the other 5 planets I did -- taking direct inspiration from direct scientific findings -- 
+              the stories for Jupiter (and Venus), attempts at sci-fi novelization with music their musical scores,
+               while still staying true to all the facts.
+
 
             </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-main">
+
+              Jupiter is many things, from being an absolute eye candy of a planet to being our guard dog, 
+              keeping rogue asteroids away from our beautiful blue planet with its massive gravitational pull.
+               However, the planet's surface, or the lack thereof, is not really somewhere we humans look forward to be in,
+                and definitely not somewhere life as we know it can exist. Its fast-moving winds, its freezing cold -- literally -- temperature, 
+                and its insane gravity are more than enough to ensure that a trip to Jupiter will be most likely a one-way trip. 
+                However, there is one place that has been attracting more and more attention from scientists over the years, 
+                as it could potentially harbor life. That place is Europa.
+              <br><br>
+              Europa's putative warm ocean underneath is said to be very habitable for life
+               as we know it. Data on both Europa and Enceladus, a very similar moon to Europa, 
+               indicates that water plumes that get ejected from both moons indeed contain all the 
+               materials needed for life to form. Water plumes and Europa's relatively hole-less surface 
+               are both an indication of geological activity; a sign that the planet is still alive. 
+               One of the theories on the forming of life on Earth deals with the formation of the first
+                single-celled organisms around underwater thermal vents on Earth, which Europa also has hidden under 
+                her icy surface.
+
+                <a href="https://europa.nasa.gov/europa/life-ingredients/" target="_blank">
+                  <img class="toolTipHover" src="pictures/EuropaSurface.jpg"style="width: 100%; margin-top: 10px;">
+                  <span class="toolTipInfo" style="padding-left: 10px; padding-right: 10px">
+                    Image showing signs of ice blocks shifts, into new positions.<br><br>
+                    <span style="font-family: WeblySleek">Credit: NASA/JPL/University ofArizona</span>
+                  </span>
+                </a>
+
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-extremetemp">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-oxygentanks">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-juno">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-quoted">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-feel">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-underwatervents">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-redbrown">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-surface">
+              
+            </p>
+
+            <p class="planetsubdesctext subtexthide" id="jupiter-info-steaming">
+              
+            </p>
+
+
           </div>
         </div>
 
@@ -1586,10 +1680,7 @@
               Her rings are composed of several smaller rings, which can be seen through even some inexpensive home telescopes. <br><br>
               <img src="pictures/firstSaturnImage.jpg" style="width:100%" alt="">
               <br>
-           
-            
-              
-             
+
             </p>
 
             <p class="planetsubdesctext subtexthide" id="saturn-info-icymoons">

@@ -1032,13 +1032,12 @@ body::-webkit-scrollbar-thumb
   width: 400px;
   height: 400px;
   opacity: 0.3;
-  clip-path: inset(0px 110px 0px 110px);
-  box-shadow: 10px 10px 5px grey;
+  //box-shadow: 10px 10px 5px grey;
   transition: transform .4s, clip-path .4s, left .4s, top .4s, opacity .4s;
-  animation: float 6s ease-in-out infinite;
+  //animation: float 6s ease-in-out infinite;
   &:hover
   {
-    @extend %slitviewanim;
+    //@extend %slitviewanim;"shifting" 
     opacity: 1;
   }
   @extend %uniformhiZindex;
@@ -1067,17 +1066,17 @@ body::-webkit-scrollbar-thumb
 #violinProfcover
 {
 
-  clip-path: inset(0px 110px 0px 110px);
-  box-shadow: 10px 10px 5px grey;
+ // clip-path: inset(0px 110px 0px 110px);
+  //box-shadow: 10px 10px 5px grey;
    height: 400px;
    opacity: 0.3;
    width: 400px;
    transition: opacity .4s, width .4s, height .4s, margin-right .4s, margin-left .4s, clip-path .4s;
-   animation: float 5s ease-in-out infinite;
+  // animation: float 5s ease-in-out infinite;
    @extend %uniformhiZindex;
   &:hover
   {
-    @extend %slitviewanim;
+  //  @extend %slitviewanim;
     opacity: 1;
   }
 
@@ -1262,6 +1261,7 @@ body::-webkit-scrollbar-thumb
 
 #logo
 {
+  border-radius: 10px;
   position: absolute;
   top: 50px;
   left: 90px;
