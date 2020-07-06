@@ -4,6 +4,7 @@
       var theThingbeingDisplayed = null;
       var instructionText = document.getElementsByClassName("instructionText");
       var instructionTextLength = instructionText.length;
+      
 
       var durText = document.getElementById("duration");
       var curText = document.getElementById("currentTime");
@@ -40,37 +41,41 @@
       //if user looks for other planets, the camera won't focus at the same place
       function openiFrame (reference)
       {
-        if (reference === "mercuryframe")
+
+        switch (reference)
         {
-          document.querySelector("#iframemercury").src = "https://eyes.nasa.gov/apps/orrery/#/mercury?&close=true";
-        }
-        if (reference === "venusframe")
-        {
-          document.querySelector("#iframevenus").src = "https://eyes.nasa.gov/apps/orrery/#/venus?&close=true";
-        }
-        if (reference === "earthframe")
-        {
-          document.querySelector("#iframeEarth").src = "https://eyes.nasa.gov/apps/orrery/#/earth?&close=true";
-        }
-        if (reference === "marsframe")
-        {
-          document.querySelector("#iframeMars").src = "https://eyes.nasa.gov/apps/orrery/#/mars?&close=true";
-        }
-        if (reference === "jupiterframe")
-        {
-          document.querySelector("#iframejupiter").src = "https://eyes.nasa.gov/apps/orrery/#/jupiter?&close=true";
-        }
-        if (reference === "saturnframe")
-        {
-          document.querySelector("#iframesaturn").src = "https://eyes.nasa.gov/apps/orrery/#/saturn?&close=true";
-        }
-        if (reference === "uranusframe")
-        {
-          document.querySelector("#iframeuranus").src = "https://eyes.nasa.gov/apps/orrery/#/uranus?&close=true";
-        }
-        if (reference === "neptuneframe")
-        {
-          document.querySelector("#iframeNeptune").src = "https://eyes.nasa.gov/apps/orrery/#/neptune?&close=true";
+          case "mercuryframe":
+            document.querySelector("#iframemercury").src = "https://eyes.nasa.gov/apps/orrery/#/mercury?&close=true";
+            instructionText[0].style.display = "block";
+            break;
+          case "venusframe":
+            document.querySelector("#iframevenus").src = "https://eyes.nasa.gov/apps/orrery/#/venus?&close=true";
+            instructionText[1].style.display = "block";
+            break;
+          case "earthframe":
+            document.querySelector("#iframeearth").src = "https://eyes.nasa.gov/apps/orrery/#/earth?&close=true";
+            instructionText[2].style.display = "block";
+            break;
+          case "marsframe":
+            document.querySelector("#iframemars").src = "https://eyes.nasa.gov/apps/orrery/#/mars?&close=true";
+            instructionText[3].style.display = "block";
+            break;
+          case "jupiterframe":
+            document.querySelector("#iframejupiter").src = "https://eyes.nasa.gov/apps/orrery/#/jupiter?&close=true";
+            instructionText[4].style.display = "block";
+            break;
+          case "saturnframe":
+            document.querySelector("#iframesaturn").src = "https://eyes.nasa.gov/apps/orrery/#/saturn?&close=true";
+            instructionText[5].style.display = "block";
+            break;
+          case "uranusframe":
+            document.querySelector("#iframeuranus").src = "https://eyes.nasa.gov/apps/orrery/#/uranus?&close=true";
+            instructionText[6].style.display = "block";
+            break;
+          default:
+            document.querySelector("#iframeneptune").src = "https://eyes.nasa.gov/apps/orrery/#/neptune?&close=true";
+            instructionText[7].style.display = "block";
+
         }
         
       }
@@ -419,4 +424,13 @@
           dragBox.classList.add("dragBoxOut");
         }
         
+      }
+
+
+      //put THE MUSIC into every main text
+      var theMusic = document.getElementsByClassName("aboutMusic");
+
+      for (obj of theMusic)
+      {
+        obj.innerHTML = "THE MUSIC";
       }
