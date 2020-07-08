@@ -282,6 +282,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: wheat;
+  border-radius: 4px;
 }
 
 #mercuryCursor {

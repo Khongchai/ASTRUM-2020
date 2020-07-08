@@ -350,6 +350,7 @@ body
 body::-webkit-scrollbar
 {
   width: 0.35rem;
+  
 }
 body::-webkit-scrollbar-track
 {
@@ -358,6 +359,7 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar-thumb
 {
   background: wheat;
+  border-radius: 4px;
 }
 
 

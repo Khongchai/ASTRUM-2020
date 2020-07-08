@@ -365,31 +365,9 @@
           {
             durText.innerHTML = "";
             curText.innerHTML = "Audio is loading; please wait";
-
-            //turn off slash and arrows
-            /*
-            document.getElementById("slash").style.opacity = 0;
-            for (obj of arrows)
-            {
-              obj.style.opacity = 0;
-            }
-            */
           }
           else
           {
-            //check so only do once
-            /*
-            if (durText.innerHTML === "")
-            {
-              /
-              document.getElementById("slash").style.opacity = 1;
-              for (obj of arrows)
-              {
-                obj.style.opacity = 1;
-              }
-              
-            }
-            */
 
             durText.innerHTML = timetoText(audio.duration, "back");
             curText.innerHTML = timetoText(audio.currentTime, "front");
@@ -434,3 +412,26 @@
       {
         obj.innerHTML = "THE MUSIC";
       }
+
+      var generalButtons = document.getElementsByClassName("generalButton");
+      var neilAudio = new Audio("sounds/NeilAudioInterview.mp3");
+      generalButtons[0].innerHTML = "PLAY";
+      generalButtons[0].addEventListener("click", () => 
+      {
+        
+        switch(generalButtons[0].innerHTML)
+          {
+            case ("PLAY"):
+              if (neilAudio != null)
+              {
+                neilAudio.play();
+                generalButtons[0].innerHTML = "PAUSE";
+                break;
+              } 
+            default:
+              neilAudio.pause();
+              generalButtons[0].innerHTML = "PLAY";        
+          }
+      })
+
+      
