@@ -41,9 +41,15 @@
       //if user looks for other planets, the camera won't focus at the same place
       function openiFrame (reference)
       {
-
+        if (audioforLourna != null)
+        {
+          audioforLourna.pause();
+          audioforLourna.currentTime = 0;
+          audioforLourna = null;
+        } 
         switch (reference)
         {
+          
           case "mercuryframe":
             document.querySelector("#iframemercury").src = "https://eyes.nasa.gov/apps/orrery/#/mercury?&close=true";
             instructionText[0].style.display = "block";
@@ -141,7 +147,7 @@
         {
           
           audio = new Audio(toBeDisplayed.src);
-          audio.volume = 0.6;
+          audio.volume = 0.7;
           if (check)
           {           
             DragBoxFadeIn();
@@ -433,5 +439,37 @@
               generalButtons[0].innerHTML = "PLAY";        
           }
       })
+
+      //-------------------------------------------------------AUDIO FOR LOURNA BELOW------------------------------------//
+      var audioforLourna;
+      document.querySelectorAll('.lournaButtons').forEach(item => {
+        item.innerHTML = "PLAY/PAUSE Narration";
+      })
+      var pauseTimeLourna;
+      function loadLournaAudio(id)
+      {
+        var audioID;
+        
+        switch (id)
+        {
+          case (8):
+            audioID = "sounds/lournaTest.mp3";
+        }
+
+        if (!audioforLourna)
+        {
+          audioforLourna = new Audio(audioID);
+          audioforLourna.play();
+        }
+        else if (audioforLourna.currentTime === pauseTimeLourna)
+        {
+          audioforLourna.play();
+        }
+        else
+        {
+          audioforLourna.pause();
+          pauseTimeLourna = audioforLourna.currentTime;
+        }
+      }
 
       
