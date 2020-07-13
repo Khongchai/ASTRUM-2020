@@ -62,7 +62,6 @@
           case "earthframe":
             document.querySelector("#iframeearth").src = "https://eyes.nasa.gov/apps/orrery/#/earth?&close=true";
             instructionText[2].style.display = "block";
-            loadLournaAudio(1);
             loadLournaAudio(3);
             break;
           case "marsframe":
