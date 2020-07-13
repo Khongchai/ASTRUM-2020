@@ -49,39 +49,48 @@
         } 
         switch (reference)
         {
-          
           case "mercuryframe":
             document.querySelector("#iframemercury").src = "https://eyes.nasa.gov/apps/orrery/#/mercury?&close=true";
             instructionText[0].style.display = "block";
+            loadLournaAudio(1);
             break;
           case "venusframe":
             document.querySelector("#iframevenus").src = "https://eyes.nasa.gov/apps/orrery/#/venus?&close=true";
             instructionText[1].style.display = "block";
+            loadLournaAudio(2);
             break;
           case "earthframe":
             document.querySelector("#iframeearth").src = "https://eyes.nasa.gov/apps/orrery/#/earth?&close=true";
             instructionText[2].style.display = "block";
+            loadLournaAudio(1);
+            loadLournaAudio(3);
             break;
           case "marsframe":
             document.querySelector("#iframemars").src = "https://eyes.nasa.gov/apps/orrery/#/mars?&close=true";
             instructionText[3].style.display = "block";
+            loadLournaAudio(4);
             break;
           case "jupiterframe":
             document.querySelector("#iframejupiter").src = "https://eyes.nasa.gov/apps/orrery/#/jupiter?&close=true";
             instructionText[4].style.display = "block";
+            loadLournaAudio(5);
             break;
           case "saturnframe":
             document.querySelector("#iframesaturn").src = "https://eyes.nasa.gov/apps/orrery/#/saturn?&close=true";
             instructionText[5].style.display = "block";
+            loadLournaAudio(6);
             break;
           case "uranusframe":
             document.querySelector("#iframeuranus").src = "https://eyes.nasa.gov/apps/orrery/#/uranus?&close=true";
             instructionText[6].style.display = "block";
+            loadLournaAudio(7);
             break;
-          default:
+          case "neptuneframe":
             document.querySelector("#iframeneptune").src = "https://eyes.nasa.gov/apps/orrery/#/neptune?&close=true";
             instructionText[7].style.display = "block";
-
+            loadLournaAudio(8);
+          default:
+            //Do nothing
         }
         
       }
@@ -449,16 +458,38 @@
       function loadLournaAudio(id)
       {
         var audioID;
-        
-        switch (id)
-        {
-          case (8):
-            audioID = "sounds/lournaTest.mp3";
-        }
-
         if (!audioforLourna)
         {
-          audioforLourna = new Audio(audioID);
+          switch (id)
+          {
+            case (1):
+              audioID = "sounds/Lourna Mercury.wav";
+              break;
+            case (2):
+              audioID = "sounds/Lourna Venus.mp3";
+              break;
+            case (3):
+              audioID = "sounds/Lourna Earth.wav";
+              break;
+            case (4):
+              audioID = "sounds/Lourna Mars.wav";
+              break;
+            case (5):
+              audioID = "sounds/Lourna Jupiter.mp3";
+              break;
+            case (6):
+              audioID = "sounds/Lourna Saturn.wav";
+              break;
+            case (7):
+              audioID = "sounds/Lourna Uranus.wav";
+              break;
+            case (8):
+              audioID = "sounds/Lourna Neptune.wav";
+              break;
+            default:
+              //do nothing
+          }
+          audioforLourna = new Audio(audioID); 
           audioforLourna.play();
         }
         else if (audioforLourna.currentTime === pauseTimeLourna)
