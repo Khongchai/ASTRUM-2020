@@ -183,27 +183,22 @@ $creamcolor: #F7F9E0;
       opacity: 0.5 ; 
       transform: none !important;
       animation: none !important;
-      margin: 0 auto !important;
       
     }
-
-    #albumcover
-    {
-      width: 100% !important;
-      background: url(pictures/albumcoverBlurred.png);
-    }
-
     #concertcover
     {
-      width: 100% !important;
-      background: url(pictures/astrumlogoBlurred.png);
+      width: fit-content !important;
+      height: fit-content !important;
     }
-
     #violinProfcover
     {
-      width: 100% !important;
-      background: url(pictures/clazz3Blurred.png);
+      max-width: 512px;
+
+      width: fit-content !important;
+      height: fit-content !important;
     }
+
+
 
 
   }
@@ -993,6 +988,7 @@ body::-webkit-scrollbar-thumb
   position: relative;
   display: inline-block;
   margin: 10px;
+  padding: 9px;
 
 }
 

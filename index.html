@@ -10,13 +10,6 @@
     <style media="screen"> 
 
 
-    @media only screen and (max-width: 850px)
-    {
-      #indexsubbody
-      {
-        top: -43px !important;
-      }
-    }
     #blackCover
     {
       position: fixed;
@@ -131,7 +124,9 @@
     
     <br>
 
+    <div style="display: inline-block">
       <p id="subtitle" >Where music meets science <br><span id="turnOffAnim">ANIMATION: ON</span></p>
+    </div>
 
 
 
@@ -152,18 +147,11 @@
       <div id="links">
         <div id="divformove" style="position: relative">
 
-        <!--
-        <div id="albumcover" class="firstpagecover" onmouseover="blackCoverShows('albumcover')" onmouseout="blackCoverHide('albumcover')">
-          <a id ="albumcoverlink"href="https://www.youtube.com/channel/UCagev05Hu01B8Q3p3CLFz2A?view_as=subscriber" target="_blank">
-              <span><img src="pictures/albumcover.jpg" style="height: 100%; width: 100%; object-fit:contain"></span>
-          </a>
-        </div>
-        -->
 
         <div class="infoContainer">
           <div id="concertcover" class="firstpagecover" onmouseover="blackCoverShows('concertcover')" onmouseout="blackCoverHide('concertcover')">
-            <a id="concertcoverlink" href="about.html">
-              <img src="pictures/webiconfit.png" style="height: 100%; width: 100%; object-fit:contain;  border-radius: 50%;">
+            <a class="concertcoverlink" href="about.html">
+              <img src="pictures/webiconfit.png" style="height: 100%; width: 100%; object-fit: contain;  border-radius: 50%;">
             </a>
           </div>
 
@@ -176,8 +164,8 @@
 
         <div class="infoContainer">
           <div id="violinProfcover" class="firstpagecover" onmouseover="blackCoverShows('violinProfcover')" onmouseout="blackCoverHide('violinProfcover')">
-            <a id="concertcoverlink" href="performance.html">
-              <img src="pictures/violinpicsquare.png" style="height: 100%; width: 100%; border-radius: 50%;">
+            <a class="concertcoverlink" href="performance.html">
+              <img src="pictures/violinpicsquare.png" style="height: 100%; width: 100%; object-fit: contain;border-radius: 50%;">
             </a>
           </div>
           <div id="pagecover3" class="page_cover" style="opacity: 0; display: none"></div>
@@ -185,12 +173,6 @@
             Watch me perform
           </p>
         </div>
-
-        
-        
-
-
-
       </div>
       </div>
 
