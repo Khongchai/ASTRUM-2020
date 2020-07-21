@@ -32,7 +32,7 @@ a {
   z-index: 50;
 }
 
-.planetDecors {
+.planetDecorsadd {
   position: relative;
   pointer-events: none;
 }
@@ -55,6 +55,7 @@ a {
   background-image: url(pictures/HongPlanets/uranus.png);
   opacity: 0.2;
   float: right;
+  position: absolute;
   top: 700px;
   z-index: 3;
 }
@@ -66,7 +67,8 @@ a {
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/neptune.png);
   opacity: 0.15;
-  left: -500px;
+  right: 500px;
+  position: absolute;
   top: 200px;
   z-index: 2;
 }
@@ -77,6 +79,7 @@ a {
   background-size: auto 100%;
   background-image: url(pictures/HongPlanets/2.png);
   opacity: 0.15;
+  position: absolute;
   left: 400px;
   top: 100px;
   z-index: 2;
@@ -791,6 +794,7 @@ body::-webkit-scrollbar-thumb {
 .firstpagecover {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 .indexbody {
