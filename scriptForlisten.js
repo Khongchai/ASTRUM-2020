@@ -17,7 +17,7 @@
 
 
       
-
+      var volumeSliderMainContainer = document.getElementById("volumeSliderMainContainer");
       var dragBox = document.getElementById("dragBox");
 
       
@@ -107,16 +107,16 @@
             curText.innerHTML = "0:00";
           }
           check = false;
-          document.querySelector("#soundcheck").innerHTML = "SOUND: OFF";
+          document.querySelector("#soundcheck").innerHTML = "MUSIC: OFF";
           localStorage.setItem("checkValLocal", check);
           
         }
         else
         {
           check = true;
-          document.querySelector("#soundcheck").innerHTML = "SOUND: ON";
+          document.querySelector("#soundcheck").innerHTML = "MUSIC: ON";
 
-          //if something displayed and user click on SOUND "OFF"
+          //if something displayed and user click on MUSIC "OFF"
           if (theThingbeingDisplayed != null)
           {
               
@@ -177,6 +177,12 @@
           }
           toBeDisplayed.style.display = "none";
           theThingbeingDisplayed = null;
+          console.log("hello");
+          if (audioforLourna != null)
+          {
+            audioforLourna.pause();
+            audioforLourna.currentTime = 0;
+          }
           
         }
 
@@ -402,6 +408,9 @@
           audio.play();
           dragBox.classList.remove("dragBoxOut");
           dragBox.classList.add("dragBoxIn");
+
+          volumeSliderMainContainer.classList.remove("dragBoxOut");
+          volumeSliderMainContainer.classList.add("dragBoxIn");
         }
         
       }
@@ -414,6 +423,9 @@
           audio.currentTime = 0;
           dragBox.classList.remove("dragBoxIn");
           dragBox.classList.add("dragBoxOut");
+
+          volumeSliderMainContainer.classList.remove("dragBoxIn");
+          volumeSliderMainContainer.classList.add("dragBoxOut");
         }
         
       }
@@ -452,6 +464,8 @@
       var audioforLourna;
       document.querySelectorAll('.lournaButtons').forEach(item => {
         item.innerHTML = "PLAY/PAUSE Narration";
+
+
       })
       var pauseTimeLourna;
       function loadLournaAudio(id)
@@ -462,28 +476,28 @@
           switch (id)
           {
             case (1):
-              audioID = "sounds/Lourna Mercury.wav";
+              audioID = "sounds/Mercury - noise removed new.aac";
               break;
             case (2):
-              audioID = "sounds/Lourna Venus.mp3";
+              audioID = "sounds/Venus synced.aac";
               break;
             case (3):
-              audioID = "sounds/Lourna Earth.wav";
+              audioID = "sounds/Earth - noise removed new.aac";
               break;
             case (4):
-              audioID = "sounds/Lourna Mars.wav";
+              audioID = "sounds/Mars - noise removed new.aac";
               break;
             case (5):
-              audioID = "sounds/Lourna Jupiter.mp3";
+              audioID = "sounds/Jupiter synced.aac";
               break;
             case (6):
-              audioID = "sounds/Lourna Saturn.wav";
+              audioID = "sounds/Saturn - noise removed new.aac";
               break;
             case (7):
-              audioID = "sounds/Lourna Uranus.wav";
+              audioID = "sounds/Uranus - noise removed new.aac";
               break;
             case (8):
-              audioID = "sounds/Lourna Neptune.wav";
+              audioID = "sounds/Neptune - noise removed new.aac";
               break;
             default:
               //do nothing
@@ -501,5 +515,21 @@
           pauseTimeLourna = audioforLourna.currentTime;
         }
       }
+
+      var volumeSliderMain = document.getElementById("volumeSliderMain");
+      volumeSliderMain.addEventListener("input", ()=>{
+        if (audio != null)
+        {
+          let volumeValue = volumeSliderMain.value / 100;
+          audio.volume = volumeValue;
+        }
+      });
+
+
+      
+      
+
+
+      
 
       
