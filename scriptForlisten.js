@@ -537,26 +537,6 @@
       
         audioforLourna.volume = volumesforRestore;
         slidersLourna[id - 1].value = volumesforRestore * 100;
-          /*
-          slidersLourna[id - 1].value = volumesforRestore * 100;
-          audioforLourna.volume = volumesforRestore;
-          if (lournaButtons[id - 1].innerHTML === "PAUSE NARRATION")
-          {
-            audioforLourna.play();
-          }
-        
-        }
-        //repeat after reaching the end
-        else if (audioforLourna.currentTime === pauseTimeLourna)
-        {
-          audioforLourna.play();
-        }
-        else
-        {
-          audioforLourna.pause();
-          pauseTimeLourna = audioforLourna.currentTime;
-        }
-        */
       }
 
       function readLournaButtons()
