@@ -462,13 +462,41 @@
 
       //-------------------------------------------------------AUDIO FOR LOURNA BELOW------------------------------------//
       var audioforLourna;
-      document.querySelectorAll('.lournaButtons').forEach(item => {
-        item.innerHTML = "PLAY/PAUSE Narration";
+      var lournaButtons = document.querySelectorAll(".lournaButtons");
 
+      var lournaPlaying = true;
+      for (var i = 0; i < lournaButtons.length; i++)
+      {
+        lournaButtons[i].innerHTML = "PAUSE NARRATION";
+        lournaButtons[i].addEventListener("click", ()=>{
+          updateLournaStatus(),
+          readLournaButtons()
+        });
+      }
+      function updateLournaStatus()
+      {
+        console.log("update");
+        var currentText;
+        if (lournaPlaying)
+        {
+          lournaPlaying = false;
+          currentText = "PLAY NARRATION";
+        }
+        else
+        {
+          lournaPlaying = true;
+          currentText = "PAUSE NARRATION";
+        } 
+        for (var i = 0; i < lournaButtons.length; i++)
+        {
+          lournaButtons[i].innerHTML = currentText;
+        }
+      }
+      
 
-      })
+      var slidersLourna = document.querySelectorAll('.lournaSlider');
       var pauseTimeLourna;
-      function loadLournaAudio(id)
+      function loadLournaAudio(id, planetName)
       {
         var audioID;
         if (!audioforLourna)
@@ -502,9 +530,23 @@
             default:
               //do nothing
           }
-          audioforLourna = new Audio(audioID); 
-          audioforLourna.play();
+          audioforLourna = new Audio(audioID);
         }
+
+        readLournaButtons();
+      
+        audioforLourna.volume = volumesforRestore;
+        slidersLourna[id - 1].value = volumesforRestore * 100;
+          /*
+          slidersLourna[id - 1].value = volumesforRestore * 100;
+          audioforLourna.volume = volumesforRestore;
+          if (lournaButtons[id - 1].innerHTML === "PAUSE NARRATION")
+          {
+            audioforLourna.play();
+          }
+        
+        }
+        //repeat after reaching the end
         else if (audioforLourna.currentTime === pauseTimeLourna)
         {
           audioforLourna.play();
@@ -514,7 +556,22 @@
           audioforLourna.pause();
           pauseTimeLourna = audioforLourna.currentTime;
         }
+        */
       }
+
+      function readLournaButtons()
+      {
+        if (lournaPlaying)
+        {   
+          audioforLourna.play();
+        }
+        else
+        {
+          audioforLourna.pause();
+        }  
+      }
+
+      var volumesforRestore = 0.5;
 
       var volumeSliderMain = document.getElementById("volumeSliderMain");
       volumeSliderMain.addEventListener("input", ()=>{
@@ -522,8 +579,24 @@
         {
           let volumeValue = volumeSliderMain.value / 100;
           audio.volume = volumeValue;
+          
         }
       });
+
+      var planetIndex = -1;
+      slidersLourna.forEach(item => {
+        planetIndex++;
+        item.addEventListener("input", () => 
+        {
+          var volumeValue = item.value / 100;
+          audioforLourna.volume = volumeValue;    
+          volumesforRestore = volumeValue;
+        })
+      })
+
+
+    
+
 
 
       
