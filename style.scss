@@ -229,7 +229,7 @@ $creamcolor: #F7F9E0;
 
   outline: none;
   position: relative;
-  top: 15px;
+  top: 11px;
   width: 100%;
   
 }
@@ -237,7 +237,7 @@ $creamcolor: #F7F9E0;
 {  
   opacity: 0.5;
   background:$brownpastel;
-  height: 11px;
+  height: 4px;
   border-radius: 5px;  
   -webkit-appearance: none;
   appearance: none;
@@ -246,9 +246,19 @@ $creamcolor: #F7F9E0;
   border-radius: 6px;
   -webkit-appearance: none;
   appearance: none;
-  width: 19px;
-  height: 19px;
-  background: $creamcolor;
+  width: 61px;
+  height: 61px;
+  background: url("pictures/tinySpaceshuttleIII.png") no-repeat;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 61px;
+  height: 61px;
+  background: url("pictures/tinySpaceshuttleII.png") no-repeat;
   cursor: pointer;
 }
 .lournaSlider
@@ -262,7 +272,8 @@ $creamcolor: #F7F9E0;
   cursor: pointer;
   height: 7px;
 }
-.lournaSlider::-moz-range-thumb {
+.lournaSlider::-moz-range-thumb 
+{
   border-radius: 6px;
   -webkit-appearance: none;
   appearance: none;
@@ -271,7 +282,8 @@ $creamcolor: #F7F9E0;
   background: $creamcolor;
   cursor: pointer;
 }
-.lournaSlider::-webkit-slider-thumb {
+.lournaSlider::-webkit-slider-thumb 
+{
   border-radius: 6px;
   -webkit-appearance: none;
   appearance: none;
@@ -281,15 +293,6 @@ $creamcolor: #F7F9E0;
   cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
-  border-radius: 6px;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 19px;
-  height: 19px;
-  background: $creamcolor;
-  cursor: pointer;
-}
 .slider:hover
 {
   opacity: 1;
