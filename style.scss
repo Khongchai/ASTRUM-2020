@@ -116,6 +116,17 @@ $creamcolor: #F7F9E0;
   float: left;
   position: relative;
 }
+#planetDecorVI
+{
+  width: 400px;
+  height: 400px;
+  left: 80%;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/1.png);
+  position: absolute;
+  opacity: 0.2;
+  top: 400px;
+}
 .planetsDecorContainer
 {
   width: 100%;

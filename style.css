@@ -100,6 +100,17 @@ a {
   position: relative;
 }
 
+#planetDecorVI {
+  width: 400px;
+  height: 400px;
+  left: 80%;
+  background-size: auto 100%;
+  background-image: url(pictures/HongPlanets/1.png);
+  position: absolute;
+  opacity: 0.2;
+  top: 400px;
+}
+
 .planetsDecorContainer {
   width: 100%;
   position: fixed;
@@ -200,7 +211,7 @@ a {
   appearance: none;
   width: 61px;
   height: 61px;
-  background: url("pictures/tinySpaceshuttleIII.png") no-repeat;
+  background: url("pictures/tinySpaceShuttleIII.png") no-repeat;
   cursor: pointer;
 }
 
@@ -210,7 +221,7 @@ a {
   appearance: none;
   width: 61px;
   height: 61px;
-  background: url("pictures/tinySpaceshuttleII.png") no-repeat;
+  background: url("pictures/tinySpaceShuttleIII.png") no-repeat;
   cursor: pointer;
 }
 
