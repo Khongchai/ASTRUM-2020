@@ -3,10 +3,6 @@
 </p>
 
 <h1 align="center">
-  A Binaural Application Written in Java
-</h1>
-
-<h1 align="center">
   Pure HTML, CSS, JS Project with a bit of Jquery
 </h1> 
 
