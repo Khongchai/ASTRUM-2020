@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  Pure HTML, CSS, JS Project with a bit of Jquery
+  Pure HTML, CSS, JS Project with a sprinkle of Jquery
 </h1> 
 
 This first static web project was made 99% in pure HTML, CSS and JS, with the exception of NASA's Eyes and Jquery.
